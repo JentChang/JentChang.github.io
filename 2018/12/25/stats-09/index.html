@@ -5,15 +5,14 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="统计学02：极差 中程数, Jent 金融 量化 Python MachineLearning">
+    <meta name="keywords" content="统计学09：箱线图1, Jent 金融 量化 Python MachineLearning">
     <meta name="description" content="统计学•目录 统计学•类别  math
 
-极差 range最小值于最大值之差
+箱线图1从下到上五条线分别表示最小值、下四分位数、中位数、上四分位数和最大值.
 
-数值越小越紧密
+你可以通过它很快的发现数据批中的异常值，判断数据批的偏态和尾重，比较几批数据的形状．
 
-一组数：65,81,73,58,94,79,67,93,82range: 94-65 = 29
-L = [65,81,73,58,94,79,">
+顾客到餐厅的距离数据通过这些">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +20,7 @@ L = [65,81,73,58,94,79,">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>统计学02：极差 中程数 | 简•客</title>
+    <title>统计学09：箱线图1 | 简•客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -276,13 +275,13 @@ L = [65,81,73,58,94,79,">
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/images/stats/s_09.png')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        统计学02：极差 中程数
+                        统计学09：箱线图1
                     </div>
                 </div>
             </div>
@@ -405,12 +404,12 @@ L = [65,81,73,58,94,79,">
                     <span class="chip bg-color">Python</span>
                 </a>
                 
-                <a href="/tags/极差/" target="_blank">
-                    <span class="chip bg-color">极差</span>
+                <a href="/tags/matplotlib/" target="_blank">
+                    <span class="chip bg-color">matplotlib</span>
                 </a>
                 
-                <a href="/tags/中程数/" target="_blank">
-                    <span class="chip bg-color">中程数</span>
+                <a href="/tags/箱线图/" target="_blank">
+                    <span class="chip bg-color">箱线图</span>
                 </a>
                 
             </div>
@@ -437,20 +436,82 @@ L = [65,81,73,58,94,79,">
             <div id="articleContent">
                 <p><a href="/contents/math/statistical.html">统计学•目录</a> <a href="/categories/Statistical/">统计学•类别</a>  <a href="/contents/math/">math</a></p>
 <hr>
-<h1 id="极差-range"><a href="#极差-range" class="headerlink" title="极差 range"></a>极差 range</h1><p>最小值于最大值之差</p>
+<h1 id="箱线图1"><a href="#箱线图1" class="headerlink" title="箱线图1"></a>箱线图1</h1><p>从下到上五条线分别表示最小值、下四分位数、中位数、上四分位数和最大值.</p>
 <blockquote>
-<p>数值越小越紧密</p>
+<p>你可以通过它很快的发现数据批中的异常值，判断数据批的偏态和尾重，比较几批数据的形状．</p>
 </blockquote>
-<p>一组数：65,81,73,58,94,79,67,93,82<br>range: 94-65 = 29</p>
-<pre><code>L = [65,81,73,58,94,79,67,93,82]
-range = max(L) - min(L)
-</code></pre><h1 id="中程数-midrange"><a href="#中程数-midrange" class="headerlink" title="中程数 midrange"></a>中程数 midrange</h1><p>最小值和最大值的算术平均数</p>
+<h4 id="顾客到餐厅的距离数据"><a href="#顾客到餐厅的距离数据" class="headerlink" title="顾客到餐厅的距离数据"></a>顾客到餐厅的距离数据</h4><p>通过这些数据绘制一张图，用来反映顾客的分布和距离的中位数．</p>
+<p>14, 6, 3, 2, 4, 15, 11, 8, 1, 7, 2, 1, 3, 4, 10, 22, 20</p>
 <blockquote>
-<p>考虑集中趋势的又一种方式</p>
+<p>？<br>显然这个跟时间无关或者并没有想要某写变量之间的关系，那么线图是不合适的．<br>条形图是用来将事物归类的，看每一类数据的情况，也不是我们想要．<br>而饼图是看个部分的占比．<br>茎叶图可以帮助了解分布情况，但是无法很好的处理中位数距离和散布情况(我说过上节中配的图并不是正经的茎叶图，显然画它有些麻烦，数据下的那个表格形状才是真正的茎叶图，绘制起来并不复杂)．茎叶图可以发现中位数的大概位置在哪里，并不能直接看出来．</p>
 </blockquote>
-<pre><code>midrange = (max(L) + min(L)) / 2
-</code></pre><hr>
-<p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> (来信请注明文章标题，如果附带链接就更方便了)</p>
+<blockquote>
+<p>关注中位数和散布情况时，我们可以选择盒须图(箱线图，箱体图)．</p>
+</blockquote>
+<p><img src="/images/stats/s_09.png" alt="图片"></p>
+<h4 id="绘制箱线图的过程"><a href="#绘制箱线图的过程" class="headerlink" title="绘制箱线图的过程"></a>绘制箱线图的过程</h4><blockquote>
+<p>按照四分位划分，它可以显示出数据中位数在哪</p>
+</blockquote>
+<h5 id="step1-将数据进行排序"><a href="#step1-将数据进行排序" class="headerlink" title="step1.将数据进行排序"></a>step1.将数据进行排序</h5><p>1, 1, 2, 2, 3, 3, 4, 4, 6, 7, 8, 10, 11, 14, 15, 20, 22<br>median: 6</p>
+<blockquote>
+<p>中位数找到之后，数据被它分为两部分，再在这两部分中分别找到它们对应的中位数<br>这样就被三个数分为四个区间(从左至右，成为第a个n分区级)</p>
+</blockquote>
+<h5 id="step2-寻找四分位数"><a href="#step2-寻找四分位数" class="headerlink" title="step2.寻找四分位数"></a>step2.寻找四分位数</h5><p>(2+3)/2=2.5  　　madian:6　　 (11+14)/2=12.5</p>
+<blockquote>
+<p>这里计算采用去掉median的方法划分，你也可以把它分别包括在两个区域计算下一次的中位数</p>
+</blockquote>
+<h4 id="利用pyhton绘制箱线图"><a href="#利用pyhton绘制箱线图" class="headerlink" title="利用pyhton绘制箱线图"></a>利用<code>pyhton</code>绘制箱线图</h4><p>先看一下参数 <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.boxplot.html" target="_blank" rel="noopener">matplotlib官网介绍</a></p>
+<pre class=" language-python"><code class="language-python">plt<span class="token punctuation">.</span>boxplot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> notch<span class="token operator">=</span>None<span class="token punctuation">,</span> sym<span class="token operator">=</span>None<span class="token punctuation">,</span> vert<span class="token operator">=</span>None<span class="token punctuation">,</span> whis<span class="token operator">=</span>None<span class="token punctuation">,</span> positions<span class="token operator">=</span>None<span class="token punctuation">,</span> widths<span class="token operator">=</span>None<span class="token punctuation">,</span> patch_artist<span class="token operator">=</span>None<span class="token punctuation">,</span> meanline<span class="token operator">=</span>None<span class="token punctuation">,</span> showmeans<span class="token operator">=</span>None<span class="token punctuation">,</span> showcaps<span class="token operator">=</span>None<span class="token punctuation">,</span> showbox<span class="token operator">=</span>None<span class="token punctuation">,</span> showfliers<span class="token operator">=</span>None<span class="token punctuation">,</span> boxprops<span class="token operator">=</span>None<span class="token punctuation">,</span> labels<span class="token operator">=</span>None<span class="token punctuation">,</span> flierprops<span class="token operator">=</span>None<span class="token punctuation">,</span> medianprops<span class="token operator">=</span>None<span class="token punctuation">,</span> meanprops<span class="token operator">=</span>None<span class="token punctuation">,</span> capprops<span class="token operator">=</span>None<span class="token punctuation">,</span> whiskerprops<span class="token operator">=</span>None<span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>为了让你觉得代码不那么繁琐，这里是一个简单的实现</p>
+</blockquote>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt 
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+
+data <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'distance'</span><span class="token punctuation">:</span>data<span class="token punctuation">}</span><span class="token punctuation">)</span>
+df<span class="token punctuation">.</span>boxplot<span class="token punctuation">(</span>
+    patch_artist<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+    showmeans<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>如果你并不满足上面代码的丰富，可以在下面的代码中发现一点新的东西</p>
+</blockquote>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt 
+<span class="token keyword">from</span> mpl_toolkits<span class="token punctuation">.</span>axisartist<span class="token punctuation">.</span>axislines <span class="token keyword">import</span> SubplotZero
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+
+data <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'distance'</span><span class="token punctuation">:</span>data<span class="token punctuation">}</span><span class="token punctuation">)</span>
+yticks <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 设置支持中文</span>
+plt<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'font.sans-serif'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'Microsoft YaHei'</span><span class="token punctuation">]</span>
+plt<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'axes.unicode_minus'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token boolean">False</span>
+
+fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">120</span><span class="token punctuation">,</span> facecolor<span class="token operator">=</span><span class="token string">'#FF9966'</span><span class="token punctuation">,</span> edgecolor<span class="token operator">=</span><span class="token string">'c'</span><span class="token punctuation">)</span> 
+ax1 <span class="token operator">=</span> SubplotZero<span class="token punctuation">(</span>fig<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> axisbg<span class="token operator">=</span><span class="token string">'#FF9966'</span><span class="token punctuation">)</span>
+fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span>ax1<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># ax1.grid(True, color='k', linestyle='-.')</span>
+ax1<span class="token punctuation">.</span>axis<span class="token punctuation">[</span><span class="token string">'right'</span><span class="token punctuation">,</span> <span class="token string">'top'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>set_visible<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+ax1<span class="token punctuation">.</span>set_yticks<span class="token punctuation">(</span>yticks<span class="token punctuation">)</span>
+ax1<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">24</span><span class="token punctuation">)</span> 
+
+df<span class="token punctuation">.</span>boxplot<span class="token punctuation">(</span>patch_artist<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> showmeans<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>这里并不重点说明程序的内容，应该更多的认识图表，利用统计学知识了解你的数据，程序的学习将会放在<code>目录</code>中<code>Machine Learning</code>，你会发现那里并不会仅仅放一些算法的内容，也有基础的工具(python)使用.</p>
+</blockquote>
+<hr>
+<p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> (来信请注明文章标题，如果附带链接就更方便了)<br>你也可以在下方的留言板留下你宝贵的意见．</p>
 
             </div>
             <hr>
@@ -589,7 +650,7 @@ range = max(L) - min(L)
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://JentChang.github.io" class="b-link-green">简•客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/25/stats-02/" class="b-link-green">统计学02：极差 中程数</a>
+                    <a href="/2018/12/25/stats-09/" class="b-link-green">统计学09：箱线图1</a>
                 </p>
             </div>
         </div>
@@ -872,26 +933,20 @@ range = max(L) - min(L)
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
-                <a href="/2018/12/25/stats-03/">
+                <a href="/2018/12/25/stats-10/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="统计学03：象形统计图">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="统计学10：箱线图2">
                         
-                        <span class="card-title">统计学03：象形统计图</span>
+                        <span class="card-title">统计学10：箱线图2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">统计学•目录 统计学•类别  math
 
-象形统计图 pictograph
-表现统计数字大小和变动的各种图形总称
-
-
-特点：形象，直观，数据比例很清楚
-
-
-博主个人能力有限，错误在所难免．如发现错误请不要吝啬，发邮件给博主更正内容，在此提前</div>
+箱线图2须须是显示所有数据的散布情况，左侧断线为最小值，右侧为最大值，我们可以很快的得出极差
+中位数中间的线是中位数，在上节你会发现里面还有一个方点，那是平均数所在位置盒图告诉我们一半的数据量小于中</div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-25
@@ -919,8 +974,8 @@ range = max(L) - min(L)
                         <span class="chip bg-color">Math</span>
                     </a>
                     
-                    <a href="/tags/象形统计图/" target="_blank">
-                        <span class="chip bg-color">象形统计图</span>
+                    <a href="/tags/箱线图/" target="_blank">
+                        <span class="chip bg-color">箱线图</span>
                     </a>
                     
                 </div>
@@ -932,20 +987,20 @@ range = max(L) - min(L)
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/25/stats-01/">
+                <a href="/2018/12/25/stats-08/">
                     <div class="card-image">
                         
+                        <img src="/images/stats/s_08.png" class="responsive-img" alt="统计学08：茎叶图">
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="统计学01：均值 中位数 众数">
-                        
-                        <span class="card-title">统计学01：均值 中位数 众数</span>
+                        <span class="card-title">统计学08：茎叶图</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">统计学•目录 统计学•类别  math
 
-平均数 mean一组数：23　29　20　32　23　21　33　25mean: (23+29+20+32+23+21+33+25)/8 = 25.75
-L = [23, 29, 20, 32, 2</div>
+茎叶图将数的大小基本不变或变化不大的位作为一个主干（茎），将变化大的位的数作为分枝（叶），列在主干的后面，这样就可以清楚地看到每个主干后面的几个数，每个数具体是多少。
+
+它可以直观的表现出数据的分布</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-25
@@ -977,16 +1032,12 @@ L = [23, 29, 20, 32, 2</div>
                         <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="/tags/均值/" target="_blank">
-                        <span class="chip bg-color">均值</span>
+                    <a href="/tags/matplotlib/" target="_blank">
+                        <span class="chip bg-color">matplotlib</span>
                     </a>
                     
-                    <a href="/tags/中位数/" target="_blank">
-                        <span class="chip bg-color">中位数</span>
-                    </a>
-                    
-                    <a href="/tags/众数/" target="_blank">
-                        <span class="chip bg-color">众数</span>
+                    <a href="/tags/茎叶图/" target="_blank">
+                        <span class="chip bg-color">茎叶图</span>
                     </a>
                     
                 </div>

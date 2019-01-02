@@ -5,15 +5,13 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="统计学02：极差 中程数, Jent 金融 量化 Python MachineLearning">
+    <meta name="keywords" content="统计学11：集中趋势, Jent 金融 量化 Python MachineLearning">
     <meta name="description" content="统计学•目录 统计学•类别  math
 
-极差 range最小值于最大值之差
+集中趋势
+从这一节才真正的进入统计学的核心，一切围绕数据进行
 
-数值越小越紧密
-
-一组数：65,81,73,58,94,79,67,93,82range: 94-65 = 29
-L = [65,81,73,58,94,79,">
+集中趋势(central Tendency)/average:算术平均数(我常说的平均数指的算术平均数mean,几何平均数，调和平均数">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +19,7 @@ L = [65,81,73,58,94,79,">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>统计学02：极差 中程数 | 简•客</title>
+    <title>统计学11：集中趋势 | 简•客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -276,13 +274,13 @@ L = [65,81,73,58,94,79,">
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        统计学02：极差 中程数
+                        统计学11：集中趋势
                     </div>
                 </div>
             </div>
@@ -405,12 +403,12 @@ L = [65,81,73,58,94,79,">
                     <span class="chip bg-color">Python</span>
                 </a>
                 
-                <a href="/tags/极差/" target="_blank">
-                    <span class="chip bg-color">极差</span>
+                <a href="/tags/matplotlib/" target="_blank">
+                    <span class="chip bg-color">matplotlib</span>
                 </a>
                 
-                <a href="/tags/中程数/" target="_blank">
-                    <span class="chip bg-color">中程数</span>
+                <a href="/tags/集中趋势/" target="_blank">
+                    <span class="chip bg-color">集中趋势</span>
                 </a>
                 
             </div>
@@ -437,20 +435,33 @@ L = [65,81,73,58,94,79,">
             <div id="articleContent">
                 <p><a href="/contents/math/statistical.html">统计学•目录</a> <a href="/categories/Statistical/">统计学•类别</a>  <a href="/contents/math/">math</a></p>
 <hr>
-<h1 id="极差-range"><a href="#极差-range" class="headerlink" title="极差 range"></a>极差 range</h1><p>最小值于最大值之差</p>
-<blockquote>
-<p>数值越小越紧密</p>
+<h1 id="集中趋势"><a href="#集中趋势" class="headerlink" title="集中趋势"></a>集中趋势</h1><blockquote>
+<p>从这一节才真正的进入统计学的核心，一切围绕数据进行</p>
 </blockquote>
-<p>一组数：65,81,73,58,94,79,67,93,82<br>range: 94-65 = 29</p>
-<pre><code>L = [65,81,73,58,94,79,67,93,82]
-range = max(L) - min(L)
-</code></pre><h1 id="中程数-midrange"><a href="#中程数-midrange" class="headerlink" title="中程数 midrange"></a>中程数 midrange</h1><p>最小值和最大值的算术平均数</p>
+<p>集中趋势(central Tendency)/average:算术平均数(我常说的平均数指的算术平均数mean,几何平均数，调和平均数),中位数，众数(mode)，它们是描述集中趋势的方法．</p>
 <blockquote>
-<p>考虑集中趋势的又一种方式</p>
+<p>它们的计算你可以去看前面的对应内容</p>
 </blockquote>
-<pre><code>midrange = (max(L) + min(L)) / 2
-</code></pre><hr>
-<p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> (来信请注明文章标题，如果附带链接就更方便了)</p>
+<p>这些公式并不像一个力与加速度的方程式，有着某种宇宙间的奥秘，只是人类创造出来的，用来方便我们大脑更好的处理数据</p>
+<blockquote>
+<p>what? why?<br>既然是人造出来的，为什么要弄出那么多的公式出来．．．<br>或许在1，1，2，4，4这组数据中你没有发现什么．<br>但是当你看到这样一组数据呢？　3，3，3，3，3，100　它的平均数是115/6，这个值没有任何参考价值，至少它不能代表整体的集中趋势．(在统计学中像100这样的异常值被成为离群值)<br>在新的数据中，中位数和众数都是3，如果这些是某个地区的房价，我相信你不会用平均数来表示这个地区的房价水平．</p>
+</blockquote>
+<blockquote>
+<p>立群值并没有一个具体的定义，它都是一看，对，是他是他就是他－离群值<br>有时间离群值的产生是因为测量错误等</p>
+</blockquote>
+<h2 id="统计学分类"><a href="#统计学分类" class="headerlink" title="统计学分类"></a>统计学分类</h2><h3 id="描述性统计学-descriptive"><a href="#描述性统计学-descriptive" class="headerlink" title="描述性统计学　descriptive"></a>描述性统计学　descriptive</h3><p>假设有一大堆数据，却希望在不告诉别人所有数据的情况下介绍这些数据的情况</p>
+<blockquote>
+<p>你可以找到一些指示性的数字来代表所有的数据，而无需将所有的数据都说一次</p>
+</blockquote>
+<h3 id="推论统计学-inferential"><a href="#推论统计学-inferential" class="headerlink" title="推论统计学 inferential"></a>推论统计学 inferential</h3><p>推论统计学运用数据来对事物做结论</p>
+<blockquote>
+<p>假设你从总体中得到一些样本(统计学中经常提到样本和总体)，<br>我们只需要对样本进行一些数学计算，便有可能推断出总体这个整体的情况</p>
+</blockquote>
+<blockquote>
+<p>下一节我们再进行描述性统计学的内容，每一节一点点小东西，就像随手看一个笑话，这样显得不那么疲劳． </p>
+</blockquote>
+<hr>
+<p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> (来信请注明文章标题，如果附带链接就更方便了)<br>你也可以在下方的留言板留下你宝贵的意见．</p>
 
             </div>
             <hr>
@@ -589,7 +600,7 @@ range = max(L) - min(L)
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://JentChang.github.io" class="b-link-green">简•客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/25/stats-02/" class="b-link-green">统计学02：极差 中程数</a>
+                    <a href="/2018/12/25/stats-11/" class="b-link-green">统计学11：集中趋势</a>
                 </p>
             </div>
         </div>
@@ -872,36 +883,34 @@ range = max(L) - min(L)
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
-                <a href="/2018/12/25/stats-03/">
+                <a href="/2018/12/29/morning-lectures/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="统计学03：象形统计图">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Morning Lectures-181229">
                         
-                        <span class="card-title">统计学03：象形统计图</span>
+                        <span class="card-title">Morning Lectures-181229</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">统计学•目录 统计学•类别  math
-
-象形统计图 pictograph
-表现统计数字大小和变动的各种图形总称
+                    <div class="summary">question 1
+什么是Python？使用Python有什么好处？
 
 
-特点：形象，直观，数据比例很清楚
+Python是一种编程语言，它有对象、模块、线程、异常处理和自动内存管理。它简洁、简单、方便、容易扩展，有许多自带的数据结构，而且它开源。
 
-
-博主个人能力有限，错误在所难免．如发现错误请不要吝啬，发邮件给博主更正内容，在此提前</div>
+question 2
+</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-25
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-29
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Statistical/" class="post-category" target="_blank">
-                                    Statistical
+                            <a href="/categories/BreadCumbs/" class="post-category" target="_blank">
+                                    BreadCumbs
                                 </a>
                             
                             
@@ -911,16 +920,12 @@ range = max(L) - min(L)
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Statistical/" target="_blank">
-                        <span class="chip bg-color">Statistical</span>
+                    <a href="/tags/question/" target="_blank">
+                        <span class="chip bg-color">question</span>
                     </a>
                     
-                    <a href="/tags/Math/" target="_blank">
-                        <span class="chip bg-color">Math</span>
-                    </a>
-                    
-                    <a href="/tags/象形统计图/" target="_blank">
-                        <span class="chip bg-color">象形统计图</span>
+                    <a href="/tags/python/" target="_blank">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
@@ -932,20 +937,20 @@ range = max(L) - min(L)
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/25/stats-01/">
+                <a href="/2018/12/25/stats-10/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="统计学01：均值 中位数 众数">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="统计学10：箱线图2">
                         
-                        <span class="card-title">统计学01：均值 中位数 众数</span>
+                        <span class="card-title">统计学10：箱线图2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">统计学•目录 统计学•类别  math
 
-平均数 mean一组数：23　29　20　32　23　21　33　25mean: (23+29+20+32+23+21+33+25)/8 = 25.75
-L = [23, 29, 20, 32, 2</div>
+箱线图2须须是显示所有数据的散布情况，左侧断线为最小值，右侧为最大值，我们可以很快的得出极差
+中位数中间的线是中位数，在上节你会发现里面还有一个方点，那是平均数所在位置盒图告诉我们一半的数据量小于中</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-25
@@ -973,20 +978,8 @@ L = [23, 29, 20, 32, 2</div>
                         <span class="chip bg-color">Math</span>
                     </a>
                     
-                    <a href="/tags/Python/" target="_blank">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/均值/" target="_blank">
-                        <span class="chip bg-color">均值</span>
-                    </a>
-                    
-                    <a href="/tags/中位数/" target="_blank">
-                        <span class="chip bg-color">中位数</span>
-                    </a>
-                    
-                    <a href="/tags/众数/" target="_blank">
-                        <span class="chip bg-color">众数</span>
+                    <a href="/tags/箱线图/" target="_blank">
+                        <span class="chip bg-color">箱线图</span>
                     </a>
                     
                 </div>

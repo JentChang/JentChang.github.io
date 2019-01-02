@@ -441,63 +441,66 @@ L = [23, 29, 20, 32, 2">
 <pre><code>L = [23, 29, 20, 32, 23, 21, 33, 25]
 mean = sum(L) / 8
 </code></pre><h1 id="中位数-median"><a href="#中位数-median" class="headerlink" title="中位数 median"></a>中位数 median</h1><p>比它小和比它大的数的数量同样多，如果总的数量为偶数，取中间两个的平均值<br>首先将上面的数排序：20, 21, 23, 23, 25, 29, 32, 33　<br>median: (23+25)/2 = 24</p>
-<pre><code>def quick(value):
-    &#39;&#39;&#39;排序函数
-    &#39;&#39;&#39;
-    if len(value) &lt; 2:
-        return value
-    mark = value[0]
-    smaller = [x for x in value if x &lt; mark]
-    equal = [x for x in value if x == mark]
-    bigger = [x for x in value if x &gt; mark]
-    return quick(smaller) + equal + quick(bigger)
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">quick</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">'''排序函数
+    '''</span>
+    <span class="token keyword">if</span> len<span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> value
+    mark <span class="token operator">=</span> value<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    smaller <span class="token operator">=</span> <span class="token punctuation">[</span>x <span class="token keyword">for</span> x <span class="token keyword">in</span> value <span class="token keyword">if</span> x <span class="token operator">&lt;</span> mark<span class="token punctuation">]</span>
+    equal <span class="token operator">=</span> <span class="token punctuation">[</span>x <span class="token keyword">for</span> x <span class="token keyword">in</span> value <span class="token keyword">if</span> x <span class="token operator">==</span> mark<span class="token punctuation">]</span>
+    bigger <span class="token operator">=</span> <span class="token punctuation">[</span>x <span class="token keyword">for</span> x <span class="token keyword">in</span> value <span class="token keyword">if</span> x <span class="token operator">></span> mark<span class="token punctuation">]</span>
+    <span class="token keyword">return</span> quick<span class="token punctuation">(</span>smaller<span class="token punctuation">)</span> <span class="token operator">+</span> equal <span class="token operator">+</span> quick<span class="token punctuation">(</span>bigger<span class="token punctuation">)</span>
 
-L = quick(L)
-index = len(L) // 2
+L <span class="token operator">=</span> quick<span class="token punctuation">(</span>L<span class="token punctuation">)</span>
+index <span class="token operator">=</span> len<span class="token punctuation">(</span>L<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>
 
-if not index:
-    mdeian = L[index]
-else:
-    mdeian = (L[index-1] + L[index]) / 2
-print(mdeian)
-</code></pre><pre><code>你也可以用下面的函数方法排序
-def insert(value):
-    for i in range(1,len(value)):
-        temp = value[i]
-        pos = i
-        for j in range(i-1, -1, -1):
-            if value[j] &gt; temp:
-                value[j+1] = value[j]
-                pos = j
-            else:
-                pos = j + 1
-                break
-        value[pos] = temp
-    return value
-</code></pre><h1 id="众数-mode"><a href="#众数-mode" class="headerlink" title="众数 mode"></a>众数 mode</h1><p>正如它的名字，出现次数最多的数字就是众数</p>
+<span class="token keyword">if</span> <span class="token operator">not</span> index<span class="token punctuation">:</span>
+    mdeian <span class="token operator">=</span> L<span class="token punctuation">[</span>index<span class="token punctuation">]</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    mdeian <span class="token operator">=</span> <span class="token punctuation">(</span>L<span class="token punctuation">[</span>index<span class="token number">-1</span><span class="token punctuation">]</span> <span class="token operator">+</span> L<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>mdeian<span class="token punctuation">)</span>
+</code></pre>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 你也可以用下面的函数方法排序</span>
+<span class="token keyword">def</span> <span class="token function">insert</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>len<span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        temp <span class="token operator">=</span> value<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        pos <span class="token operator">=</span> i
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>i<span class="token number">-1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> value<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> temp<span class="token punctuation">:</span>
+                value<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+                pos <span class="token operator">=</span> j
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                pos <span class="token operator">=</span> j <span class="token operator">+</span> <span class="token number">1</span>
+                <span class="token keyword">break</span>
+        value<span class="token punctuation">[</span>pos<span class="token punctuation">]</span> <span class="token operator">=</span> temp
+    <span class="token keyword">return</span> value
+</code></pre>
+<h1 id="众数-mode"><a href="#众数-mode" class="headerlink" title="众数 mode"></a>众数 mode</h1><p>正如它的名字，出现次数最多的数字就是众数</p>
 <blockquote>
 <p>众数可以为多个</p>
 </blockquote>
-<pre><code>def mode_fun(value):
-    l = [] 
-    d = {} 
-    mode = []
+<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">mode_fun</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    l <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> 
+    d <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> 
+    mode <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
 
-    for i in range(len(value)):    # 把数字和对应的数学存入字典
-        if value[i] in d: 
-            d[value[i]] += 1 
-        else: 
-            d[value[i]] = 1
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token comment" spellcheck="true"># 把数字和对应的数学存入字典</span>
+        <span class="token keyword">if</span> value<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token keyword">in</span> d<span class="token punctuation">:</span> 
+            d<span class="token punctuation">[</span>value<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span> 
+        <span class="token keyword">else</span><span class="token punctuation">:</span> 
+            d<span class="token punctuation">[</span>value<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
 
-    for k, v in d.items():    # item返回元组 
-        l.append(v) 
+    <span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token keyword">in</span> d<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token comment" spellcheck="true"># item返回元组 </span>
+        l<span class="token punctuation">.</span>append<span class="token punctuation">(</span>v<span class="token punctuation">)</span> 
 
-    for k, v in d.items():
-        if v == max(l):
-            mode.append(k)
-    return mode
-mode_fun(L)
-</code></pre><blockquote>
+    <span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token keyword">in</span> d<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> v <span class="token operator">==</span> max<span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            mode<span class="token punctuation">.</span>append<span class="token punctuation">(</span>k<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> mode
+mode_fun<span class="token punctuation">(</span>L<span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
 <p>也可以直接通过<code>import numpy, scipy</code>很快的得出答案</p>
 </blockquote>
 <hr>

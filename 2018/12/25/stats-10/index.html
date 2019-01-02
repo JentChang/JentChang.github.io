@@ -5,15 +5,11 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="统计学02：极差 中程数, Jent 金融 量化 Python MachineLearning">
+    <meta name="keywords" content="统计学10：箱线图2, Jent 金融 量化 Python MachineLearning">
     <meta name="description" content="统计学•目录 统计学•类别  math
 
-极差 range最小值于最大值之差
-
-数值越小越紧密
-
-一组数：65,81,73,58,94,79,67,93,82range: 94-65 = 29
-L = [65,81,73,58,94,79,">
+箱线图2须须是显示所有数据的散布情况，左侧断线为最小值，右侧为最大值，我们可以很快的得出极差
+中位数中间的线是中位数，在上节你会发现里面还有一个方点，那是平均数所在位置盒图告诉我们一半的数据量小于中">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +17,7 @@ L = [65,81,73,58,94,79,">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>统计学02：极差 中程数 | 简•客</title>
+    <title>统计学10：箱线图2 | 简•客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -276,13 +272,13 @@ L = [65,81,73,58,94,79,">
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        统计学02：极差 中程数
+                        统计学10：箱线图2
                     </div>
                 </div>
             </div>
@@ -401,16 +397,8 @@ L = [65,81,73,58,94,79,">
                     <span class="chip bg-color">Math</span>
                 </a>
                 
-                <a href="/tags/Python/" target="_blank">
-                    <span class="chip bg-color">Python</span>
-                </a>
-                
-                <a href="/tags/极差/" target="_blank">
-                    <span class="chip bg-color">极差</span>
-                </a>
-                
-                <a href="/tags/中程数/" target="_blank">
-                    <span class="chip bg-color">中程数</span>
+                <a href="/tags/箱线图/" target="_blank">
+                    <span class="chip bg-color">箱线图</span>
                 </a>
                 
             </div>
@@ -437,20 +425,14 @@ L = [65,81,73,58,94,79,">
             <div id="articleContent">
                 <p><a href="/contents/math/statistical.html">统计学•目录</a> <a href="/categories/Statistical/">统计学•类别</a>  <a href="/contents/math/">math</a></p>
 <hr>
-<h1 id="极差-range"><a href="#极差-range" class="headerlink" title="极差 range"></a>极差 range</h1><p>最小值于最大值之差</p>
+<h1 id="箱线图2"><a href="#箱线图2" class="headerlink" title="箱线图2"></a>箱线图2</h1><h5 id="须"><a href="#须" class="headerlink" title="须"></a>须</h5><p>须是显示所有数据的散布情况，左侧断线为最小值，右侧为最大值，我们可以很快的得出极差</p>
+<h5 id="中位数"><a href="#中位数" class="headerlink" title="中位数"></a>中位数</h5><p>中间的线是中位数，在上节你会发现里面还有一个方点，那是平均数所在位置<br>盒图告诉我们一半的数据量小于中位数</p>
 <blockquote>
-<p>数值越小越紧密</p>
+<p>中位数可以用来作为集中趋势的测量标准</p>
 </blockquote>
-<p>一组数：65,81,73,58,94,79,67,93,82<br>range: 94-65 = 29</p>
-<pre><code>L = [65,81,73,58,94,79,67,93,82]
-range = max(L) - min(L)
-</code></pre><h1 id="中程数-midrange"><a href="#中程数-midrange" class="headerlink" title="中程数 midrange"></a>中程数 midrange</h1><p>最小值和最大值的算术平均数</p>
-<blockquote>
-<p>考虑集中趋势的又一种方式</p>
-</blockquote>
-<pre><code>midrange = (max(L) + min(L)) / 2
-</code></pre><hr>
-<p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> (来信请注明文章标题，如果附带链接就更方便了)</p>
+<h5 id="盒"><a href="#盒" class="headerlink" title="盒"></a>盒</h5><p>盒的两端是二分区域的各自中位数，即盒左端为小于主中位数数据的中位数，盒右端为大于主中位数数据的中位数．</p>
+<hr>
+<p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> (来信请注明文章标题，如果附带链接就更方便了)<br>你也可以在下方的留言板留下你宝贵的意见．</p>
 
             </div>
             <hr>
@@ -589,7 +571,7 @@ range = max(L) - min(L)
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://JentChang.github.io" class="b-link-green">简•客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/25/stats-02/" class="b-link-green">统计学02：极差 中程数</a>
+                    <a href="/2018/12/25/stats-10/" class="b-link-green">统计学10：箱线图2</a>
                 </p>
             </div>
         </div>
@@ -872,26 +854,22 @@ range = max(L) - min(L)
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
-                <a href="/2018/12/25/stats-03/">
+                <a href="/2018/12/25/stats-11/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="统计学03：象形统计图">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="统计学11：集中趋势">
                         
-                        <span class="card-title">统计学03：象形统计图</span>
+                        <span class="card-title">统计学11：集中趋势</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">统计学•目录 统计学•类别  math
 
-象形统计图 pictograph
-表现统计数字大小和变动的各种图形总称
+集中趋势
+从这一节才真正的进入统计学的核心，一切围绕数据进行
 
-
-特点：形象，直观，数据比例很清楚
-
-
-博主个人能力有限，错误在所难免．如发现错误请不要吝啬，发邮件给博主更正内容，在此提前</div>
+集中趋势(central Tendency)/average:算术平均数(我常说的平均数指的算术平均数mean,几何平均数，调和平均数</div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-25
@@ -919,8 +897,16 @@ range = max(L) - min(L)
                         <span class="chip bg-color">Math</span>
                     </a>
                     
-                    <a href="/tags/象形统计图/" target="_blank">
-                        <span class="chip bg-color">象形统计图</span>
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/matplotlib/" target="_blank">
+                        <span class="chip bg-color">matplotlib</span>
+                    </a>
+                    
+                    <a href="/tags/集中趋势/" target="_blank">
+                        <span class="chip bg-color">集中趋势</span>
                     </a>
                     
                 </div>
@@ -932,20 +918,22 @@ range = max(L) - min(L)
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/25/stats-01/">
+                <a href="/2018/12/25/stats-09/">
                     <div class="card-image">
                         
+                        <img src="/images/stats/s_09.png" class="responsive-img" alt="统计学09：箱线图1">
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="统计学01：均值 中位数 众数">
-                        
-                        <span class="card-title">统计学01：均值 中位数 众数</span>
+                        <span class="card-title">统计学09：箱线图1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">统计学•目录 统计学•类别  math
 
-平均数 mean一组数：23　29　20　32　23　21　33　25mean: (23+29+20+32+23+21+33+25)/8 = 25.75
-L = [23, 29, 20, 32, 2</div>
+箱线图1从下到上五条线分别表示最小值、下四分位数、中位数、上四分位数和最大值.
+
+你可以通过它很快的发现数据批中的异常值，判断数据批的偏态和尾重，比较几批数据的形状．
+
+顾客到餐厅的距离数据通过这些</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-25
@@ -977,16 +965,12 @@ L = [23, 29, 20, 32, 2</div>
                         <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="/tags/均值/" target="_blank">
-                        <span class="chip bg-color">均值</span>
+                    <a href="/tags/matplotlib/" target="_blank">
+                        <span class="chip bg-color">matplotlib</span>
                     </a>
                     
-                    <a href="/tags/中位数/" target="_blank">
-                        <span class="chip bg-color">中位数</span>
-                    </a>
-                    
-                    <a href="/tags/众数/" target="_blank">
-                        <span class="chip bg-color">众数</span>
+                    <a href="/tags/箱线图/" target="_blank">
+                        <span class="chip bg-color">箱线图</span>
                     </a>
                     
                 </div>

@@ -479,24 +479,25 @@
 <blockquote>
 <p>它的每一份的面积和它所代表的数据属性占总属性的百分比是等价的</p>
 </blockquote>
-<h4 id="利用pyhton绘制线性图"><a href="#利用pyhton绘制线性图" class="headerlink" title="利用pyhton绘制线性图"></a>利用<code>pyhton</code>绘制线性图</h4><pre><code>import numpy as np 
-import matplotlib.pyplot as plt 
-from matplotlib import cm
+<h4 id="利用pyhton绘制线性图"><a href="#利用pyhton绘制线性图" class="headerlink" title="利用pyhton绘制线性图"></a>利用<code>pyhton</code>绘制线性图</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt 
+<span class="token keyword">from</span> matplotlib <span class="token keyword">import</span> cm
 
-labels = &#39;Business&#39;, &#39;Investment&#39;, &#39;Financing&#39;
-money = [33.43, 3.02, 2.03]
-explode = (0.05, 0.1, 0.1) 
+labels <span class="token operator">=</span> <span class="token string">'Business'</span><span class="token punctuation">,</span> <span class="token string">'Investment'</span><span class="token punctuation">,</span> <span class="token string">'Financing'</span>
+money <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">33.43</span><span class="token punctuation">,</span> <span class="token number">3.02</span><span class="token punctuation">,</span> <span class="token number">2.03</span><span class="token punctuation">]</span>
+explode <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">0.05</span><span class="token punctuation">,</span> <span class="token number">0.1</span><span class="token punctuation">,</span> <span class="token number">0.1</span><span class="token punctuation">)</span> 
 
-fig, ax = plt.subplots()
+fig<span class="token punctuation">,</span> ax <span class="token operator">=</span> plt<span class="token punctuation">.</span>subplots<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-# 设置颜色，也可以不设置(colors不传值，会采用默认值)
-colors = cm.rainbow(np.arange(len(labels))/len(labels))
-ax.pie(money, explode=explode, labels=labels, autopct=&quot;%1.1f%%&quot;,
-       shadow=True, startangle=180, colors=colors)
-ax.axis(&#39;equal&#39;)
-plt.title(&#39;Cash Outflows of 2011&#39;)
-plt.show()
-</code></pre><blockquote>
+<span class="token comment" spellcheck="true"># 设置颜色，也可以不设置(colors不传值，会采用默认值)</span>
+colors <span class="token operator">=</span> cm<span class="token punctuation">.</span>rainbow<span class="token punctuation">(</span>np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>len<span class="token punctuation">(</span>labels<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">/</span>len<span class="token punctuation">(</span>labels<span class="token punctuation">)</span><span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>pie<span class="token punctuation">(</span>money<span class="token punctuation">,</span> explode<span class="token operator">=</span>explode<span class="token punctuation">,</span> labels<span class="token operator">=</span>labels<span class="token punctuation">,</span> autopct<span class="token operator">=</span><span class="token string">"%1.1f%%"</span><span class="token punctuation">,</span>
+       shadow<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> startangle<span class="token operator">=</span><span class="token number">180</span><span class="token punctuation">,</span> colors<span class="token operator">=</span>colors<span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>axis<span class="token punctuation">(</span><span class="token string">'equal'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Cash Outflows of 2011'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
 <p>程序中并没有像图片中的效果，图片是我在校期间的报表分析作业，它是通过<code>excel</code>绘制的，当时我还不认识计算机语言．<br>你也可以通过<code>excel</code>绘制，它可能会通过很快的方法达到你想要的结果．</p>
 </blockquote>
 <hr>

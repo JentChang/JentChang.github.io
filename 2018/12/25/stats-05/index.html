@@ -498,36 +498,37 @@ December
 <blockquote>
 <p>从图中很容易发现这每个月之间股价有涨有跌，对于问题，这一年整体趋势是涨的</p>
 </blockquote>
-<h4 id="利用pyhton绘制线性图"><a href="#利用pyhton绘制线性图" class="headerlink" title="利用pyhton绘制线性图"></a>利用<code>pyhton</code>绘制线性图</h4><pre><code>import numpy as np
-import matplotlib.pyplot as plt
-from scipy import optimize
+<h4 id="利用pyhton绘制线性图"><a href="#利用pyhton绘制线性图" class="headerlink" title="利用pyhton绘制线性图"></a>利用<code>pyhton</code>绘制线性图</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">from</span> scipy <span class="token keyword">import</span> optimize
 
 
-def line_fun(x, theate, beta):
-    return theate * x + beta
+<span class="token keyword">def</span> <span class="token function">line_fun</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> theate<span class="token punctuation">,</span> beta<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> theate <span class="token operator">*</span> x <span class="token operator">+</span> beta
 
 
-stock_name = [&#39;July&#39;, &#39;August&#39;, &#39;September&#39;, &#39;October&#39;, &#39;November&#39;, &#39;December&#39;,
-         &#39;January&#39;, &#39;February&#39;, &#39;March&#39;, &#39;April&#39;, &#39;May&#39;, &#39;June&#39;]
-stock_num = np.arange(1, len(stock_name)+1)
-price = np.array([10.1, 11.1, 10.2, 12, 12.7, 12.1, 13.2, 13.7, 16.9, 15.3, 15.9, 16.7])
-price_y = np.arange(6, 20, 2)
+stock_name <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'July'</span><span class="token punctuation">,</span> <span class="token string">'August'</span><span class="token punctuation">,</span> <span class="token string">'September'</span><span class="token punctuation">,</span> <span class="token string">'October'</span><span class="token punctuation">,</span> <span class="token string">'November'</span><span class="token punctuation">,</span> <span class="token string">'December'</span><span class="token punctuation">,</span>
+         <span class="token string">'January'</span><span class="token punctuation">,</span> <span class="token string">'February'</span><span class="token punctuation">,</span> <span class="token string">'March'</span><span class="token punctuation">,</span> <span class="token string">'April'</span><span class="token punctuation">,</span> <span class="token string">'May'</span><span class="token punctuation">,</span> <span class="token string">'June'</span><span class="token punctuation">]</span>
+stock_num <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> len<span class="token punctuation">(</span>stock_name<span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
+price <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">10.1</span><span class="token punctuation">,</span> <span class="token number">11.1</span><span class="token punctuation">,</span> <span class="token number">10.2</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">12.7</span><span class="token punctuation">,</span> <span class="token number">12.1</span><span class="token punctuation">,</span> <span class="token number">13.2</span><span class="token punctuation">,</span> <span class="token number">13.7</span><span class="token punctuation">,</span> <span class="token number">16.9</span><span class="token punctuation">,</span> <span class="token number">15.3</span><span class="token punctuation">,</span> <span class="token number">15.9</span><span class="token punctuation">,</span> <span class="token number">16.7</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+price_y <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
 
-# 线性拟合
-theate, beta = optimize.curve_fit(line_fun, stock_num, price)[0]
-y = line_fun(stock_num, theate, beta)
+<span class="token comment" spellcheck="true"># 线性拟合</span>
+theate<span class="token punctuation">,</span> beta <span class="token operator">=</span> optimize<span class="token punctuation">.</span>curve_fit<span class="token punctuation">(</span>line_fun<span class="token punctuation">,</span> stock_num<span class="token punctuation">,</span> price<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+y <span class="token operator">=</span> line_fun<span class="token punctuation">(</span>stock_num<span class="token punctuation">,</span> theate<span class="token punctuation">,</span> beta<span class="token punctuation">)</span>
 
-plt.style.use(&#39;ggplot&#39;)
-plt.figure(figsize=(14, 6))
-plt.plot(stock_num, price, &#39;b-o&#39;)
-plt.plot(stock_num, y, &#39;r-.&#39;)
-plt.xticks(stock_num, stock_name, rotation=45)
-plt.yticks(price_y)
-plt.title(&#39;price of stock share, July 2010-June 2011&#39;)
-plt.xlabel(&#39;months&#39;)
-plt.ylabel(&quot;price($)&quot;)
-plt.show()
-</code></pre><hr>
+plt<span class="token punctuation">.</span>style<span class="token punctuation">.</span>use<span class="token punctuation">(</span><span class="token string">'ggplot'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>stock_num<span class="token punctuation">,</span> price<span class="token punctuation">,</span> <span class="token string">'b-o'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>stock_num<span class="token punctuation">,</span> y<span class="token punctuation">,</span> <span class="token string">'r-.'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xticks<span class="token punctuation">(</span>stock_num<span class="token punctuation">,</span> stock_name<span class="token punctuation">,</span> rotation<span class="token operator">=</span><span class="token number">45</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>yticks<span class="token punctuation">(</span>price_y<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'price of stock share, July 2010-June 2011'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'months'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">"price($)"</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
 <p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> (来信请注明文章标题，如果附带链接就更方便了)</p>
 
             </div>
@@ -1011,26 +1012,39 @@ plt.show()
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/25/stats-03/">
+                <a href="/2018/12/25/stats-04/">
                     <div class="card-image">
                         
+                        <img src="/images/stats/s_04.png" class="responsive-img" alt="统计学04：条形图">
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="统计学03：象形统计图">
-                        
-                        <span class="card-title">统计学03：象形统计图</span>
+                        <span class="card-title">统计学04：条形图</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">统计学•目录 统计学•类别  math
 
-象形统计图 pictograph
-表现统计数字大小和变动的各种图形总称
+条形图 bar学生期中成绩和期末成绩如下表
 
 
-特点：形象，直观，数据比例很清楚
+name
+Jasmine
+Jeff
+Nevin
+Alejandra
+Marta
 
 
-博主个人能力有限，错误在所难免．如发现错误请不要吝啬，发邮件给博主更正内容，在此提前</div>
+
+
+MidtermExam
+73
+87
+84
+81
+95
+
+
+Fi</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-25
@@ -1058,8 +1072,16 @@ plt.show()
                         <span class="chip bg-color">Math</span>
                     </a>
                     
-                    <a href="/tags/象形统计图/" target="_blank">
-                        <span class="chip bg-color">象形统计图</span>
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/matplotlib/" target="_blank">
+                        <span class="chip bg-color">matplotlib</span>
+                    </a>
+                    
+                    <a href="/tags/条形图/" target="_blank">
+                        <span class="chip bg-color">条形图</span>
                     </a>
                     
                 </div>

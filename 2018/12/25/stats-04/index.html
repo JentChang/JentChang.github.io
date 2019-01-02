@@ -491,39 +491,40 @@ Fi">
 <p>把数据通过可视化的方法呈现出来，可以让我们更直观的观察一些在数字上没有直接发现的东西．</p>
 </blockquote>
 <p><code>以下代码是绘制条形图的命令</code></p>
-<pre><code>import numpy as np
-import matplotlib.pyplot as plt
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
 
 
-name = [&#39;Jasmine&#39;, &#39;Jeff&#39;, &#39;Nevin&#39;, &#39;Alejandra&#39;, &#39;Marta&#39;]
-midterm_exam = (73, 87, 84, 81, 95)
-final_exam = (78, 85, 87, 95, 90)
+name <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Jasmine'</span><span class="token punctuation">,</span> <span class="token string">'Jeff'</span><span class="token punctuation">,</span> <span class="token string">'Nevin'</span><span class="token punctuation">,</span> <span class="token string">'Alejandra'</span><span class="token punctuation">,</span> <span class="token string">'Marta'</span><span class="token punctuation">]</span>
+midterm_exam <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">73</span><span class="token punctuation">,</span> <span class="token number">87</span><span class="token punctuation">,</span> <span class="token number">84</span><span class="token punctuation">,</span> <span class="token number">81</span><span class="token punctuation">,</span> <span class="token number">95</span><span class="token punctuation">)</span>
+final_exam <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">78</span><span class="token punctuation">,</span> <span class="token number">85</span><span class="token punctuation">,</span> <span class="token number">87</span><span class="token punctuation">,</span> <span class="token number">95</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">)</span>
 
-fig, ax = plt.subplots()
+fig<span class="token punctuation">,</span> ax <span class="token operator">=</span> plt<span class="token punctuation">.</span>subplots<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-index = np.arange(len(name))
-bar_width = 0.35
-opacity = 0.6
-error_config = {&#39;ecolor&#39;: &#39;0.3&#39;}
+index <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>len<span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+bar_width <span class="token operator">=</span> <span class="token number">0.35</span>
+opacity <span class="token operator">=</span> <span class="token number">0.6</span>
+error_config <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'ecolor'</span><span class="token punctuation">:</span> <span class="token string">'0.3'</span><span class="token punctuation">}</span>
 
-rects1 = ax.bar(index + bar_width / 2, midterm_exam, bar_width,
-                color=&#39;b&#39;, alpha=opacity, yerr=3,
-                error_kw=error_config,
-                label=&#39;midterm_exam&#39;)
+rects1 <span class="token operator">=</span> ax<span class="token punctuation">.</span>bar<span class="token punctuation">(</span>index <span class="token operator">+</span> bar_width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> midterm_exam<span class="token punctuation">,</span> bar_width<span class="token punctuation">,</span>
+                color<span class="token operator">=</span><span class="token string">'b'</span><span class="token punctuation">,</span> alpha<span class="token operator">=</span>opacity<span class="token punctuation">,</span> yerr<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span>
+                error_kw<span class="token operator">=</span>error_config<span class="token punctuation">,</span>
+                label<span class="token operator">=</span><span class="token string">'midterm_exam'</span><span class="token punctuation">)</span>
 
-rects2 = ax.bar(index + 3 * bar_width / 2, final_exam, bar_width,
-                color=&#39;r&#39;, alpha=opacity, yerr=3,
-                error_kw=error_config,
-                label=&#39;final_exam&#39;)
+rects2 <span class="token operator">=</span> ax<span class="token punctuation">.</span>bar<span class="token punctuation">(</span>index <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">*</span> bar_width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> final_exam<span class="token punctuation">,</span> bar_width<span class="token punctuation">,</span>
+                color<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">,</span> alpha<span class="token operator">=</span>opacity<span class="token punctuation">,</span> yerr<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span>
+                error_kw<span class="token operator">=</span>error_config<span class="token punctuation">,</span>
+                label<span class="token operator">=</span><span class="token string">'final_exam'</span><span class="token punctuation">)</span>
 
-ax.set_xlabel(&#39;name&#39;)
-ax.set_ylabel(&#39;Score(%)&#39;)
-ax.set_title(&#39;Scores on Midterm and Final Exams&#39;)
-ax.set_xticks(index + 3 * bar_width / 2)
-ax.set_xticklabels(name)
-ax.legend(fontsize=&#39;x-small&#39;, loc=&#39;upper left&#39;, scatterpoints=1)
-plt.show()
-</code></pre><hr>
+ax<span class="token punctuation">.</span>set_xlabel<span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>set_ylabel<span class="token punctuation">(</span><span class="token string">'Score(%)'</span><span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>set_title<span class="token punctuation">(</span><span class="token string">'Scores on Midterm and Final Exams'</span><span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>set_xticks<span class="token punctuation">(</span>index <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">*</span> bar_width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>set_xticklabels<span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>fontsize<span class="token operator">=</span><span class="token string">'x-small'</span><span class="token punctuation">,</span> loc<span class="token operator">=</span><span class="token string">'upper left'</span><span class="token punctuation">,</span> scatterpoints<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<hr>
 <p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> (来信请注明文章标题，如果附带链接就更方便了)</p>
 
             </div>
@@ -946,26 +947,28 @@ plt.show()
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
-                <a href="/2018/12/25/stats-03/">
+                <a href="/2018/12/25/stats-05/">
                     <div class="card-image">
                         
+                        <img src="/images/stats/s_05.png" class="responsive-img" alt="统计学05：线形图">
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="统计学03：象形统计图">
-                        
-                        <span class="card-title">统计学03：象形统计图</span>
+                        <span class="card-title">统计学05：线形图</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">统计学•目录 统计学•类别  math
 
-象形统计图 pictograph
-表现统计数字大小和变动的各种图形总称
+线形图一家投资公司有如下12个月的特定股票业绩数据如下表这一年间，股价是上涨？下跌？还是不变？
 
 
-特点：形象，直观，数据比例很清楚
 
-
-博主个人能力有限，错误在所难免．如发现错误请不要吝啬，发邮件给博主更正内容，在此提前</div>
+July
+August
+September
+October
+November
+December
+</div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-25
@@ -993,8 +996,20 @@ plt.show()
                         <span class="chip bg-color">Math</span>
                     </a>
                     
-                    <a href="/tags/象形统计图/" target="_blank">
-                        <span class="chip bg-color">象形统计图</span>
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/matplotlib/" target="_blank">
+                        <span class="chip bg-color">matplotlib</span>
+                    </a>
+                    
+                    <a href="/tags/scipy/" target="_blank">
+                        <span class="chip bg-color">scipy</span>
+                    </a>
+                    
+                    <a href="/tags/线形图/" target="_blank">
+                        <span class="chip bg-color">线形图</span>
                     </a>
                     
                 </div>
@@ -1006,24 +1021,26 @@ plt.show()
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/25/stats-02/">
+                <a href="/2018/12/25/stats-03/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="统计学02：极差 中程数">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="统计学03：象形统计图">
                         
-                        <span class="card-title">统计学02：极差 中程数</span>
+                        <span class="card-title">统计学03：象形统计图</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">统计学•目录 统计学•类别  math
 
-极差 range最小值于最大值之差
+象形统计图 pictograph
+表现统计数字大小和变动的各种图形总称
 
-数值越小越紧密
 
-一组数：65,81,73,58,94,79,67,93,82range: 94-65 = 29
-L = [65,81,73,58,94,79,</div>
+特点：形象，直观，数据比例很清楚
+
+
+博主个人能力有限，错误在所难免．如发现错误请不要吝啬，发邮件给博主更正内容，在此提前</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-25
@@ -1051,16 +1068,8 @@ L = [65,81,73,58,94,79,</div>
                         <span class="chip bg-color">Math</span>
                     </a>
                     
-                    <a href="/tags/Python/" target="_blank">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/极差/" target="_blank">
-                        <span class="chip bg-color">极差</span>
-                    </a>
-                    
-                    <a href="/tags/中程数/" target="_blank">
-                        <span class="chip bg-color">中程数</span>
+                    <a href="/tags/象形统计图/" target="_blank">
+                        <span class="chip bg-color">象形统计图</span>
                     </a>
                     
                 </div>
