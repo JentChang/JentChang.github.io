@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://JentChang.github.io/"/>
-  <updated>2018-12-29T07:26:26.177Z</updated>
+  <updated>2019-01-03T07:12:13.667Z</updated>
   <id>http://JentChang.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://JentChang.github.io/2018/12/29/morning-lectures/"/>
     <id>http://JentChang.github.io/2018/12/29/morning-lectures/</id>
     <published>2018-12-29T06:36:47.000Z</published>
-    <updated>2018-12-29T07:26:26.177Z</updated>
+    <updated>2019-01-03T07:12:13.667Z</updated>
     
     <summary type="html">
     
@@ -45,11 +45,135 @@
   </entry>
   
   <entry>
-    <title>统计学11：集中趋势</title>
-    <link href="http://JentChang.github.io/2018/12/25/stats-11/"/>
-    <id>http://JentChang.github.io/2018/12/25/stats-11/</id>
-    <published>2018-12-25T15:15:51.000Z</published>
-    <updated>2019-01-02T13:24:38.000Z</updated>
+    <title>统计学17：随机变量介绍</title>
+    <link href="http://JentChang.github.io/2018/12/25/stats-17/"/>
+    <id>http://JentChang.github.io/2018/12/25/stats-17/</id>
+    <published>2018-12-25T15:15:57.000Z</published>
+    <updated>2019-01-03T14:24:05.718Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/math/statistical.html&quot;&gt;统计学•目录&lt;/a&gt; &lt;a href=&quot;/categories/Statistical/&quot;&gt;统计学•类别&lt;/a&gt;  &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Statistical" scheme="http://JentChang.github.io/categories/Statistical/"/>
+    
+    
+      <category term="Statistical" scheme="http://JentChang.github.io/tags/Statistical/"/>
+    
+      <category term="Math" scheme="http://JentChang.github.io/tags/Math/"/>
+    
+      <category term="随机变量" scheme="http://JentChang.github.io/tags/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>统计学16：方差的公式</title>
+    <link href="http://JentChang.github.io/2018/12/25/stats-16/"/>
+    <id>http://JentChang.github.io/2018/12/25/stats-16/</id>
+    <published>2018-12-25T15:15:56.000Z</published>
+    <updated>2019-01-03T14:26:52.297Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/math/statistical.html&quot;&gt;统计学•目录&lt;/a&gt; &lt;a href=&quot;/categories/Statistical/&quot;&gt;统计学•类别&lt;/a&gt;  &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Statistical" scheme="http://JentChang.github.io/categories/Statistical/"/>
+    
+    
+      <category term="Statistical" scheme="http://JentChang.github.io/tags/Statistical/"/>
+    
+      <category term="Math" scheme="http://JentChang.github.io/tags/Math/"/>
+    
+      <category term="方差公式" scheme="http://JentChang.github.io/tags/%E6%96%B9%E5%B7%AE%E5%85%AC%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>统计学15：标准差</title>
+    <link href="http://JentChang.github.io/2018/12/25/stats-15/"/>
+    <id>http://JentChang.github.io/2018/12/25/stats-15/</id>
+    <published>2018-12-25T15:15:55.000Z</published>
+    <updated>2019-01-03T11:24:37.942Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/math/statistical.html&quot;&gt;统计学•目录&lt;/a&gt; &lt;a href=&quot;/categories/Statistical/&quot;&gt;统计学•类别&lt;/a&gt;  &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Statistical" scheme="http://JentChang.github.io/categories/Statistical/"/>
+    
+    
+      <category term="Statistical" scheme="http://JentChang.github.io/tags/Statistical/"/>
+    
+      <category term="Math" scheme="http://JentChang.github.io/tags/Math/"/>
+    
+      <category term="numpy" scheme="http://JentChang.github.io/tags/numpy/"/>
+    
+      <category term="标准差" scheme="http://JentChang.github.io/tags/%E6%A0%87%E5%87%86%E5%B7%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>统计学14：样本方差</title>
+    <link href="http://JentChang.github.io/2018/12/25/stats-14/"/>
+    <id>http://JentChang.github.io/2018/12/25/stats-14/</id>
+    <published>2018-12-25T15:15:54.000Z</published>
+    <updated>2019-01-03T08:33:07.782Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/math/statistical.html&quot;&gt;统计学•目录&lt;/a&gt; &lt;a href=&quot;/categories/Statistical/&quot;&gt;统计学•类别&lt;/a&gt;  &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Statistical" scheme="http://JentChang.github.io/categories/Statistical/"/>
+    
+    
+      <category term="Statistical" scheme="http://JentChang.github.io/tags/Statistical/"/>
+    
+      <category term="Math" scheme="http://JentChang.github.io/tags/Math/"/>
+    
+      <category term="方差" scheme="http://JentChang.github.io/tags/%E6%96%B9%E5%B7%AE/"/>
+    
+      <category term="样本" scheme="http://JentChang.github.io/tags/%E6%A0%B7%E6%9C%AC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>统计学13：总体方差</title>
+    <link href="http://JentChang.github.io/2018/12/25/stats-13/"/>
+    <id>http://JentChang.github.io/2018/12/25/stats-13/</id>
+    <published>2018-12-25T15:15:53.000Z</published>
+    <updated>2019-01-03T08:29:20.024Z</updated>
     
     <summary type="html">
     
@@ -72,7 +196,67 @@
     
       <category term="Python" scheme="http://JentChang.github.io/tags/Python/"/>
     
-      <category term="matplotlib" scheme="http://JentChang.github.io/tags/matplotlib/"/>
+      <category term="方差" scheme="http://JentChang.github.io/tags/%E6%96%B9%E5%B7%AE/"/>
+    
+      <category term="离中趋势" scheme="http://JentChang.github.io/tags/%E7%A6%BB%E4%B8%AD%E8%B6%8B%E5%8A%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>统计学12：样本和总体</title>
+    <link href="http://JentChang.github.io/2018/12/25/stats-12/"/>
+    <id>http://JentChang.github.io/2018/12/25/stats-12/</id>
+    <published>2018-12-25T15:15:52.000Z</published>
+    <updated>2019-01-03T02:38:48.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/math/statistical.html&quot;&gt;统计学•目录&lt;/a&gt; &lt;a href=&quot;/categories/Statistical/&quot;&gt;统计学•类别&lt;/a&gt;  &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Statistical" scheme="http://JentChang.github.io/categories/Statistical/"/>
+    
+    
+      <category term="Statistical" scheme="http://JentChang.github.io/tags/Statistical/"/>
+    
+      <category term="Math" scheme="http://JentChang.github.io/tags/Math/"/>
+    
+      <category term="样本和总体" scheme="http://JentChang.github.io/tags/%E6%A0%B7%E6%9C%AC%E5%92%8C%E6%80%BB%E4%BD%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>统计学11：集中趋势</title>
+    <link href="http://JentChang.github.io/2018/12/25/stats-11/"/>
+    <id>http://JentChang.github.io/2018/12/25/stats-11/</id>
+    <published>2018-12-25T15:15:51.000Z</published>
+    <updated>2019-01-02T13:51:24.076Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/math/statistical.html&quot;&gt;统计学•目录&lt;/a&gt; &lt;a href=&quot;/categories/Statistical/&quot;&gt;统计学•类别&lt;/a&gt;  &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Statistical" scheme="http://JentChang.github.io/categories/Statistical/"/>
+    
+    
+      <category term="Statistical" scheme="http://JentChang.github.io/tags/Statistical/"/>
+    
+      <category term="Math" scheme="http://JentChang.github.io/tags/Math/"/>
     
       <category term="集中趋势" scheme="http://JentChang.github.io/tags/%E9%9B%86%E4%B8%AD%E8%B6%8B%E5%8A%BF/"/>
     
@@ -147,7 +331,7 @@
     <link href="http://JentChang.github.io/2018/12/25/stats-08/"/>
     <id>http://JentChang.github.io/2018/12/25/stats-08/</id>
     <published>2018-12-25T15:15:48.000Z</published>
-    <updated>2019-01-02T08:13:44.000Z</updated>
+    <updated>2019-01-03T06:27:54.055Z</updated>
     
     <summary type="html">
     
@@ -281,6 +465,36 @@
   </entry>
   
   <entry>
+    <title>统计学03：象形统计图</title>
+    <link href="http://JentChang.github.io/2018/12/25/stats-03/"/>
+    <id>http://JentChang.github.io/2018/12/25/stats-03/</id>
+    <published>2018-12-25T15:15:44.000Z</published>
+    <updated>2019-01-02T13:54:27.011Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/math/statistical.html&quot;&gt;统计学•目录&lt;/a&gt; &lt;a href=&quot;/categories/Statistical/&quot;&gt;统计学•类别&lt;/a&gt;  &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Statistical" scheme="http://JentChang.github.io/categories/Statistical/"/>
+    
+    
+      <category term="Statistical" scheme="http://JentChang.github.io/tags/Statistical/"/>
+    
+      <category term="Math" scheme="http://JentChang.github.io/tags/Math/"/>
+    
+      <category term="象形统计图" scheme="http://JentChang.github.io/tags/%E8%B1%A1%E5%BD%A2%E7%BB%9F%E8%AE%A1%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>统计学04：条形图</title>
     <link href="http://JentChang.github.io/2018/12/25/stats-04/"/>
     <id>http://JentChang.github.io/2018/12/25/stats-04/</id>
@@ -311,36 +525,6 @@
       <category term="matplotlib" scheme="http://JentChang.github.io/tags/matplotlib/"/>
     
       <category term="条形图" scheme="http://JentChang.github.io/tags/%E6%9D%A1%E5%BD%A2%E5%9B%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>统计学03：象形统计图</title>
-    <link href="http://JentChang.github.io/2018/12/25/stats-03/"/>
-    <id>http://JentChang.github.io/2018/12/25/stats-03/</id>
-    <published>2018-12-25T15:15:44.000Z</published>
-    <updated>2018-12-28T10:08:04.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;/contents/math/statistical.html&quot;&gt;统计学•目录&lt;/a&gt; &lt;a href=&quot;/categories/Statistical/&quot;&gt;统计学•类别&lt;/a&gt;  &lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Statistical" scheme="http://JentChang.github.io/categories/Statistical/"/>
-    
-    
-      <category term="Statistical" scheme="http://JentChang.github.io/tags/Statistical/"/>
-    
-      <category term="Math" scheme="http://JentChang.github.io/tags/Math/"/>
-    
-      <category term="象形统计图" scheme="http://JentChang.github.io/tags/%E8%B1%A1%E5%BD%A2%E7%BB%9F%E8%AE%A1%E5%9B%BE/"/>
     
   </entry>
   
