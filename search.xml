@@ -529,35 +529,6 @@
     
     
     <entry>
-      <title>统计学03：象形统计图</title>
-      <link href="/2018/12/25/stats-03/"/>
-      <url>/2018/12/25/stats-03/</url>
-      
-        <content type="html"><![CDATA[<p><a href="/contents/math/statistical.html">统计学•目录</a> <a href="/categories/Statistical/">统计学•类别</a>  <a href="/contents/math/">math</a></p><hr><h1 id="象形统计图-pictograph"><a href="#象形统计图-pictograph" class="headerlink" title="象形统计图 pictograph"></a>象形统计图 pictograph</h1><blockquote><p>表现统计数字大小和变动的各种图形总称</p></blockquote><blockquote><p>特点：形象，直观，数据比例很清楚</p></blockquote><blockquote><p>人眼是个高带宽的巨量信号输入并行处理器，具有超强的模式识别能力，对可视符号的感知速度对数字或文本快多个数量级．</p></blockquote><hr><p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> (来信请注明文章标题，如果附带链接就更方便了)</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Statistical </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Statistical </tag>
-            
-            <tag> Math </tag>
-            
-            <tag> 象形统计图 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>统计学04：条形图</title>
       <link href="/2018/12/25/stats-04/"/>
       <url>/2018/12/25/stats-04/</url>
@@ -583,6 +554,35 @@
             <tag> matplotlib </tag>
             
             <tag> 条形图 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>统计学03：象形统计图</title>
+      <link href="/2018/12/25/stats-03/"/>
+      <url>/2018/12/25/stats-03/</url>
+      
+        <content type="html"><![CDATA[<p><a href="/contents/math/statistical.html">统计学•目录</a> <a href="/categories/Statistical/">统计学•类别</a>  <a href="/contents/math/">math</a></p><hr><h1 id="象形统计图-pictograph"><a href="#象形统计图-pictograph" class="headerlink" title="象形统计图 pictograph"></a>象形统计图 pictograph</h1><blockquote><p>表现统计数字大小和变动的各种图形总称</p></blockquote><blockquote><p>特点：形象，直观，数据比例很清楚</p></blockquote><blockquote><p>人眼是个高带宽的巨量信号输入并行处理器，具有超强的模式识别能力，对可视符号的感知速度对数字或文本快多个数量级．</p></blockquote><hr><p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> (来信请注明文章标题，如果附带链接就更方便了)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Statistical </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Statistical </tag>
+            
+            <tag> Math </tag>
+            
+            <tag> 象形统计图 </tag>
             
         </tags>
       
