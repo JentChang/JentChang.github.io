@@ -5,14 +5,11 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="统计学16：方差的公式, Jent 金融 量化 Python MachineLearning">
+    <meta name="keywords" content="统计学20：二项分布2, Jent 金融 量化 Python MachineLearning">
     <meta name="description" content="统计学•目录 统计学•类别  math
 
-方差公式
-基于总体方差公式
-
-$$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
-推导　　　　　　　　　　　　　　　　　　$\sigma ^ ">
+二项分布
+随机变量是一种映射关系．还是以上一节投掷硬币情况为例$$X=\begin{cases}0&amp;amp; \text{全为正面},\\1&amp;amp; \text{有$1$次为正面},\\2&amp;amp">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +17,7 @@ $$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>统计学16：方差的公式 | 简•客</title>
+    <title>统计学20：二项分布2 | 简•客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -275,13 +272,13 @@ $$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/images/stats/s_20.png')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        统计学16：方差的公式
+                        统计学20：二项分布2
                     </div>
                 </div>
             </div>
@@ -400,8 +397,12 @@ $$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
                     <span class="chip bg-color">Math</span>
                 </a>
                 
-                <a href="/tags/方差公式/" target="_blank">
-                    <span class="chip bg-color">方差公式</span>
+                <a href="/tags/matplotlib/" target="_blank">
+                    <span class="chip bg-color">matplotlib</span>
+                </a>
+                
+                <a href="/tags/二项分布/" target="_blank">
+                    <span class="chip bg-color">二项分布</span>
                 </a>
                 
             </div>
@@ -428,17 +429,113 @@ $$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
             <div id="articleContent">
                 <p><a href="/contents/math/statistical.html">统计学•目录</a> <a href="/categories/Statistical/">统计学•类别</a>  <a href="/contents/math/">math</a></p>
 <hr>
-<h1 id="方差公式"><a href="#方差公式" class="headerlink" title="方差公式"></a>方差公式</h1><blockquote>
-<p>基于总体方差公式</p>
+<h1 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h1><blockquote>
+<p>随机变量是一种映射关系．还是以上一节投掷硬币情况为例<br>$$X=\begin{cases}<br>0&amp; \text{全为正面},\\<br>1&amp; \text{有$1$次为正面},\\<br>2&amp; \text{有$2$次为正面},\\<br>3&amp; \text{有$3$次为正面},\\<br>4&amp; \text{有$4$次为正面},\\<br>5&amp; \text{全不为正面}.<br>\end{cases}$$</p>
 </blockquote>
-<p>$$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$</p>
-<p>推导<br>　　　　　　　　　　　　　　　　　　$\sigma ^ 2 = \frac{\sum_{i=1}^N (x_i-\mu)^2}{N} \\<br>　= \frac{\sum_{i=1}^N (x_i^2 - 2\mu x_i + \mu^2)}{N} \\<br>　= \frac{\sum_{i=1}^N x_i^2 - 2\mu \sum_{i=1}^N x_i + \mu^2\sum_{i=1}^N 1}{N} \\<br>　= \frac{\sum_{i=1}^N x_i^2 - 2\mu \sum_{i=1}^N x_i + \mu^2N}{N} \\<br>　= \frac{\sum_{i=1}^N x_i^2}{N}-<br>              \frac{2\mu \sum_{i=1}^N x_i}{N}+<br>              \frac{\mu^2N}{N} \\<br>　= \frac{\sum_{i=1}^N x_i^2}{N}-<br>              2\mu^2+<br>              \mu^2 \\<br>　= \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2<br>$</p>
+<p>把上概率整理如下图表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">事件</th>
+<th style="text-align:center">值</th>
+<th style="text-align:center">事件</th>
+<th style="text-align:center">值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$P(X=0)$</td>
+<td style="text-align:center">$\frac{1}{32}$</td>
+<td style="text-align:center">$P(X=3)$</td>
+<td style="text-align:center">$\frac{5}{16}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$P(X=1)$</td>
+<td style="text-align:center">$\frac{5}{32}$</td>
+<td style="text-align:center">$P(X=4)$</td>
+<td style="text-align:center">$\frac{5}{32}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$P(X=2)$</td>
+<td style="text-align:center">$\frac{5}{16}$</td>
+<td style="text-align:center">$P(X=5)$</td>
+<td style="text-align:center">$\frac{1}{32}$</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/images/stats/s_20_02.png" alt="图片"></p>
 <blockquote>
-<p>公式可以帮助你更快的计算，当然你有了python和excel，将会不屑这些，不过我觉得有必要去推一下，毕竟你是玩这个领域东西的人．</p>
+<p>如果投掷的次数非常的多，把它们的概率值用曲线描出来，就是一根钟形曲线．<br><strong>在离散中是二项分布，在连续中它是正态分布．</strong></p>
 </blockquote>
+<p><img src="/images/stats/s_20.png" alt="图片"></p>
 <blockquote>
-<p>看到目录你可能会震惊，什么是诸方差，完全没有听过，那并不是在说诸方差这个名词，它是诸多方差公式的意思．</p>
+<p>人们经常对特定事物进行假设（很多时候我们无法知道事物机理），假设很多随机事物在进行，把这些随机事件加起来，就像掷硬币数正面这样（假设为事件的发生符合二项分布或正态分布）．</p>
 </blockquote>
+<p>在绘制第二张图表的代码中，你会发现我定义了一个函数，而不是一个一个枚举出对应的概率值，这说明它是可以被总结出公式的．<br>还记得上一节我在最后的$P(X=5)$求解时，把系数（后面是每次独立发生的概率值）写了$C_5^5$吗？</p>
+<blockquote>
+<p>$C_n^m$表示从$n$个元素中挑选出$m$个元素（无序）的可能．（也可以理解为从$n$次实验中发生$m$次同事件的可能）</p>
+</blockquote>
+<h3 id="二项式系数公式"><a href="#二项式系数公式" class="headerlink" title="二项式系数公式"></a>二项式系数公式</h3><p>$$(_k^n)=C_n^m = \frac{n!}{m!(n-m)!}$$</p>
+<blockquote>
+<p>也可以继续上一节那个分析，$\frac{A_n^m}{A_m^m}$记为$C_n^m$</p>
+</blockquote>
+<p>有了二项式系数其实就是从$n$次实验中发生$m$次同事件的可能种类数，然后它乘一每次事件的概率就是我们求的$P(X=m)$．<br>那么二项式分布$X～B(n,p)$的公式就来了：<br>$$P(k,n,p) = P(X=k) = (_k^n)p^k(1-P)^{n-k}$$</p>
+<h4 id="投掷5次硬币的代码"><a href="#投掷5次硬币的代码" class="headerlink" title="投掷5次硬币的代码"></a>投掷5次硬币的代码</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt 
+<span class="token keyword">from</span> mpl_toolkits<span class="token punctuation">.</span>axisartist<span class="token punctuation">.</span>axislines <span class="token keyword">import</span> SubplotZero
+
+x <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+y <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token operator">/</span><span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token operator">/</span><span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token operator">/</span><span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token operator">/</span><span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token operator">/</span><span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">32</span><span class="token punctuation">]</span>
+xticks <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+yticks <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'1/32'</span><span class="token punctuation">,</span> <span class="token string">'5/32'</span><span class="token punctuation">,</span> <span class="token string">'10/32'</span><span class="token punctuation">,</span> <span class="token string">'10/32'</span><span class="token punctuation">,</span> <span class="token string">'5/32'</span><span class="token punctuation">,</span> <span class="token string">'1/32'</span><span class="token punctuation">]</span>
+
+fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">120</span><span class="token punctuation">,</span> facecolor<span class="token operator">=</span><span class="token string">'#FF9966'</span><span class="token punctuation">,</span> edgecolor<span class="token operator">=</span><span class="token string">'c'</span><span class="token punctuation">)</span> 
+ax1 <span class="token operator">=</span> SubplotZero<span class="token punctuation">(</span>fig<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> axisbg<span class="token operator">=</span><span class="token string">'#FF9966'</span><span class="token punctuation">)</span>
+fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span>ax1<span class="token punctuation">)</span>
+ax1<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token string">'y'</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'c'</span><span class="token punctuation">,</span> linestyle<span class="token operator">=</span><span class="token string">'-.'</span><span class="token punctuation">)</span>
+ax1<span class="token punctuation">.</span>axis<span class="token punctuation">[</span><span class="token string">'right'</span><span class="token punctuation">,</span> <span class="token string">'top'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>set_visible<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>yticks<span class="token punctuation">(</span>y<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>yticks<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xticks<span class="token punctuation">(</span>xticks<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylim<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token operator">/</span><span class="token number">16</span><span class="token operator">+</span><span class="token number">0.08</span><span class="token punctuation">)</span> 
+plt<span class="token punctuation">.</span>xlim<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span> 
+
+width <span class="token operator">=</span> <span class="token number">0.96</span>
+ax1<span class="token punctuation">.</span>bar<span class="token punctuation">(</span>x<span class="token operator">-</span>width<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> y<span class="token punctuation">,</span> width<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'m'</span><span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.3</span><span class="token punctuation">,</span> yerr<span class="token operator">=</span><span class="token number">0.01</span><span class="token punctuation">,</span>error_kw<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'ecolor'</span><span class="token punctuation">:</span> <span class="token string">'0.3'</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> s<span class="token punctuation">,</span> f<span class="token punctuation">,</span> i  <span class="token keyword">in</span> zip<span class="token punctuation">(</span>yticks<span class="token punctuation">,</span> y<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ax1<span class="token punctuation">.</span>annotate<span class="token punctuation">(</span>s<span class="token punctuation">,</span> xy<span class="token operator">=</span><span class="token punctuation">(</span>i<span class="token number">-0.3</span><span class="token punctuation">,</span> f<span class="token operator">+</span><span class="token number">0.012</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="增加投掷次数的代码"><a href="#增加投掷次数的代码" class="headerlink" title="增加投掷次数的代码"></a>增加投掷次数的代码</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
+<span class="token keyword">from</span> math <span class="token keyword">import</span> factorial
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt 
+<span class="token keyword">from</span> mpl_toolkits<span class="token punctuation">.</span>axisartist<span class="token punctuation">.</span>axislines <span class="token keyword">import</span> SubplotZero
+
+
+<span class="token keyword">def</span> <span class="token function">binomial</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> factorial<span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>factorial<span class="token punctuation">(</span>k<span class="token punctuation">)</span> <span class="token operator">*</span> factorial<span class="token punctuation">(</span>n <span class="token operator">-</span> k<span class="token punctuation">)</span> <span class="token operator">*</span> pow<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+x <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+n <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>len<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
+n <span class="token operator">+=</span> len<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span>
+y <span class="token operator">=</span> <span class="token punctuation">[</span>binomial<span class="token punctuation">(</span>n<span class="token punctuation">,</span> k<span class="token punctuation">)</span> <span class="token keyword">for</span> n<span class="token punctuation">,</span> k <span class="token keyword">in</span> zip<span class="token punctuation">(</span>n<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">120</span><span class="token punctuation">,</span> facecolor<span class="token operator">=</span><span class="token string">'#FF9966'</span><span class="token punctuation">,</span> edgecolor<span class="token operator">=</span><span class="token string">'c'</span><span class="token punctuation">)</span> 
+ax1 <span class="token operator">=</span> SubplotZero<span class="token punctuation">(</span>fig<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> axisbg<span class="token operator">=</span><span class="token string">'#FF9966'</span><span class="token punctuation">)</span>
+fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span>ax1<span class="token punctuation">)</span>
+ax1<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token string">'y'</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'c'</span><span class="token punctuation">,</span> linestyle<span class="token operator">=</span><span class="token string">'-.'</span><span class="token punctuation">)</span>
+ax1<span class="token punctuation">.</span>axis<span class="token punctuation">[</span><span class="token string">'right'</span><span class="token punctuation">,</span> <span class="token string">'top'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>set_visible<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlim<span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">)</span> 
+
+width <span class="token operator">=</span> <span class="token number">0.96</span>
+ax1<span class="token punctuation">.</span>bar<span class="token punctuation">(</span>x<span class="token operator">-</span>width<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> y<span class="token punctuation">,</span> width<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'m'</span><span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">)</span>
+
+ax1<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> <span class="token string">'b--'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
 <hr>
 <p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>
 
@@ -579,7 +676,7 @@ $$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://JentChang.github.io" class="b-link-green">简•客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/25/stats-16/" class="b-link-green">统计学16：方差的公式</a>
+                    <a href="/2018/12/25/stats-20/" class="b-link-green">统计学20：二项分布2</a>
                 </p>
             </div>
         </div>
@@ -862,30 +959,34 @@ $$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
-                <a href="/2018/12/25/stats-17/">
+                <a href="/2018/12/29/morning-lectures/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="统计学17：随机变量介绍">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Morning Lectures-181229">
                         
-                        <span class="card-title">统计学17：随机变量介绍</span>
+                        <span class="card-title">Morning Lectures-181229</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">统计学•目录 统计学•类别  math
+                    <div class="summary">question 1
+什么是Python？使用Python有什么好处？
 
-随机变量 random variable
-我们大概见过方程，如$x+3=7$，这里的$x$为变量，但是它有确定的值，这就不是随机的．类似的我们可以猜想，随机变量就是值不是确定的呗，并不能却确切的求解</div>
+
+Python是一种编程语言，它有对象、模块、线程、异常处理和自动内存管理。它简洁、简单、方便、容易扩展，有许多自带的数据结构，而且它开源。
+
+question 2
+</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-25
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-29
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Statistical/" class="post-category" target="_blank">
-                                    Statistical
+                            <a href="/categories/BreadCumbs/" class="post-category" target="_blank">
+                                    BreadCumbs
                                 </a>
                             
                             
@@ -895,16 +996,12 @@ $$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Statistical/" target="_blank">
-                        <span class="chip bg-color">Statistical</span>
+                    <a href="/tags/question/" target="_blank">
+                        <span class="chip bg-color">question</span>
                     </a>
                     
-                    <a href="/tags/Math/" target="_blank">
-                        <span class="chip bg-color">Math</span>
-                    </a>
-                    
-                    <a href="/tags/随机变量/" target="_blank">
-                        <span class="chip bg-color">随机变量</span>
+                    <a href="/tags/python/" target="_blank">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
@@ -916,31 +1013,23 @@ $$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/25/stats-15/">
+                <a href="/2018/12/25/stats-19/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="统计学15：标准差">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="统计学19：二项分布1">
                         
-                        <span class="card-title">统计学15：标准差</span>
+                        <span class="card-title">统计学19：二项分布1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">统计学•目录 统计学•类别  math
 
-标准差回顾
+二项分布看一下掷硬币的问题
 
+掷一次硬币正面或者反面发生的概率都是$\frac{1}{2}$
 
-concept
-population
-sample
-
-
-
-
-均值mean
-$\mu = \frac{\sum_{i=1}^N x_i}{N}$
-$\bar x = \frac{\su</div>
+掷五次硬币或者一次掷五个硬币（每个硬币正反 独立的，每次硬币独立的，怎么操作都一样．），记出现正面的数</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-25
@@ -968,12 +1057,8 @@ $\bar x = \frac{\su</div>
                         <span class="chip bg-color">Math</span>
                     </a>
                     
-                    <a href="/tags/numpy/" target="_blank">
-                        <span class="chip bg-color">numpy</span>
-                    </a>
-                    
-                    <a href="/tags/标准差/" target="_blank">
-                        <span class="chip bg-color">标准差</span>
+                    <a href="/tags/二项分布/" target="_blank">
+                        <span class="chip bg-color">二项分布</span>
                     </a>
                     
                 </div>

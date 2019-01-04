@@ -5,14 +5,14 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="统计学16：方差的公式, Jent 金融 量化 Python MachineLearning">
+    <meta name="keywords" content="统计学19：二项分布1, Jent 金融 量化 Python MachineLearning">
     <meta name="description" content="统计学•目录 统计学•类别  math
 
-方差公式
-基于总体方差公式
+二项分布看一下掷硬币的问题
 
-$$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
-推导　　　　　　　　　　　　　　　　　　$\sigma ^ ">
+掷一次硬币正面或者反面发生的概率都是$\frac{1}{2}$
+
+掷五次硬币或者一次掷五个硬币（每个硬币正反 独立的，每次硬币独立的，怎么操作都一样．），记出现正面的数">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +20,7 @@ $$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>统计学16：方差的公式 | 简•客</title>
+    <title>统计学19：二项分布1 | 简•客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -275,13 +275,13 @@ $$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        统计学16：方差的公式
+                        统计学19：二项分布1
                     </div>
                 </div>
             </div>
@@ -400,8 +400,8 @@ $$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
                     <span class="chip bg-color">Math</span>
                 </a>
                 
-                <a href="/tags/方差公式/" target="_blank">
-                    <span class="chip bg-color">方差公式</span>
+                <a href="/tags/二项分布/" target="_blank">
+                    <span class="chip bg-color">二项分布</span>
                 </a>
                 
             </div>
@@ -428,16 +428,55 @@ $$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
             <div id="articleContent">
                 <p><a href="/contents/math/statistical.html">统计学•目录</a> <a href="/categories/Statistical/">统计学•类别</a>  <a href="/contents/math/">math</a></p>
 <hr>
-<h1 id="方差公式"><a href="#方差公式" class="headerlink" title="方差公式"></a>方差公式</h1><blockquote>
-<p>基于总体方差公式</p>
-</blockquote>
-<p>$$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$</p>
-<p>推导<br>　　　　　　　　　　　　　　　　　　$\sigma ^ 2 = \frac{\sum_{i=1}^N (x_i-\mu)^2}{N} \\<br>　= \frac{\sum_{i=1}^N (x_i^2 - 2\mu x_i + \mu^2)}{N} \\<br>　= \frac{\sum_{i=1}^N x_i^2 - 2\mu \sum_{i=1}^N x_i + \mu^2\sum_{i=1}^N 1}{N} \\<br>　= \frac{\sum_{i=1}^N x_i^2 - 2\mu \sum_{i=1}^N x_i + \mu^2N}{N} \\<br>　= \frac{\sum_{i=1}^N x_i^2}{N}-<br>              \frac{2\mu \sum_{i=1}^N x_i}{N}+<br>              \frac{\mu^2N}{N} \\<br>　= \frac{\sum_{i=1}^N x_i^2}{N}-<br>              2\mu^2+<br>              \mu^2 \\<br>　= \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2<br>$</p>
+<h1 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h1><p>看一下掷硬币的问题</p>
 <blockquote>
-<p>公式可以帮助你更快的计算，当然你有了python和excel，将会不屑这些，不过我觉得有必要去推一下，毕竟你是玩这个领域东西的人．</p>
+<p>掷一次硬币正面或者反面发生的概率都是$\frac{1}{2}$</p>
+</blockquote>
+<p>掷五次硬币或者一次掷五个硬币（每个硬币正反 <strong>独立</strong>的，每次硬币独立的，怎么操作都一样．），记出现正面的数量为$X$.<br>$P(X=0)$（出现正面为0次的概率，也就是五次全为反面）？</p>
+<blockquote>
+<p>全为反面只有一种情况，就是第一次投掷为反，第二次为反．．．</p>
+</blockquote>
+<p>$$P(X=0)=\frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} \times \frac{1}{2}=\frac{1}{32}$$</p>
+<p>$P(X=1)$（出现正面为1次的概率）？</p>
+<blockquote>
+<p>正面为1次有5种情况，就是第一次投掷为正，其他全为反；第二次为正，其他全为反．．．<br>每中情况都是$\frac{1}{32}$（出现正面的次数和非正面的次数都是$\frac{1}{2}$）</p>
+</blockquote>
+<p>$$P(X=1)=5 \times \frac{1}{32} = \frac{5}{32}$$</p>
+<p>$P(X=2)$（出现正面为2次的概率）？</p>
+<blockquote>
+<p>还要枚举吗？好像有点累<br>分析一下：</p>
+<ul>
+<li>先确定一个正面发生的位置，它有5种（第一次投掷为正，第二次为正．．．），再确定第二个正面发生的位置，第一个记录已经占走了一个位置，还有四个位置选一个为正，有4种．　$5 \times 4$</li>
+<li>刚刚我们先确定了，再确定，多做了排序，也就是同样第二次和第三次为正，但是我们却在刚刚把它记为了两种情况（先找到2位再发现3，和先找到3再发现2）我们要排除我们不必要的排序．　$\frac{5 \times 4}{2}$</li>
+<li>每中情况都是$\frac{1}{32}$</li>
+</ul>
+</blockquote>
+<p>$$P(X=2)=\frac{5 \times 4}{2} \times \frac{1}{32} = \frac{5}{16}$$</p>
+<p>$P(X=3)$？</p>
+<blockquote>
+<ul>
+<li>确定第一个（5个位置选1个），第二个（4个位置选1个），第三个（3个位置选1个）$5 \times 4 \times 3$</li>
+<li>排除不必要的排序（3个的排序为$3 \times 2$）．　$\frac{5 \times 4 \times 3}{3 \times 2}$</li>
+<li>每中情况都是$\frac{1}{32}$</li>
+</ul>
+</blockquote>
+<p>$$P(X=3)=\frac{5 \times 4 \times 3}{3 \times 2} \times \frac{1}{32} = \frac{5}{16}$$</p>
+<p>$P(X=4)$？</p>
+<blockquote>
+<ul>
+<li>$A_5^4 = 5 \times 4 \times 3 \times 2$</li>
+<li>$\frac{A_5^4}{A_4^4} = \frac{5 \times 4 \times 3 \times 2}{4 \times 3 \times 2}$</li>
+<li>$\frac{1}{32}$</li>
+</ul>
+</blockquote>
+<p>$$P(X=4)=\frac{5 \times 4 \times 3 \times 2}{4 \times 3 \times 2} \times \frac{1}{32} = \frac{5}{32}$$</p>
+<p>$P(X=5)$？</p>
+<p>$$P(X=5)=C_5^5 \times \frac{1}{32} = \frac{1}{32}$$</p>
+<blockquote>
+<p>也可以把5次为正理解为0次为反，正反概率相等，那么$P(X=5)＝P(X=0)$</p>
 </blockquote>
 <blockquote>
-<p>看到目录你可能会震惊，什么是诸方差，完全没有听过，那并不是在说诸方差这个名词，它是诸多方差公式的意思．</p>
+<p>二项分布就是重复n次独立的伯努利试验.<br>伯努利实验:在每次试验中只有两种可能的结果，而且两种结果发生与否互相对立，并且相互独立，与其它各次试验结果无关，事件发生与否的概率在每一次独立试验中都保持不变</p>
 </blockquote>
 <hr>
 <p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>
@@ -579,7 +618,7 @@ $$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://JentChang.github.io" class="b-link-green">简•客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/12/25/stats-16/" class="b-link-green">统计学16：方差的公式</a>
+                    <a href="/2018/12/25/stats-19/" class="b-link-green">统计学19：二项分布1</a>
                 </p>
             </div>
         </div>
@@ -862,20 +901,19 @@ $$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
-                <a href="/2018/12/25/stats-17/">
+                <a href="/2018/12/25/stats-20/">
                     <div class="card-image">
                         
+                        <img src="/images/stats/s_20.png" class="responsive-img" alt="统计学20：二项分布2">
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="统计学17：随机变量介绍">
-                        
-                        <span class="card-title">统计学17：随机变量介绍</span>
+                        <span class="card-title">统计学20：二项分布2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">统计学•目录 统计学•类别  math
 
-随机变量 random variable
-我们大概见过方程，如$x+3=7$，这里的$x$为变量，但是它有确定的值，这就不是随机的．类似的我们可以猜想，随机变量就是值不是确定的呗，并不能却确切的求解</div>
+二项分布
+随机变量是一种映射关系．还是以上一节投掷硬币情况为例$$X=\begin{cases}0&amp; \text{全为正面},\\1&amp; \text{有$1$次为正面},\\2&amp</div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-25
@@ -903,8 +941,12 @@ $$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
                         <span class="chip bg-color">Math</span>
                     </a>
                     
-                    <a href="/tags/随机变量/" target="_blank">
-                        <span class="chip bg-color">随机变量</span>
+                    <a href="/tags/matplotlib/" target="_blank">
+                        <span class="chip bg-color">matplotlib</span>
+                    </a>
+                    
+                    <a href="/tags/二项分布/" target="_blank">
+                        <span class="chip bg-color">二项分布</span>
                     </a>
                     
                 </div>
@@ -916,31 +958,21 @@ $$\sigma ^ 2 = \frac{\sum_{i=1}^N x_i^2}{N} - \mu^2$$
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2018/12/25/stats-15/">
+                <a href="/2018/12/25/stats-18/">
                     <div class="card-image">
                         
+                        <img src="/images/stats/s_18.png" class="responsive-img" alt="统计学18：概率密度函数">
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="统计学15：标准差">
-                        
-                        <span class="card-title">统计学15：标准差</span>
+                        <span class="card-title">统计学18：概率密度函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">统计学•目录 统计学•类别  math
 
-标准差回顾
+概率密度函数
+首先我们需知道随机变量所有值发生概率和等于1概率密度函数是对连续随机变量而言的．
 
-
-concept
-population
-sample
-
-
-
-
-均值mean
-$\mu = \frac{\sum_{i=1}^N x_i}{N}$
-$\bar x = \frac{\su</div>
+对于连续随机变量，我们很难说$P(X=0)$（X为0的概率）是多少，而且这是个很难测的数值，因为这里</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2018-12-25
@@ -968,12 +1000,12 @@ $\bar x = \frac{\su</div>
                         <span class="chip bg-color">Math</span>
                     </a>
                     
-                    <a href="/tags/numpy/" target="_blank">
-                        <span class="chip bg-color">numpy</span>
+                    <a href="/tags/matplotlib/" target="_blank">
+                        <span class="chip bg-color">matplotlib</span>
                     </a>
                     
-                    <a href="/tags/标准差/" target="_blank">
-                        <span class="chip bg-color">标准差</span>
+                    <a href="/tags/概率密度函数/" target="_blank">
+                        <span class="chip bg-color">概率密度函数</span>
                     </a>
                     
                 </div>
