@@ -5,15 +5,13 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="统计学24：二项分布的期望值, Jent 金融 量化 Python MachineLearning">
+    <meta name="keywords" content="统计学26：泊松过程2, Jent 金融 量化 Python MachineLearning">
     <meta name="description" content="统计学•目录 统计学•类别  math
 
-二项分布的期望值假设随机变量X表示n次实验的次数，其中每次成功的概率是P.
-$$E(X) = np$$
+泊松过程
+测出平均每小时9辆车通过$\lambda=9$
 
-在二项分布中，期望值可以看成是最可能得到的那个结果．
-
-假设投篮的命中概率为40％，投10次">
+$$P(X=k) = {\lim_{n\to \infty}} \binom{n}{k} \bigg(\frac{\lambda}{n} ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +19,7 @@ $$E(X) = np$$
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>统计学24：二项分布的期望值 | 简•客</title>
+    <title>统计学26：泊松过程2 | 简•客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -276,13 +274,13 @@ $$E(X) = np$$
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        统计学24：二项分布的期望值
+                        统计学26：泊松过程2
                     </div>
                 </div>
             </div>
@@ -401,12 +399,8 @@ $$E(X) = np$$
                     <span class="chip bg-color">Math</span>
                 </a>
                 
-                <a href="/tags/二项分布/" target="_blank">
-                    <span class="chip bg-color">二项分布</span>
-                </a>
-                
-                <a href="/tags/期望值/" target="_blank">
-                    <span class="chip bg-color">期望值</span>
+                <a href="/tags/泊松过程/" target="_blank">
+                    <span class="chip bg-color">泊松过程</span>
                 </a>
                 
             </div>
@@ -433,22 +427,11 @@ $$E(X) = np$$
             <div id="articleContent">
                 <p><a href="/contents/math/statistical.html">统计学•目录</a> <a href="/categories/Statistical/">统计学•类别</a>  <a href="/contents/math/">math</a></p>
 <hr>
-<h1 id="二项分布的期望值"><a href="#二项分布的期望值" class="headerlink" title="二项分布的期望值"></a>二项分布的期望值</h1><p>假设随机变量X表示n次实验的次数，其中每次成功的概率是P.</p>
-<p>$$E(X) = np$$</p>
-<blockquote>
-<p>在二项分布中，期望值可以看成是最可能得到的那个结果．</p>
+<h1 id="泊松过程"><a href="#泊松过程" class="headerlink" title="泊松过程"></a>泊松过程</h1><blockquote>
+<p>测出平均每小时9辆车通过$\lambda=9$</p>
 </blockquote>
-<p>假设投篮的命中概率为40％，投10次．<br>那么$E(X) = np = 10 \times 40\% =4$</p>
-<blockquote>
-<p>可以理解为命中概率为40％，那么投10次，可能4次命中．</p>
-</blockquote>
-<h4 id="回顾二项式概率的公式："><a href="#回顾二项式概率的公式：" class="headerlink" title="回顾二项式概率的公式："></a>回顾二项式概率的公式：</h4><p>$$P(X=k) = (_k^n)p^k(1-P)^{n-k}$$</p>
-<h4 id="期望值公式："><a href="#期望值公式：" class="headerlink" title="期望值公式："></a>期望值公式：</h4><p>$$E(X) = \sum_{k=0}^nkP(X=k)=\sum_{k=0}^n(_k^n)kP^k(1-P)^{n-k}$$<br>$　　E(X) =0(_0^n)p^0(1-P)^{n-0}+1(_1^n)p^1(1-P)^{n-1}+…+n(_n^n)p^n(1-P)^{n-n}\\<br>　　　　　=1(_1^n)p^1(1-P)^{n-1}+…+n(_n^n)p^n(1-P)^{n-n} \\<br>　　　　　=\sum _{k=1}^n(_k^n)P^k(1-P)^{n-K}<br>$</p>
-<p><em>代入二项式系数公式</em><br>$$二项式系数　　　(_k^n)=\frac{n!}{k!(n-k)!}$$<br>　　　　　　　　　$E(X) =\sum _{k=1}^n \frac{n!}{k!(n-k)!} k P^k(1-P)^{n-K}\\<br>　　　=\sum _{k=1}^n \frac{n!}{k(k-1)!(n-k)!} k P^k(1-P)^{n-K}\\<br>　　　=\sum _{k=1}^n \frac{n!}{(k-1)!(n-k)!} P^k(1-P)^{n-K}\\<br>　　　=\sum _{k=1}^n \frac{n(n-1)!}{(k-1)!(n-k)!} PP^{k-1}(1-P)^{n-K}\\<br>　　　=np\sum _{k=1}^n \frac{(n-1)!}{(k-1)!(n-k)!} P^{k-1}(1-P)^{n-K}\\<br>$</p>
-<p><em>令$a=k-1,b=n-1$，则$n-k=b-a$</em><br>　　　　　　　　　$E(X) =np\sum _{a=0}^b \frac{(b)!}{a!(b-a)!} P^{a}(1-P)^{b-a}\\<br>　　　=np\sum _{a=0}^b (_a^b) P^{a}(1-P)^{b-a}\\<br>　　　= np<br>$</p>
-<blockquote>
-<p>$\sum _{a=0}^b (_a^b) P^{a}(1-P)^{b-a}$表示一个二项分布的概率和，和应该为1</p>
-</blockquote>
+<p>$$P(X=k) = {\lim_{n\to \infty}} \binom{n}{k} \bigg(\frac{\lambda}{n} \bigg)^k \bigg(1-\frac{\lambda}{n} \bigg)^{n-k} = \frac{\lambda ^k}{k!}e^{-\lambda}$$</p>
+<p>$P(X=2) =\frac{9 ^2}{k!}e^{-9}$$</p>
 <hr>
 <p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>
 
@@ -589,7 +572,7 @@ $$E(X) = np$$
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://JentChang.github.io" class="b-link-green">简•客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/01/01/stats-24/" class="b-link-green">统计学24：二项分布的期望值</a>
+                    <a href="/2019/01/01/stats-26/" class="b-link-green">统计学26：泊松过程2</a>
                 </p>
             </div>
         </div>
@@ -870,27 +853,28 @@ $$E(X) = np$$
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
-                <a href="/2019/01/01/stats-25/">
+                <a href="/2019/01/01/stats-26/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="统计学25：泊松过程1">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="统计学26：泊松过程2">
                         
-                        <span class="card-title">统计学25：泊松过程1</span>
+                        <span class="card-title">统计学26：泊松过程2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">统计学•目录 统计学•类别  math
 
-泊松过程确定交通道路上任意时刻通过车的数量．先定义一个相关随机变量X（表示一个小时内通过的车辆数）．
+泊松过程
+测出平均每小时9辆车通过$\lambda=9$
 
-假设条件：任意时刻的情况没有差异（没有高峰期之类的，每分每秒都一样），每一时刻是独立（不会受其</div>
+$$P(X=k) = {\lim_{n\to \infty}} \binom{n}{k} \bigg(\frac{\lambda}{n} </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -903,6 +887,7 @@ $$E(X) = np$$
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -927,21 +912,21 @@ $$E(X) = np$$
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2019/01/01/stats-23/">
+                <a href="/2019/01/01/stats-25/">
                     <div class="card-image">
                         
-                        <img src="/images/stats/s_23.png" class="responsive-img" alt="统计学23：期望值E(X)">
                         
-                        <span class="card-title">统计学23：期望值E(X)</span>
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="统计学25：泊松过程1">
+                        
+                        <span class="card-title">统计学25：泊松过程1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">统计学•目录 统计学•类别  math
 
-期望值
-如果你是在B站上看的，这一节课可能会没有字幕，这里介绍的稍微详细一点．
+泊松过程确定交通道路上任意时刻通过车的数量．先定义一个相关随机变量X（表示一个小时内通过的车辆数）．
 
-介绍集中趋势的时候，用均值描述是一种常用的方法．给出一个总体，一组数： 3, 3, 3, 4, 5它的平均数是：　$</div>
+假设条件：任意时刻的情况没有差异（没有高峰期之类的，每分每秒都一样），每一时刻是独立（不会受其</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-01
@@ -969,8 +954,8 @@ $$E(X) = np$$
                         <span class="chip bg-color">Math</span>
                     </a>
                     
-                    <a href="/tags/期望值/" target="_blank">
-                        <span class="chip bg-color">期望值</span>
+                    <a href="/tags/泊松过程/" target="_blank">
+                        <span class="chip bg-color">泊松过程</span>
                     </a>
                     
                 </div>
