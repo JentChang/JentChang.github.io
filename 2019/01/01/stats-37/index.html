@@ -5,13 +5,10 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="统计学29：正态分布介绍, Jent 金融 量化 Python MachineLearning">
+    <meta name="keywords" content="统计学37：样本均值的抽样分布2, Jent 金融 量化 Python MachineLearning">
     <meta name="description" content="统计学•目录 统计学•类别  math
 
-正态分布介绍
-推论统计几乎完全以正态分布为基础的它的重要性可想而知．像线性规划的残差就是以它为假设，然后也是通过它的基础求解的．
-
-再来熟悉你下的函数，有必要经常看一下,建议自己动手把公式显示你的面">
+样本均值的抽样分布在35节的图中，样本选择4中间会有很多个值是取不到的，发现它是一列一列的，那是因为总有值是平均不出来的，可以把样本假设为2就很容易思考出来了，随机选择两个数，他们的平均数就那么几种">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>统计学29：正态分布介绍 | 简•客</title>
+    <title>统计学37：样本均值的抽样分布2 | 简•客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -274,13 +271,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/images/stats/s_29_02.png')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        统计学29：正态分布介绍
+                        统计学37：样本均值的抽样分布2
                     </div>
                 </div>
             </div>
@@ -399,20 +396,8 @@
                     <span class="chip bg-color">Math</span>
                 </a>
                 
-                <a href="/tags/scipy/" target="_blank">
-                    <span class="chip bg-color">scipy</span>
-                </a>
-                
-                <a href="/tags/Excel/" target="_blank">
-                    <span class="chip bg-color">Excel</span>
-                </a>
-                
-                <a href="/tags/正态分布/" target="_blank">
-                    <span class="chip bg-color">正态分布</span>
-                </a>
-                
-                <a href="/tags/Matplotlib/" target="_blank">
-                    <span class="chip bg-color">Matplotlib</span>
+                <a href="/tags/样本均值的抽样分布/" target="_blank">
+                    <span class="chip bg-color">样本均值的抽样分布</span>
                 </a>
                 
             </div>
@@ -439,111 +424,11 @@
             <div id="articleContent">
                 <p><a href="/contents/math/statistical.html">统计学•目录</a> <a href="/categories/Statistical/">统计学•类别</a>  <a href="/contents/math/">math</a></p>
 <hr>
-<h1 id="正态分布介绍"><a href="#正态分布介绍" class="headerlink" title="正态分布介绍"></a>正态分布介绍</h1><blockquote>
-<p>推论统计几乎完全以正态分布为基础的它的重要性可想而知．像线性规划的残差就是以它为假设，然后也是通过它的基础求解的．</p>
-</blockquote>
-<p>再来熟悉你下的函数，有必要经常看一下,建议自己动手把公式显示你的面前，还要认识它的不同的样子．<br>$$P(X) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\big(\frac{x-\mu}{\sigma} \big)^2}$$<br>也可以是<br>$$P(X) = \frac{1}{\sqrt{2\pi \sigma ^2}}e^{-\frac{(x-\mu)^2}{2\sigma ^2}}$$<br>也可是<br>$$P(X) = \frac{1}{\sqrt{2\pi \sigma ^2 e^{z^2}}}　_{…其中z=\frac{x-\mu}{\sigma}}$$</p>
+<h1 id="样本均值的抽样分布"><a href="#样本均值的抽样分布" class="headerlink" title="样本均值的抽样分布"></a>样本均值的抽样分布</h1><p>在35节的图中，样本选择4中间会有很多个值是取不到的，发现它是一列一列的，那是因为总有值是平均不出来的，可以把样本假设为2就很容易思考出来了，随机选择两个数，他们的平均数就那么几种情况．</p>
+<p>随着样本容量趋于无穷，样本均值的抽样分布趋于正态分布，当然不需要那么多就已经观察到效果．<br>随着样本容量趋于无穷，偏度更接近于0，峰度也更接近于0，标准差是变小的．</p>
 <blockquote>
-<p>$P(X) = \frac{1}{\sqrt{2\pi \sigma ^2}} \Big( e^ {\big(\frac{x-\mu}{\sigma} \big)^2} \Big)^{-\frac{1}{2}}$<br>$e^{-\frac{1}{2}a}=\big(e^a\big)^{-\frac{1}{2}}$<br>$z=\frac{x-\mu}{\sigma}$标准$z$分数，它并不是第一次出现．</p>
+<p>样本容量非常非常的大，那么它的均值是基本代替总体均值的．几百万的样本值的均值是对总体均值的很好估计．</p>
 </blockquote>
-<h3 id="图表"><a href="#图表" class="headerlink" title="图表"></a>图表</h3><h4 id="这是一个概率密度函数图形"><a href="#这是一个概率密度函数图形" class="headerlink" title="这是一个概率密度函数图形"></a>这是一个概率密度函数图形</h4><p><img src="/images/stats/s_29_01.png" alt="图片"></p>
-<blockquote>
-<p>下载表格，尝试更改里面的均值和标准差．</p>
-</blockquote>
-<p>看看有哪些结论</p>
-<ul>
-<li>均值$\mu$是它的对称轴．</li>
-<li>标准差$\sigma$表示图形的宽窄，标准差越小，意味者数值越向平均值靠拢，在图像中就会呈现出窄的样子．（可以理解为标准差是同均值的某种平均距离）</li>
-<li>二项分布是有限的，正太分布在整个实轴上都有定义．（尽管延伸出去概率极小，但也是存在的）</li>
-</ul>
-<p>对于正态分布的概率，应该用两点间曲线下方的面积描述．<br>它的计算应该对函数求解积分．但是这个积分过于难求，因此采用数值的方法求解（累积分布函数CDF）．<br>CDF（x）是求面积的关于x的函数，它是概率密度曲线的积分，表示小于x的面积．<br>$$CDF(x)={\int_{-\infty}^{x}P(x)dx}$$</p>
-<blockquote>
-<p>之前我用累积的方法在python中求解过．</p>
-</blockquote>
-<blockquote>
-<p>在Excel中，正态分布函数<code>normdist</code>可以快速的求正态分布密度函数和累积函数<br>$normdist(x,\mu ,\sigma ,TRUE/FALSE)$TRUE表示求累积分布值，FALSE表示求概率密度函数的高值，在表格中使用函数，它会有自动提示．</p>
-</blockquote>
-<h4 id="这是一个累积分布函数图形"><a href="#这是一个累积分布函数图形" class="headerlink" title="这是一个累积分布函数图形"></a>这是一个累积分布函数图形</h4><p><img src="/images/stats/s_29_02.png" alt="图片"></p>
-<blockquote>
-<p>刚刚发现图片插入的不合适，值都和100％重合上了，不利于观察．（实际是没有重合的，表格中的数也是存在近似的）<br>没关系，只要明白$CDF(x)$对应的值是表示小于x的概率，这个图就会看了．</p>
-</blockquote>
-<p>如果要求$a＜x＜b$的概率，只需要求$CDF(a)-CDF(b)$就可以了．</p>
-<blockquote>
-<p>表格中的计算就是这样做的</p>
-</blockquote>
-<h3 id="python中的正态分布"><a href="#python中的正态分布" class="headerlink" title="python中的正态分布"></a>python中的正态分布</h3><p>在python中的科学计算包<code>scipy</code>中，stats.norm.pdf（x），stats.norm.cdf（x）分别表示概率密度函数和累积函数，具体参数这里不做介绍．<br>下面是利用python绘图程序．</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> scipy <span class="token keyword">import</span> exp<span class="token punctuation">,</span> sqrt<span class="token punctuation">,</span> stats
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
-<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
-<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>mathtext <span class="token keyword">as</span> mathtext
-
-
-<span class="token keyword">def</span> <span class="token function">f</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">return</span> stats<span class="token punctuation">.</span>norm<span class="token punctuation">.</span>pdf<span class="token punctuation">(</span>t<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">#默认标准正态分布　＼mu=0 \sigma=1</span>
-
-
-z <span class="token operator">=</span> <span class="token number">0.2</span>
-x <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">0.1</span><span class="token punctuation">)</span>
-y <span class="token operator">=</span> f<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
-
-fig<span class="token punctuation">,</span> <span class="token punctuation">(</span>ax1<span class="token punctuation">,</span> ax2<span class="token punctuation">)</span> <span class="token operator">=</span> plt<span class="token punctuation">.</span>subplots<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-ax1<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0.45</span><span class="token punctuation">)</span>
-ax1<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true"># 绘制标准正态分布</span>
-
-x2 <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">,</span> z<span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">40</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
-sum <span class="token operator">=</span> <span class="token number">0</span>
-delta <span class="token operator">=</span> <span class="token number">0.001</span>
-s <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">,</span> z<span class="token punctuation">,</span> delta<span class="token punctuation">)</span>
-
-<span class="token keyword">for</span> i <span class="token keyword">in</span> s<span class="token punctuation">:</span>
-    sum <span class="token operator">+=</span> f<span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">*</span> delta     <span class="token comment" spellcheck="true"># 累积</span>
-
-ax1<span class="token punctuation">.</span>annotate<span class="token punctuation">(</span>
-    <span class="token string">'area is '</span> <span class="token operator">+</span> str<span class="token punctuation">(</span>round<span class="token punctuation">(</span>sum<span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> xy<span class="token operator">=</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0.25</span><span class="token punctuation">)</span><span class="token punctuation">,</span> xytext<span class="token operator">=</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">3.8</span><span class="token punctuation">,</span> <span class="token number">0.4</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    arrowprops<span class="token operator">=</span>dict<span class="token punctuation">(</span>facecolor<span class="token operator">=</span><span class="token string">'red'</span><span class="token punctuation">,</span> shrink<span class="token operator">=</span><span class="token number">0.01</span><span class="token punctuation">)</span>
-<span class="token punctuation">)</span>
-ax1<span class="token punctuation">.</span>annotate<span class="token punctuation">(</span>
-    <span class="token string">'z = '</span> <span class="token operator">+</span> str<span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">,</span> xy<span class="token operator">=</span><span class="token punctuation">(</span>z<span class="token punctuation">,</span> <span class="token number">0.01</span><span class="token punctuation">)</span>
-<span class="token punctuation">)</span>
-ax1<span class="token punctuation">.</span>fill_between<span class="token punctuation">(</span>x2<span class="token punctuation">,</span> f<span class="token punctuation">(</span>x2<span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token comment" spellcheck="true"># 填充</span>
-
-
-<span class="token keyword">def</span> <span class="token function">f2</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">return</span> stats<span class="token punctuation">.</span>norm<span class="token punctuation">.</span>cdf<span class="token punctuation">(</span>x<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true"># 计算标准正态分布累积</span>
-
-
-y1 <span class="token operator">=</span> f2<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
-y2 <span class="token operator">=</span> np<span class="token punctuation">.</span>ones<span class="token punctuation">(</span>len<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">0.5</span>
-x3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
-y3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span>
-
-ax2<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y1<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span>
-ax2<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y2<span class="token punctuation">,</span> <span class="token string">'b-'</span><span class="token punctuation">)</span>
-ax2<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x3<span class="token punctuation">,</span> y3<span class="token punctuation">)</span>
-ax2<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span><span class="token punctuation">[</span>z<span class="token punctuation">,</span> z<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>f2<span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> c<span class="token operator">=</span><span class="token string">'b'</span><span class="token punctuation">,</span> marker<span class="token operator">=</span><span class="token string">'o'</span><span class="token punctuation">)</span>
-
-ax2<span class="token punctuation">.</span>annotate<span class="token punctuation">(</span>
-    <span class="token string">'f(z)=f('</span> <span class="token operator">+</span> str<span class="token punctuation">(</span>z<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">') is '</span> <span class="token operator">+</span> str<span class="token punctuation">(</span>np<span class="token punctuation">.</span>round<span class="token punctuation">(</span>f2<span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    xy<span class="token operator">=</span><span class="token punctuation">(</span>z<span class="token punctuation">,</span> f2<span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> xytext<span class="token operator">=</span><span class="token punctuation">(</span>z<span class="token number">-3</span><span class="token punctuation">,</span> f2<span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> arrowprops<span class="token operator">=</span>dict<span class="token punctuation">(</span>facecolor<span class="token operator">=</span><span class="token string">'red'</span><span class="token punctuation">,</span> shrink<span class="token operator">=</span><span class="token number">0.01</span><span class="token punctuation">)</span>
-<span class="token punctuation">)</span>
-ax2<span class="token punctuation">.</span>annotate<span class="token punctuation">(</span>
-    <span class="token string">'z is '</span> <span class="token operator">+</span> str<span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">,</span> xy<span class="token operator">=</span><span class="token punctuation">(</span>z<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> xytext<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">1.5</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-    arrowprops<span class="token operator">=</span>dict<span class="token punctuation">(</span>facecolor<span class="token operator">=</span><span class="token string">'blue'</span><span class="token punctuation">,</span> shrink<span class="token operator">=</span><span class="token number">0.01</span><span class="token punctuation">)</span>
-<span class="token punctuation">)</span>
-ax2<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
-ax2<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
-
-m <span class="token operator">=</span> r<span class="token string">'$\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$'</span>
-parser <span class="token operator">=</span> mathtext<span class="token punctuation">.</span>MathTextParser<span class="token punctuation">(</span><span class="token string">'Bitmap'</span><span class="token punctuation">)</span>
-r<span class="token punctuation">,</span> depth <span class="token operator">=</span> parser<span class="token punctuation">.</span>to_rgba<span class="token punctuation">(</span>m<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'k'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">12</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">120</span><span class="token punctuation">)</span>
-fig<span class="token punctuation">.</span>figimage<span class="token punctuation">(</span>r<span class="token punctuation">.</span>astype<span class="token punctuation">(</span>float<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">255</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">450</span><span class="token punctuation">,</span> <span class="token number">580</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-<blockquote>
-<p>多利用电子表格熟悉图形和数值之间的关系．</p>
-</blockquote>
-<hr>
-<h4 id="本节excel文件下载链接"><a href="#本节excel文件下载链接" class="headerlink" title="本节excel文件下载链接"></a>本节excel文件下载链接</h4><p><a href="http://pl0108rj3.bkt.clouddn.com/stats/excel/stat_29_%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83.xlsx" target="_blank" rel="noopener">中文表格</a><br><a href="https://www.khanacademy.org/downloads" target="_blank" rel="noopener">可汗学院原表格</a></p>
 <hr>
 <p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>
 
@@ -684,7 +569,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://JentChang.github.io" class="b-link-green">简•客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/01/01/stats-29/" class="b-link-green">统计学29：正态分布介绍</a>
+                    <a href="/2019/01/01/stats-37/" class="b-link-green">统计学37：样本均值的抽样分布2</a>
                 </p>
             </div>
         </div>
@@ -965,25 +850,25 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
-                <a href="/2019/01/01/stats-35/">
+                <a href="/2019/01/01/stats-37/">
                     <div class="card-image">
                         
-                        <img src="/images/stats/s_35.png" class="responsive-img" alt="统计学35：中心极限定理">
                         
-                        <span class="card-title">统计学35：中心极限定理</span>
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="统计学37：样本均值的抽样分布2">
+                        
+                        <span class="card-title">统计学37：样本均值的抽样分布2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">统计学•目录 统计学•类别  math
 
-中心极限定理一组数，[1, 1, 3, 4, 6, 6]（可以理解成把2，5点分别换成了1，6点的实验．），从这组数中取样本，假设样本为4．
-我用python模拟了随机的过程，动画表示样本数100,</div>
+样本均值的抽样分布在35节的图中，样本选择4中间会有很多个值是取不到的，发现它是一列一列的，那是因为总有值是平均不出来的，可以把样本假设为2就很容易思考出来了，随机选择两个数，他们的平均数就那么几种</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -996,6 +881,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1007,16 +893,8 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                         <span class="chip bg-color">Math</span>
                     </a>
                     
-                    <a href="/tags/Python/" target="_blank">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/Matplotlib/" target="_blank">
-                        <span class="chip bg-color">Matplotlib</span>
-                    </a>
-                    
-                    <a href="/tags/中心极限定理/" target="_blank">
-                        <span class="chip bg-color">中心极限定理</span>
+                    <a href="/tags/样本均值的抽样分布/" target="_blank">
+                        <span class="chip bg-color">样本均值的抽样分布</span>
                     </a>
                     
                 </div>
@@ -1028,21 +906,26 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2019/01/01/stats-28/">
+                <a href="/2019/01/01/stats-36/">
                     <div class="card-image">
                         
-                        <img src="/images/stats/s_28_02.png" class="responsive-img" alt="统计学28：正态分布Excel练习">
+                        <img src="/images/stats/s_36_02.png" class="responsive-img" alt="统计学36：样本均值的抽样分布">
                         
-                        <span class="card-title">统计学28：正态分布Excel练习</span>
+                        <span class="card-title">统计学36：样本均值的抽样分布</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">统计学•目录 统计学•类别  math
 
-正态分布Excel练习
-他有很多个名字：正态分布，高斯分布，钟形曲线
+样本均值的抽样分布
+上一节中图表表示每次实验的样本均值的频率，称为样本均值的抽样分布图．抽样分布表示，它来自于原分布．
 
-正态分布密度函数$$P(X) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\bi</div>
+
+这一节主要是抽样的模拟．
+
+视频中软件来源
+
+如果在网站中找不到可以直接通</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-01
@@ -1070,12 +953,12 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                         <span class="chip bg-color">Math</span>
                     </a>
                     
-                    <a href="/tags/Excel/" target="_blank">
-                        <span class="chip bg-color">Excel</span>
+                    <a href="/tags/中心极限定理/" target="_blank">
+                        <span class="chip bg-color">中心极限定理</span>
                     </a>
                     
-                    <a href="/tags/正态分布/" target="_blank">
-                        <span class="chip bg-color">正态分布</span>
+                    <a href="/tags/样本均值的抽样分布/" target="_blank">
+                        <span class="chip bg-color">样本均值的抽样分布</span>
                     </a>
                     
                 </div>
@@ -1176,13 +1059,6 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 <footer class="page-footer bg-color">
     <div class="container row center-align">
