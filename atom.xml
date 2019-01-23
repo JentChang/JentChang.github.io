@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://JentChang.github.io/"/>
-  <updated>2019-01-11T13:46:10.419Z</updated>
+  <updated>2019-01-23T11:26:03.067Z</updated>
   <id>http://JentChang.github.io/</id>
   
   <author>
@@ -15,6 +15,190 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>爬虫05：抓包</title>
+    <link href="http://JentChang.github.io/2019/01/22/spider-05/"/>
+    <id>http://JentChang.github.io/2019/01/22/spider-05/</id>
+    <published>2019-01-21T17:00:05.000Z</published>
+    <updated>2019-01-23T11:26:03.067Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/spider/&quot;&gt;爬虫•目录&lt;/a&gt; &lt;a href=&quot;/categories/Spider/&quot;&gt;爬虫•类别&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Fiddler&quot;&gt;&lt;a href=&quot;#Fiddler&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Spider" scheme="http://JentChang.github.io/categories/Spider/"/>
+    
+    
+      <category term="爬虫spider" scheme="http://JentChang.github.io/tags/%E7%88%AC%E8%99%ABspider/"/>
+    
+      <category term="Fiddler" scheme="http://JentChang.github.io/tags/Fiddler/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>爬虫04：数据持久存储</title>
+    <link href="http://JentChang.github.io/2019/01/22/spider-04/"/>
+    <id>http://JentChang.github.io/2019/01/22/spider-04/</id>
+    <published>2019-01-21T17:00:04.000Z</published>
+    <updated>2019-01-23T11:07:14.689Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/spider/&quot;&gt;爬虫•目录&lt;/a&gt; &lt;a href=&quot;/categories/Spider/&quot;&gt;爬虫•类别&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;Mongo数据库&quot;&gt;&lt;a href=&quot;#Mongo数据库&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Spider" scheme="http://JentChang.github.io/categories/Spider/"/>
+    
+    
+      <category term="爬虫spider" scheme="http://JentChang.github.io/tags/%E7%88%AC%E8%99%ABspider/"/>
+    
+      <category term="Mongodb" scheme="http://JentChang.github.io/tags/Mongodb/"/>
+    
+      <category term="Mysql" scheme="http://JentChang.github.io/tags/Mysql/"/>
+    
+      <category term="防火墙" scheme="http://JentChang.github.io/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>爬虫03：解析模块</title>
+    <link href="http://JentChang.github.io/2019/01/22/spider-03/"/>
+    <id>http://JentChang.github.io/2019/01/22/spider-03/</id>
+    <published>2019-01-21T17:00:03.000Z</published>
+    <updated>2019-01-23T10:51:58.117Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/spider/&quot;&gt;爬虫•目录&lt;/a&gt; &lt;a href=&quot;/categories/Spider/&quot;&gt;爬虫•类别&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;解析模块&quot;&gt;&lt;a href=&quot;#解析模块&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Spider" scheme="http://JentChang.github.io/categories/Spider/"/>
+    
+    
+      <category term="爬虫spider" scheme="http://JentChang.github.io/tags/%E7%88%AC%E8%99%ABspider/"/>
+    
+      <category term="正则解析" scheme="http://JentChang.github.io/tags/%E6%AD%A3%E5%88%99%E8%A7%A3%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>爬虫02：请求及案例</title>
+    <link href="http://JentChang.github.io/2019/01/22/spider-02/"/>
+    <id>http://JentChang.github.io/2019/01/22/spider-02/</id>
+    <published>2019-01-21T17:00:02.000Z</published>
+    <updated>2019-01-23T07:21:42.536Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/spider/&quot;&gt;爬虫•目录&lt;/a&gt; &lt;a href=&quot;/categories/Spider/&quot;&gt;爬虫•类别&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;1-GET&quot;&gt;&lt;a href=&quot;#1-GET&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Spider" scheme="http://JentChang.github.io/categories/Spider/"/>
+    
+    
+      <category term="爬虫spider" scheme="http://JentChang.github.io/tags/%E7%88%AC%E8%99%ABspider/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>爬虫01：概述,环境，模块</title>
+    <link href="http://JentChang.github.io/2019/01/22/spider-01/"/>
+    <id>http://JentChang.github.io/2019/01/22/spider-01/</id>
+    <published>2019-01-21T17:00:01.000Z</published>
+    <updated>2019-01-23T11:25:47.874Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/spider/&quot;&gt;爬虫•目录&lt;/a&gt; &lt;a href=&quot;/categories/Spider/&quot;&gt;爬虫•类别&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;获取数据的方式&quot;&gt;&lt;a href=&quot;#获取数据的方式&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Spider" scheme="http://JentChang.github.io/categories/Spider/"/>
+    
+    
+      <category term="爬虫spider" scheme="http://JentChang.github.io/tags/%E7%88%AC%E8%99%ABspider/"/>
+    
+      <category term="Anaconda" scheme="http://JentChang.github.io/tags/Anaconda/"/>
+    
+      <category term="Spyder" scheme="http://JentChang.github.io/tags/Spyder/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>统计学38：均值标准误差</title>
+    <link href="http://JentChang.github.io/2019/01/01/stats-38/"/>
+    <id>http://JentChang.github.io/2019/01/01/stats-38/</id>
+    <published>2018-12-31T16:00:18.000Z</published>
+    <updated>2019-01-14T01:19:33.375Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/math/statistical.html&quot;&gt;统计学•目录&lt;/a&gt; &lt;a href=&quot;/categories/Statistical/&quot;&gt;统计学•类别&lt;/a&gt;  &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Statistical" scheme="http://JentChang.github.io/categories/Statistical/"/>
+    
+    
+      <category term="Statistical" scheme="http://JentChang.github.io/tags/Statistical/"/>
+    
+      <category term="Math" scheme="http://JentChang.github.io/tags/Math/"/>
+    
+      <category term="均值标准误差" scheme="http://JentChang.github.io/tags/%E5%9D%87%E5%80%BC%E6%A0%87%E5%87%86%E8%AF%AF%E5%B7%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>统计学37：样本均值的抽样分布2</title>
@@ -451,192 +635,6 @@
       <category term="matplotlib" scheme="http://JentChang.github.io/tags/matplotlib/"/>
     
       <category term="二项分布" scheme="http://JentChang.github.io/tags/%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>统计学19：二项分布1</title>
-    <link href="http://JentChang.github.io/2018/12/25/stats-19/"/>
-    <id>http://JentChang.github.io/2018/12/25/stats-19/</id>
-    <published>2018-12-25T15:15:59.000Z</published>
-    <updated>2019-01-04T12:17:20.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;/contents/math/statistical.html&quot;&gt;统计学•目录&lt;/a&gt; &lt;a href=&quot;/categories/Statistical/&quot;&gt;统计学•类别&lt;/a&gt;  &lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Statistical" scheme="http://JentChang.github.io/categories/Statistical/"/>
-    
-    
-      <category term="Statistical" scheme="http://JentChang.github.io/tags/Statistical/"/>
-    
-      <category term="Math" scheme="http://JentChang.github.io/tags/Math/"/>
-    
-      <category term="二项分布" scheme="http://JentChang.github.io/tags/%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>统计学18：概率密度函数</title>
-    <link href="http://JentChang.github.io/2018/12/25/stats-18/"/>
-    <id>http://JentChang.github.io/2018/12/25/stats-18/</id>
-    <published>2018-12-25T15:15:58.000Z</published>
-    <updated>2019-01-04T13:48:40.749Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;/contents/math/statistical.html&quot;&gt;统计学•目录&lt;/a&gt; &lt;a href=&quot;/categories/Statistical/&quot;&gt;统计学•类别&lt;/a&gt;  &lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Statistical" scheme="http://JentChang.github.io/categories/Statistical/"/>
-    
-    
-      <category term="Statistical" scheme="http://JentChang.github.io/tags/Statistical/"/>
-    
-      <category term="Math" scheme="http://JentChang.github.io/tags/Math/"/>
-    
-      <category term="matplotlib" scheme="http://JentChang.github.io/tags/matplotlib/"/>
-    
-      <category term="密度函数" scheme="http://JentChang.github.io/tags/%E5%AF%86%E5%BA%A6%E5%87%BD%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>统计学17：随机变量介绍</title>
-    <link href="http://JentChang.github.io/2018/12/25/stats-17/"/>
-    <id>http://JentChang.github.io/2018/12/25/stats-17/</id>
-    <published>2018-12-25T15:15:57.000Z</published>
-    <updated>2019-01-03T14:24:05.718Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;/contents/math/statistical.html&quot;&gt;统计学•目录&lt;/a&gt; &lt;a href=&quot;/categories/Statistical/&quot;&gt;统计学•类别&lt;/a&gt;  &lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Statistical" scheme="http://JentChang.github.io/categories/Statistical/"/>
-    
-    
-      <category term="Statistical" scheme="http://JentChang.github.io/tags/Statistical/"/>
-    
-      <category term="Math" scheme="http://JentChang.github.io/tags/Math/"/>
-    
-      <category term="随机变量" scheme="http://JentChang.github.io/tags/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>统计学16：方差的公式</title>
-    <link href="http://JentChang.github.io/2018/12/25/stats-16/"/>
-    <id>http://JentChang.github.io/2018/12/25/stats-16/</id>
-    <published>2018-12-25T15:15:56.000Z</published>
-    <updated>2019-01-04T13:12:15.626Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;/contents/math/statistical.html&quot;&gt;统计学•目录&lt;/a&gt; &lt;a href=&quot;/categories/Statistical/&quot;&gt;统计学•类别&lt;/a&gt;  &lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Statistical" scheme="http://JentChang.github.io/categories/Statistical/"/>
-    
-    
-      <category term="Statistical" scheme="http://JentChang.github.io/tags/Statistical/"/>
-    
-      <category term="Math" scheme="http://JentChang.github.io/tags/Math/"/>
-    
-      <category term="方差公式" scheme="http://JentChang.github.io/tags/%E6%96%B9%E5%B7%AE%E5%85%AC%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>统计学15：标准差</title>
-    <link href="http://JentChang.github.io/2018/12/25/stats-15/"/>
-    <id>http://JentChang.github.io/2018/12/25/stats-15/</id>
-    <published>2018-12-25T15:15:55.000Z</published>
-    <updated>2019-01-03T11:24:37.942Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;/contents/math/statistical.html&quot;&gt;统计学•目录&lt;/a&gt; &lt;a href=&quot;/categories/Statistical/&quot;&gt;统计学•类别&lt;/a&gt;  &lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Statistical" scheme="http://JentChang.github.io/categories/Statistical/"/>
-    
-    
-      <category term="Statistical" scheme="http://JentChang.github.io/tags/Statistical/"/>
-    
-      <category term="Math" scheme="http://JentChang.github.io/tags/Math/"/>
-    
-      <category term="numpy" scheme="http://JentChang.github.io/tags/numpy/"/>
-    
-      <category term="标准差" scheme="http://JentChang.github.io/tags/%E6%A0%87%E5%87%86%E5%B7%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>统计学14：样本方差</title>
-    <link href="http://JentChang.github.io/2018/12/25/stats-14/"/>
-    <id>http://JentChang.github.io/2018/12/25/stats-14/</id>
-    <published>2018-12-25T15:15:54.000Z</published>
-    <updated>2019-01-03T08:33:07.782Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;/contents/math/statistical.html&quot;&gt;统计学•目录&lt;/a&gt; &lt;a href=&quot;/categories/Statistical/&quot;&gt;统计学•类别&lt;/a&gt;  &lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Statistical" scheme="http://JentChang.github.io/categories/Statistical/"/>
-    
-    
-      <category term="Statistical" scheme="http://JentChang.github.io/tags/Statistical/"/>
-    
-      <category term="Math" scheme="http://JentChang.github.io/tags/Math/"/>
-    
-      <category term="方差" scheme="http://JentChang.github.io/tags/%E6%96%B9%E5%B7%AE/"/>
-    
-      <category term="样本" scheme="http://JentChang.github.io/tags/%E6%A0%B7%E6%9C%AC/"/>
     
   </entry>
   
