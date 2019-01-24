@@ -420,7 +420,7 @@
 <hr>
 <h3 id="1-GET"><a href="#1-GET" class="headerlink" title="1.GET"></a>1.GET</h3><h4 id="1特点"><a href="#1特点" class="headerlink" title="1特点"></a>1特点</h4><p>值在url后面　以键值的形式追加在后面　</p>
 <h4 id="2案例"><a href="#2案例" class="headerlink" title="2案例"></a>2案例</h4><p>上节案例</p>
-<h3 id="2-POST（在Request-中添加data参数）"><a href="#2-POST（在Request-中添加data参数）" class="headerlink" title="2.POST（在Request()中添加data参数）"></a>2.POST（在Request()中添加data参数）</h3><h4 id="data参数"><a href="#data参数" class="headerlink" title="data参数"></a>data参数</h4><p><code>urllib.request.Request(url, data=data, headers=headers)</code><br>data 表单数据以bytes类型提交</p>
+<h3 id="2-POST（在Request-中添加data参数）"><a href="#2-POST（在Request-中添加data参数）" class="headerlink" title="2.POST（在Request()中添加data参数）"></a>2.POST（在Request()中添加data参数）</h3><h4 id="data参数"><a href="#data参数" class="headerlink" title="data参数"></a>data参数</h4><p><code>urllib.request.Request(url, data=data, headers=headers)</code><br>data 表单数据以bytes类型提交（浏览器F12　Network-&gt;Headers-&gt;From Data）</p>
 <h4 id="处理表单数据data为bytes类型"><a href="#处理表单数据data为bytes类型" class="headerlink" title="处理表单数据data为bytes类型"></a>处理表单数据data为bytes类型</h4><ul>
 <li>1.先把data定义为字典</li>
 <li>2.<code>urlencode(data).encode()</code></li>
@@ -465,7 +465,7 @@ rDict <span class="token operator">=</span> json<span class="token punctuation">
 <span class="token keyword">print</span><span class="token punctuation">(</span>rDict<span class="token punctuation">[</span><span class="token string">'translateResult'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'tgt'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 </code></pre>
 <blockquote>
-<p>验证问题后面再弄，这里只是改了url</p>
+<p>验证问题后面再弄（<a href="/2019/01/22/spider-07/">爬虫07：requests请求模块2</a>），这里只是改了url</p>
 </blockquote>
 <hr>
 <p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>

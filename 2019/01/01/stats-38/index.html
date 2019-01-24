@@ -8,8 +8,8 @@
     <meta name="keywords" content="统计学38：均值标准误差, Jent 金融 量化 Python MachineLearning">
     <meta name="description" content="统计学•目录 统计学•类别  math
 
-均值标准误差
-博主个人能力有限，错误在所难免．如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．Email: JentChang@163.com （来信请注明文章标题，如果附带链接就更方便了">
+均值标准误差已知原概率密度函数的标准差和样本容量，预测样本均值的抽样分布的方差．$$\sigma_{\bar{x}}^2 = \frac{\sigma ^2}{n}$$
+样本均值抽样分布的标准差通常">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -425,7 +425,92 @@
             <div id="articleContent">
                 <p><a href="/contents/math/statistical.html">统计学•目录</a> <a href="/categories/Statistical/">统计学•类别</a>  <a href="/contents/math/">math</a></p>
 <hr>
-<h1 id="均值标准误差"><a href="#均值标准误差" class="headerlink" title="均值标准误差"></a>均值标准误差</h1><hr>
+<h1 id="均值标准误差"><a href="#均值标准误差" class="headerlink" title="均值标准误差"></a>均值标准误差</h1><p>已知原概率密度函数的标准差和样本容量，预测样本均值的抽样分布的方差．<br>$$\sigma_{\bar{x}}^2 = \frac{\sigma ^2}{n}$$</p>
+<p>样本均值抽样分布的标准差通常称作 <strong>均值标注差</strong> 也称作均值标准误差<br>$$\sigma_{\bar{x}} = \frac{\sigma ^2}{\sqrt{n}}$$</p>
+<blockquote>
+<p>方差的代码和样本均值的抽样分布代码都在之前写过了，可以试试把他们结合起来验证一下公式的正确性．</p>
+</blockquote>
+<blockquote>
+<p>还是再来一下代码吧．<br>代码是一个讨厌的东西，但是不得不承认它是一个很好的工具．这意味着要让它为你工作要显得比必须花时间调弄它划算．</p>
+</blockquote>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 只是在代码最后添加了计算标准差</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'原来分布标准差'</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>std<span class="token punctuation">(</span>L<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'计算样本均值抽样分布标准差'</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>std<span class="token punctuation">(</span>L<span class="token punctuation">)</span><span class="token operator">/</span>np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>SIZE<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'样本均值抽样分布标准差'</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>std<span class="token punctuation">(</span>random_num<span class="token punctuation">(</span>SIZE<span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">,</span> L<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>并不是完美的一样，样本的数量不要设的太小（这里是10000）<br>代码变量名字起的不好，SIZE才是样本容量，相当于公式里面的N</p>
+</blockquote>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt 
+<span class="token keyword">from</span> mpl_toolkits<span class="token punctuation">.</span>axisartist<span class="token punctuation">.</span>axislines <span class="token keyword">import</span> SubplotZero
+<span class="token keyword">import</span> random
+<span class="token keyword">import</span> warnings
+
+
+<span class="token keyword">def</span> <span class="token function">daw</span><span class="token punctuation">(</span>SIZE<span class="token punctuation">,</span> N<span class="token punctuation">,</span> L<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">120</span><span class="token punctuation">,</span> facecolor<span class="token operator">=</span><span class="token string">'#FF9966'</span><span class="token punctuation">,</span> edgecolor<span class="token operator">=</span><span class="token string">'c'</span><span class="token punctuation">)</span> 
+    ax1 <span class="token operator">=</span> SubplotZero<span class="token punctuation">(</span>fig<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> axisbg<span class="token operator">=</span><span class="token string">'#FF9966'</span><span class="token punctuation">)</span>
+    fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span>ax1<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true"># ax1.grid(True, color='k', linestyle='-.')</span>
+    ax1<span class="token punctuation">.</span>axis<span class="token punctuation">[</span><span class="token string">'right'</span><span class="token punctuation">,</span> <span class="token string">'top'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>set_visible<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>ion<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    mean <span class="token operator">=</span> sum<span class="token punctuation">(</span>L<span class="token punctuation">)</span><span class="token operator">/</span>len<span class="token punctuation">(</span>L<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> N<span class="token punctuation">:</span>
+        plt<span class="token punctuation">.</span>pause<span class="token punctuation">(</span><span class="token number">0.0001</span><span class="token punctuation">)</span>
+        S<span class="token punctuation">,</span> S_mean <span class="token operator">=</span> random_num<span class="token punctuation">(</span>SIZE<span class="token punctuation">,</span> i<span class="token punctuation">,</span> L<span class="token punctuation">)</span>
+        x<span class="token punctuation">,</span> y <span class="token operator">=</span> stats_num<span class="token punctuation">(</span>S_mean<span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true"># print('S', S); print(mean); print('x', x); print('y', y)</span>
+        ax1<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> s<span class="token operator">=</span><span class="token number">15</span><span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.4</span><span class="token punctuation">)</span>
+        ax1<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">(</span>mean<span class="token punctuation">,</span>mean<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">1600</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'g-.'</span><span class="token punctuation">)</span>
+        ax1<span class="token punctuation">.</span>set_ylim<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">1600</span><span class="token punctuation">)</span> 
+
+    xy <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token keyword">for</span> a<span class="token punctuation">,</span> b <span class="token keyword">in</span> zip<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+    xy <span class="token operator">=</span> sorted<span class="token punctuation">(</span>xy<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> s<span class="token punctuation">:</span> s<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    x <span class="token operator">=</span> <span class="token punctuation">[</span>a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">for</span> a <span class="token keyword">in</span> xy<span class="token punctuation">]</span>
+    y <span class="token operator">=</span> <span class="token punctuation">[</span>a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">for</span> a <span class="token keyword">in</span> xy<span class="token punctuation">]</span>
+    ax1<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> <span class="token string">'r-'</span><span class="token punctuation">)</span>    
+    plt<span class="token punctuation">.</span>ioff<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token comment" spellcheck="true">## 随机取样</span>
+<span class="token keyword">def</span> <span class="token function">random_num</span><span class="token punctuation">(</span>size<span class="token punctuation">,</span> n<span class="token punctuation">,</span> l<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    S <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> size<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    S_mean <span class="token operator">=</span> list<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        _s <span class="token operator">=</span> list<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> size<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            _s<span class="token punctuation">.</span>append<span class="token punctuation">(</span>random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        mean <span class="token operator">=</span> sum<span class="token punctuation">(</span>_s<span class="token punctuation">)</span><span class="token operator">/</span>size
+        _s<span class="token punctuation">.</span>append<span class="token punctuation">(</span>mean<span class="token punctuation">)</span>
+        S<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> _s
+        S_mean<span class="token punctuation">.</span>append<span class="token punctuation">(</span>mean<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> S<span class="token punctuation">,</span> S_mean
+
+
+<span class="token comment" spellcheck="true">## 统计次数</span>
+<span class="token keyword">def</span> <span class="token function">stats_num</span><span class="token punctuation">(</span>S_mean<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    x <span class="token operator">=</span> <span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> set<span class="token punctuation">(</span>S_mean<span class="token punctuation">)</span><span class="token punctuation">]</span>
+    y <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> x<span class="token punctuation">:</span>
+        y<span class="token punctuation">.</span>append<span class="token punctuation">(</span>S_mean<span class="token punctuation">.</span>count<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> x<span class="token punctuation">,</span> y
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    L <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span>      <span class="token comment" spellcheck="true">## 总体中数字频率</span>
+    SIZE <span class="token operator">=</span> <span class="token number">100</span>                  <span class="token comment" spellcheck="true">## 样本容量 </span>
+    N <span class="token operator">=</span> range<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">10001</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">## 样本数量</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'原来分布标准差'</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>std<span class="token punctuation">(</span>L<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'计算样本均值抽样分布标准差'</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>std<span class="token punctuation">(</span>L<span class="token punctuation">)</span><span class="token operator">/</span>np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>SIZE<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'样本均值抽样分布标准差'</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>std<span class="token punctuation">(</span>random_num<span class="token punctuation">(</span>SIZE<span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">,</span> L<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    warnings<span class="token punctuation">.</span>filterwarnings<span class="token punctuation">(</span><span class="token string">'ignore'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#忽略警告</span>
+    daw<span class="token punctuation">(</span>SIZE<span class="token punctuation">,</span> N<span class="token punctuation">,</span> L<span class="token punctuation">)</span>
+</code></pre>
+<hr>
 <p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>
 
             </div>
@@ -848,36 +933,29 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
-                <a href="/2019/01/22/spider-01/">
+                <a href="/2019/01/01/stats-39/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="爬虫01：概述,环境，模块">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="统计学39：抽样分布例题">
                         
-                        <span class="card-title">爬虫01：概述,环境，模块</span>
+                        <span class="card-title">统计学39：抽样分布例题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">爬虫•目录 爬虫•类别
+                    <div class="summary">统计学•目录 统计学•类别  math
 
-获取数据的方式
-自有数据
-第三方购买  数据堂  贵阳大数据交易所
-爬虫爬取数据  市场上没有，价格太高，利用爬虫程序爬取
-
-python请求模块，解析模块丰富成熟，scrapy框架
-
-python的多线程由于全局</div>
+抽样分布例题The averagemale drinks 2L of water when active outdoors(with a standard deviation of 0.7L). Y</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-22
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-01
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Spider/" class="post-category" target="_blank">
-                                    Spider
+                            <a href="/categories/Statistical/" class="post-category" target="_blank">
+                                    Statistical
                                 </a>
                             
                             
@@ -887,16 +965,20 @@ python的多线程由于全局</div>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/爬虫spider/" target="_blank">
-                        <span class="chip bg-color">爬虫spider</span>
+                    <a href="/tags/Statistical/" target="_blank">
+                        <span class="chip bg-color">Statistical</span>
                     </a>
                     
-                    <a href="/tags/Anaconda/" target="_blank">
-                        <span class="chip bg-color">Anaconda</span>
+                    <a href="/tags/Math/" target="_blank">
+                        <span class="chip bg-color">Math</span>
                     </a>
                     
-                    <a href="/tags/Spyder/" target="_blank">
-                        <span class="chip bg-color">Spyder</span>
+                    <a href="/tags/抽样分布例题/" target="_blank">
+                        <span class="chip bg-color">抽样分布例题</span>
+                    </a>
+                    
+                    <a href="/tags/z表格/" target="_blank">
+                        <span class="chip bg-color">z表格</span>
                     </a>
                     
                 </div>
@@ -1050,6 +1132,13 @@ python的多线程由于全局</div>
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 <footer class="page-footer bg-color">
     <div class="container row center-align">
