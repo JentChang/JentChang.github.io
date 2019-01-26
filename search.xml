@@ -4,6 +4,196 @@
   
     
     <entry>
+      <title>统计学46：小样本容量置信区间</title>
+      <link href="/2019/01/23/stats-46/"/>
+      <url>/2019/01/23/stats-46/</url>
+      
+        <content type="html"><![CDATA[<p><a href="/contents/math/statistical.html">统计学•目录</a> <a href="/categories/Statistical/">统计学•类别</a>  <a href="/contents/math/">math</a></p><hr><h2 id="小样本容量置信区间"><a href="#小样本容量置信区间" class="headerlink" title="小样本容量置信区间"></a>小样本容量置信区间</h2><p>7patient’s blood pressures have been measured after having been given a new drug for 3 months. They had blood perssure increases of 1.5, 2.9, 0.9, 3.9, 3.2, 2.1 and 1.9. Construct a 95% confidence interval for the true expected blood pressure increase for all patients in a population.</p><p>7个患者在服用新药3个月后测量血压．其血压上升值分别为1.5, 2.9, 0.9, 3.9, 3.2, 2.1, 1.9．<br>为总体中所有病人的血压升高真正期望值建立一个95％的置信区间．</p><blockquote><p>生物过程是一个正态分布，也就是总体其实是一个正态分布</p></blockquote><p>这里只有样本信息，看看可以得到些什么</p><p>$\bar{x} = \frac{1.5+2.9+0.9+3.9+3.2+ 2.1+1.9}{7}=2.34$</p><p>$S^2 = \frac{(1.5-2.34)^ + (2.9-1.34)^2+…}{7-1} = 1.04^2$</p><p>$\sigma \approx S$ ？？？？</p><p>这里样本容量太小了，并不能通过样本很好的估计总体的标准差．</p><blockquote><p>30以上才算好的估计<br>这里抽样分布不能认为是正态分布，不能使用中心极限理论．</p></blockquote><p><strong>可以认为是t分布</strong></p><blockquote><p>t分布用于根据小样本来估计呈正态分布且方差未知的总体的均值。如果总体方差已知（例如在样本数量足够多时），则应该用正态分布来估计总体均值</p></blockquote><p><img src="/images/stats/s_46.png" alt="图片"></p><p>查表2.447个标准差<br>$\bar{x} \pm 2.447\hat{\sigma}_{\bar{x}}=2.34 \pm 2.447\frac{1.04}{\sqrt{7}} = 2.34 \pm 0.96$</p><p>1.38-3.3</p><p><img src="/images/stats/s_46_02.png" alt="图片"></p><blockquote><p>t分布查表要确定自由度，自由度为n-1</p></blockquote><hr><p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Statistical </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Statistical </tag>
+            
+            <tag> Math </tag>
+            
+            <tag> 置信区间 </tag>
+            
+            <tag> 小样本容量 </tag>
+            
+            <tag> t分布 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>统计学45：置信区间例题</title>
+      <link href="/2019/01/23/stats-45/"/>
+      <url>/2019/01/23/stats-45/</url>
+      
+        <content type="html"><![CDATA[<p><a href="/contents/math/statistical.html">统计学•目录</a> <a href="/categories/Statistical/">统计学•类别</a>  <a href="/contents/math/">math</a></p><hr><h2 id="置信区间例题"><a href="#置信区间例题" class="headerlink" title="置信区间例题"></a>置信区间例题</h2><p>In a local teaching district a technology grant is available to teachers in order to install a cluster of four computers in their classrooms. From the 6250 teachers in the district, 250 were randomly selected and asked if they felt that computers were an essential teaching tool for their classroom. Of those selected,142 teachers felt that computers were an essential teaching tool.</p><p>某地区教学区获得一批技术拨款，用于在教师中安排4台一组的计算机．该区总共有6250名教师，随机抽取250名，并且问他们是否认为计算机是教师必备的教学工具．抽取的教师中，有142名认为计算机是教学必备的工具．</p><p><strong>问题1</strong>：<br>计算一个99％置信区间，其中教师认为计算机是必备的教学工具．</p><p>定义1表示计算机被认为是必备工具，占比为p，0表示计算机被认为不是必备工具，占比为q=1-p．<br>$\bar{x} = \frac{1\times 142 + 0 \times 108}{250} = 0.568$</p><p>$S^2 = \frac{142\times (1-0.568)^2 + 108\times (0-0.568)}{250-1}=0.246$</p><p>$\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{250}} \approx \frac{S}{\sqrt{250}} = 0.031$</p><p>这里需要用到z表格<br>z表格的值应该为0.99/2+0.5＝0.995<br>对应2.58个标准差处</p><blockquote><p>大概99％的概率，样本均值在抽样分布均值左右2.58个标准差范围．</p></blockquote><p>$0.568 \pm 2.58 \times 0.031 = 0.568 \pm 0.08$</p><p>0.488-0.648</p><p><strong>问题2</strong>：<br>保持99％置信水平的前提下，如何缩小置信区间？</p><p>抽取更大的样本．</p><hr><p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Statistical </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Statistical </tag>
+            
+            <tag> Math </tag>
+            
+            <tag> 置信区间 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>统计学44：误差范围2</title>
+      <link href="/2019/01/23/stats-44/"/>
+      <url>/2019/01/23/stats-44/</url>
+      
+        <content type="html"><![CDATA[<p><a href="/contents/math/statistical.html">统计学•目录</a> <a href="/categories/Statistical/">统计学•类别</a>  <a href="/contents/math/">math</a></p><hr><h2 id="误差范围"><a href="#误差范围" class="headerlink" title="误差范围"></a>误差范围</h2><p>样本均值落在抽样分布均值周围2个标准差的概率：<br>$$P(\bar{x}　is　within　2\sigma_{\bar{x}}　of　\mu_{bar{x}}) = 0.954$$</p><blockquote><p>经验法则68-95.4-99.7</p></blockquote><p>$$P(\mu_{\bar{x}}　is　within　2\sigma_{\bar{x}}　of　\bar{x}) = 0.954$$</p><blockquote><p>$\mu_{\bar{x}} = p$　　$\sigma_{\bar{x}} \approx 0.05$</p></blockquote><p>$$P(p　is　within　0.10　of　\bar{x}) \approx 0.954$$<br>$$P(p　is　within　0.43\pm 0.1) \approx 0.954$$</p><p>95%概率p在0.43$\pm0.1$的范围内</p><p>也就是置信区间33％－53％的置信度为95％</p><blockquote><p>它只是表示有95％的置信水平　p落在33％－53％之间，95％的信息并不是95％的实际占比</p></blockquote><blockquote><p>更容易的理解<br>43％的人将投票给B，57％的人投给A，误差范围是10％<br>如果想要的更准确（误差范围），就需要更大的样本容量．</p></blockquote><hr><p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Statistical </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Statistical </tag>
+            
+            <tag> Math </tag>
+            
+            <tag> 置信区间 </tag>
+            
+            <tag> 误差范围 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>统计学43：误差范围1</title>
+      <link href="/2019/01/23/stats-43/"/>
+      <url>/2019/01/23/stats-43/</url>
+      
+        <content type="html"><![CDATA[<p><a href="/contents/math/statistical.html">统计学•目录</a> <a href="/categories/Statistical/">统计学•类别</a>  <a href="/contents/math/">math</a></p><hr><h2 id="误差范围"><a href="#误差范围" class="headerlink" title="误差范围"></a>误差范围</h2><p>情景：统计一个总体的投票情况，这里有两个候选人A and B</p><p>结果：B的票数占总的比例是p,则A的票数占比是1-p</p><p>为了计算方便，我们把A记为0，把B记为1</p><blockquote><p>这是一种二进制编码的思想，在计算机应用中经常会用到．</p></blockquote><p>则均值为（它是一个分布取不到的值）<br>$\mu = p$</p><p><em>但是p是很难去一一统计然后得出的．不可能把每个人都去调查一遍的．</em></p><p><strong>抽样</strong><br>随机选取一部分，100人吧<br>其中57人选A, 43人选B．<br>$$\bar{x}=\frac{57\times 0 + 43\times 1}{100} = 0.43$$<br>$$S^2 = \frac{57\times (0-0.43)^2 + 43\times (1-0.43)^2}{100-1} = 0.2475$$<br>$$S = \sqrt{0.2475} = 0.50$$</p><blockquote><p>样本的离均值平方对n-1个求期望，是对总体无偏差估计</p></blockquote><p><strong>思考：这个样本估计总体，那它有多少可信度，也就死有多好的去估计呢</strong></p><p>均值的最好估计为<br>均值0.43意味着43％的人投B<br>在0.43周围的存在？一个区间，我们有？确信真实均值是在该区间内的．</p><p>原分布是一个离散分布，我们从总体中，随机抽100个求均值，不断的抽取．这其实就是一个样本均值抽样分布．</p><p>样本均值抽样分布的标准差估为0.05（5％），（这在之前是有过计算过程的，看图应该可以明白．）</p><p><img src="/images/stats/s_43.png" alt="图片"></p><p>有95％的机率合理确信总体的真实均值p在？此区间内<br>下一节继续．这里理解把问题研究对象转换成了一个样本均值抽样分布．</p><hr><p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Statistical </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Statistical </tag>
+            
+            <tag> Math </tag>
+            
+            <tag> 置信区间 </tag>
+            
+            <tag> 误差范围 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>统计学42：伯努利分布均值和方差公式</title>
+      <link href="/2019/01/23/stats-42/"/>
+      <url>/2019/01/23/stats-42/</url>
+      
+        <content type="html"><![CDATA[<p><a href="/contents/math/statistical.html">统计学•目录</a> <a href="/categories/Statistical/">统计学•类别</a>  <a href="/contents/math/">math</a></p><hr><h2 id="伯努利分布均值和方差公式"><a href="#伯努利分布均值和方差公式" class="headerlink" title="伯努利分布均值和方差公式"></a>伯努利分布均值和方差公式</h2><p>设成功（1）的概率为p,则不成功（0）的概率为1-p</p><p>mean<br>$$\mu = 0 \times (1-p) + 1 \times p = p$$</p><p>variance<br>$$\sigma ^ 2 = (1-p) \times {(0-p)^2} + p \times {(1-p)^2}$$<br>$$(1-p) \times {(0-p)^2} + p \times {(1-p)^2} = (1-p) \times (p)\times (p) + p \times (1-p) \times (1-p)\\<br>　　　　　　=p \times (1-p) \times {p+1-p}$$</p><p>$$\sigma ^ 2 = p(1-p)$$</p><blockquote><p>伯努利分布 是一种离散分布,有两种可能的结果。<br>1表示成功，出现的概率为p(其中0＜p＜1)。0表示失败，出现的概率为q=1-p<br>这个分布在分类算法里使用比较多</p></blockquote><blockquote><p>二项分布其实就是n重伯努利分布．<br>期望为 $E(x)=np$，方差为 $D(x)=np(1-p)$</p></blockquote><blockquote><p><code>from scipy.stats import binom</code></p></blockquote><hr><p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Statistical </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Statistical </tag>
+            
+            <tag> Math </tag>
+            
+            <tag> 均值 </tag>
+            
+            <tag> 方差 </tag>
+            
+            <tag> 伯努利分布 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>统计学41：伯努利分布均值和方差的例子</title>
+      <link href="/2019/01/23/stats-41/"/>
+      <url>/2019/01/23/stats-41/</url>
+      
+        <content type="html"><![CDATA[<p><a href="/contents/math/statistical.html">统计学•目录</a> <a href="/categories/Statistical/">统计学•类别</a>  <a href="/contents/math/">math</a></p><hr><h2 id="伯努利分布均值和方差的例子"><a href="#伯努利分布均值和方差的例子" class="headerlink" title="伯努利分布均值和方差的例子"></a>伯努利分布均值和方差的例子</h2><p>背景：对总体做一个满意度调查，只有两个选项，满意和不满意．</p><p>结果：40％的人不满意，60％的人满意</p><h4 id="均值"><a href="#均值" class="headerlink" title="均值"></a>均值</h4><p>问：从总体中随机选一个人出来，期望支持程度是多少？（该分布的均值？）</p><p>这是一个离散分布，期望值等于各种可能概率值加权后的和<br>但是这里存在一个问题，不满意和满意并不是一个数，如何计算？<br>我们可以设不满意的值为0，满意为1．这样就可以计算了．<br>$$\mu = 0.4 \times 0 + 0.6 \times 1＝0.6$$</p><blockquote><p>显然是不会有一个人认为是0.6的，说他60％满意，40％不满意，他只能选择满意和不满意．（只能是0 or 1）<br>均值（期望值）不在分布上</p></blockquote><blockquote><p>如果调查100个人，这意味着期望值是60，也就是期望：60人认为是满意的，40人认为不满意</p></blockquote><h4 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h4><blockquote><p>方差可以认为是离均值或者期望值的距离的平方的概率加权和</p></blockquote><p>$$\sigma = 0.4 \times {(0-0.6)^2} + 0.6 \times {(1-0.6)^2} = 0.24$$</p><hr><p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Statistical </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Statistical </tag>
+            
+            <tag> Math </tag>
+            
+            <tag> 均值 </tag>
+            
+            <tag> 方差 </tag>
+            
+            <tag> 伯努利分布 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>统计学40：置信区间</title>
       <link href="/2019/01/23/stats-40/"/>
       <url>/2019/01/23/stats-40/</url>
@@ -33,11 +223,42 @@
     
     
     <entry>
+      <title>爬虫08：xpath解析</title>
+      <link href="/2019/01/22/spider-08/"/>
+      <url>/2019/01/22/spider-08/</url>
+      
+        <content type="html"><![CDATA[<p><a href="/contents/spider/">爬虫•目录</a> <a href="/categories/Spider/">爬虫•类别</a></p><hr><h2 id="xpath解析"><a href="#xpath解析" class="headerlink" title="xpath解析"></a>xpath解析</h2><p>在XML文档中查找信息的语言，同样适用于HTML文档的检索</p><h3 id="xpath工具"><a href="#xpath工具" class="headerlink" title="xpath工具"></a>xpath工具</h3><h4 id="Chrom插件-Xpath-Helper"><a href="#Chrom插件-Xpath-Helper" class="headerlink" title="Chrom插件　Xpath Helper"></a>Chrom插件　Xpath Helper</h4><p>打开　ctrl + shift + x</p><blockquote><p>Firefox插件　Xpath checker</p></blockquote><h4 id="选取节点"><a href="#选取节点" class="headerlink" title="选取节点"></a>选取节点</h4><ul><li>路径表达式</li></ul><table><thead><tr><th style="text-align:left">表达式</th><th style="text-align:left">描述</th></tr></thead><tbody><tr><td style="text-align:left">nodename</td><td style="text-align:left">选取此节点的所有子节点。</td></tr><tr><td style="text-align:left">/</td><td style="text-align:left">从根节点选取。</td></tr><tr><td style="text-align:left">//</td><td style="text-align:left">从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置。</td></tr><tr><td style="text-align:left">.</td><td style="text-align:left">选取当前节点。</td></tr><tr><td style="text-align:left">..</td><td style="text-align:left">选取当前节点的父节点。</td></tr><tr><td style="text-align:left">@</td><td style="text-align:left">选取属性。</td></tr></tbody></table><ul><li>|　多路径匹配（或）<br>  xpath表达式1 | xpath表达式2</li></ul><table><thead><tr><th style="text-align:left">路径表达式</th><th style="text-align:left">结果</th></tr></thead><tbody><tr><td style="text-align:left">bookstore</td><td style="text-align:left">选取 bookstore 元素的所有子节点。</td></tr><tr><td style="text-align:left">/bookstore</td><td style="text-align:left">选取根元素 bookstore。</td></tr><tr><td style="text-align:left">注释：假如路径起始于正斜杠( / )，则此路径始终代表到某元素的绝对路径！</td></tr><tr><td style="text-align:left">bookstore/book</td><td style="text-align:left">选取属于 bookstore 的子元素的所有 book 元素。</td></tr><tr><td style="text-align:left">//book</td><td style="text-align:left">选取所有 book 子元素，而不管它们在文档中的位置。</td></tr><tr><td style="text-align:left">bookstore//book</td><td style="text-align:left">选择属于 bookstore 元素的后代的所有 book 元素，而不管它们位于 bookstore 之下的什么位置。</td></tr><tr><td style="text-align:left">//@lang</td><td style="text-align:left">选取名为 lang 的所有属性。</td></tr></tbody></table><ul><li>函数<ul><li>contains() 匹配一个属性值中 <strong>包含</strong>某些字符串的节点<br>  //title[contains(@lang, ‘e’)]　获取节点对象</li><li>text() 获取文本<br>  //title[contains(@lang, ‘e’)]/text() 获取的是节点内容</li></ul></li></ul><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><ul><li>导模块<br>  from lxml import etree</li><li>创建解析对象<br>  parseHtml = etree.HTML(html)</li><li>调用xpath<br>  rList = parseHtml.xpath(‘xpath表达式’)<blockquote><p>调用xpath，返回的一定为列表</p></blockquote></li></ul><h4 id="xpath解析例子"><a href="#xpath解析例子" class="headerlink" title="xpath解析例子"></a>xpath解析例子</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etreehtml <span class="token operator">=</span> <span class="token triple-quoted-string string">'''&lt;div class="wrapper">    &lt;i class="iconfont icon-back" id="back">&lt;/i>    &lt;a href="/" id="channel">新浪社会&lt;/a>    &lt;ul id="nav">        &lt;li>&lt;a href="http://domestic.firefox.sina.com/" title="国内">国内&lt;/a>&lt;/li>        &lt;li>&lt;a href="http://world.firefox.sina.com/" title="国际">国际&lt;/a>&lt;/li>        &lt;li>&lt;a href="http://mil.firefox.sina.com/" title="军事">军事&lt;/a>&lt;/li>        &lt;li>&lt;a href="http://photo.firefox.sina.com/" title="图片">图片&lt;/a>&lt;/li>        &lt;li>&lt;a href="http://society.firefox.sina.com/" title="社会">社会&lt;/a>&lt;/li>        &lt;li>&lt;a href="http://ent.firefox.sina.com/" title="娱乐">娱乐&lt;/a>&lt;/li>        &lt;li>&lt;a href="http://tech.firefox.sina.com/" title="科技">科技&lt;/a>&lt;/li>        &lt;li>&lt;a href="http://sports.firefox.sina.com/" title="体育">体育&lt;/a>&lt;/li>        &lt;li>&lt;a href="http://finance.firefox.sina.com/" title="财经">财经&lt;/a>&lt;/li>        &lt;li>&lt;a href="http://auto.firefox.sina.com/" title="汽车">汽车&lt;/a>&lt;/li>    &lt;/ul>    &lt;i class="iconfont icon-liebiao" id="menu">&lt;/i>&lt;/div>'''</span><span class="token comment" spellcheck="true"># 创建解析对象</span>paresHtml <span class="token operator">=</span> etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>html<span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 调用xpath返回结果</span><span class="token keyword">def</span> <span class="token function">xp</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>    rList <span class="token operator">=</span> paresHtml<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span>x<span class="token punctuation">)</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>rList<span class="token punctuation">)</span>xp<span class="token punctuation">(</span><span class="token string">'//ul//a/text()'</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#Out:['国内', '国际', '军事', '图片', '社会', '娱乐', '科技', '体育', '财经', '汽车']</span>xp<span class="token punctuation">(</span><span class="token string">'//ul/li/a/@href'</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#Out:['http://domestic.firefox.sina.com/', 'http://world.firefox.sina.com/', 'http://mil.firefox.sina.com/', 'http://photo.firefox.sina.com/', 'http://society.firefox.sina.com/', 'http://ent.firefox.sina.com/', 'http://tech.firefox.sina.com/', 'http://sports.firefox.sina.com/', 'http://finance.firefox.sina.com/', 'http://auto.firefox.sina.com/']</span></code></pre><h3 id="爬虫案例"><a href="#爬虫案例" class="headerlink" title="爬虫案例"></a>爬虫案例</h3><p>抓取目标图片</p><blockquote><p>思路</p><pre><code>模特链接列表 = parseHtml.xpath(&#39;..&#39;)for 模特链接　in　模特链接列表：    图片链接列表　＝　对模特发请求后xpath    for 图片链接　in　＝　图片链接列表：        html　＝　对图片连接发请求        with open(filename, &#39;wb&#39;) as f:            f.write(html)</code></pre></blockquote><blockquote><p>步骤<br>1.获取主页URL，寻找URl规律<br><a href="http://www.tmt001.com/" target="_blank" rel="noopener">http://www.tmt001.com/</a><br>2.xpath<br>List : //div[@class=’result_models’]/ul/li/div[@class=’model_data’]/a/@href<br>name : //div[@class=’result_models’]/ul/li/div[@class=’model_data’]/a/text()<br>jpgList ://dd/img/@src<br>jpgname : name+01</p></blockquote><p>爬虫代码</p><pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree<span class="token keyword">import</span> requests<span class="token keyword">import</span> time<span class="token keyword">class</span> <span class="token class-name">TotSpider</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>        self<span class="token punctuation">.</span>baseurl <span class="token operator">=</span> <span class="token string">'http://www.tmt001.com/'</span>        self<span class="token punctuation">.</span>headers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span><span class="token string">''</span><span class="token punctuation">}</span>     <span class="token keyword">def</span> <span class="token function">getPage</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> url<span class="token punctuation">,</span> xp<span class="token operator">=</span>None<span class="token punctuation">)</span><span class="token punctuation">:</span>        res <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token operator">=</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>self<span class="token punctuation">.</span>headers<span class="token punctuation">)</span>        <span class="token keyword">if</span> xp <span class="token operator">==</span> None<span class="token punctuation">:</span>            <span class="token keyword">return</span> res<span class="token punctuation">.</span>content        res<span class="token punctuation">.</span>encoding <span class="token operator">=</span> <span class="token string">'utf-8'</span>        html <span class="token operator">=</span> res<span class="token punctuation">.</span>text        <span class="token keyword">return</span> self<span class="token punctuation">.</span>parsePage<span class="token punctuation">(</span>html<span class="token punctuation">,</span> xp<span class="token punctuation">)</span>    <span class="token keyword">def</span> <span class="token function">parsePage</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> html<span class="token punctuation">,</span> xp<span class="token punctuation">)</span><span class="token punctuation">:</span>        paresHtml <span class="token operator">=</span> etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>html<span class="token punctuation">)</span>        rList <span class="token operator">=</span> paresHtml<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span>xp<span class="token punctuation">)</span>        <span class="token keyword">return</span> rList    <span class="token keyword">def</span> <span class="token function">writeJpg</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> html<span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">:</span>        <span class="token keyword">with</span> open<span class="token punctuation">(</span>filename<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>            f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>html<span class="token punctuation">)</span>    <span class="token keyword">def</span> <span class="token function">workOn</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>        menu <span class="token operator">=</span> <span class="token triple-quoted-string string">'''        \033[32m********************        ---    1.爬取    ---        ---    2.退出    ---        ********************        请选择(1/2):\033[0m        '''</span>        cmd  <span class="token operator">=</span> input<span class="token punctuation">(</span>menu<span class="token punctuation">)</span>        <span class="token keyword">if</span> cmd<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'1'</span><span class="token punctuation">:</span>            n <span class="token operator">=</span> input<span class="token punctuation">(</span><span class="token string">'请输入页数>>>'</span><span class="token punctuation">)</span>            <span class="token keyword">if</span> n<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>isdigit<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>                n <span class="token operator">=</span> int<span class="token punctuation">(</span>n<span class="token punctuation">)</span>                <span class="token keyword">for</span> page <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>                    url <span class="token operator">=</span>self<span class="token punctuation">.</span>baseurl <span class="token operator">+</span> <span class="token string">'?c=article&amp;a=search&amp;xb=2&amp;page='</span> <span class="token operator">+</span> str<span class="token punctuation">(</span>page<span class="token punctuation">)</span>                    xp_a <span class="token operator">=</span> <span class="token string">"//div[@class='result_models']/ul/li/div[@class='model_data']/a/@href"</span>                    xp_name <span class="token operator">=</span> <span class="token string">"//div[@class='result_models']/ul/li/div[@class='model_data']/a/text()"</span>                    rList_a <span class="token operator">=</span> self<span class="token punctuation">.</span>getPage<span class="token punctuation">(</span>url<span class="token punctuation">,</span> xp_a<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#                    print(rList_a)</span>                    rList_name <span class="token operator">=</span> self<span class="token punctuation">.</span>getPage<span class="token punctuation">(</span>url<span class="token punctuation">,</span> xp_name<span class="token punctuation">)</span>                    <span class="token keyword">for</span> rt_a<span class="token punctuation">,</span> filename <span class="token keyword">in</span> zip<span class="token punctuation">(</span>rList_a<span class="token punctuation">,</span> rList_name<span class="token punctuation">)</span><span class="token punctuation">:</span>                        url <span class="token operator">=</span> self<span class="token punctuation">.</span>baseurl <span class="token operator">+</span> rt_a                        xp <span class="token operator">=</span> <span class="token string">'//dd/img/@src'</span>                        rList_jpg <span class="token operator">=</span> self<span class="token punctuation">.</span>getPage<span class="token punctuation">(</span>url<span class="token punctuation">,</span> xp<span class="token punctuation">)</span>                        <span class="token keyword">for</span> name<span class="token punctuation">,</span> rt_j <span class="token keyword">in</span> enumerate<span class="token punctuation">(</span>rList_jpg<span class="token punctuation">)</span><span class="token punctuation">:</span>                            url <span class="token operator">=</span> self<span class="token punctuation">.</span>baseurl <span class="token operator">+</span> rt_j                            html <span class="token operator">=</span> self<span class="token punctuation">.</span>getPage<span class="token punctuation">(</span>url<span class="token punctuation">)</span>                            file_name <span class="token operator">=</span> <span class="token string">'tot/'</span> <span class="token operator">+</span> filename <span class="token operator">+</span> str<span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'.jpg'</span>                            self<span class="token punctuation">.</span>writeJpg<span class="token punctuation">(</span>html<span class="token punctuation">,</span> file_name<span class="token punctuation">)</span>                            time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.2</span><span class="token punctuation">)</span>              <span class="token keyword">else</span><span class="token punctuation">:</span>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'over'</span><span class="token punctuation">)</span><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>    spider <span class="token operator">=</span> TotSpider<span class="token punctuation">(</span><span class="token punctuation">)</span>    spider<span class="token punctuation">.</span>workOn<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><hr><p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Spider </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 解析 </tag>
+            
+            <tag> requests </tag>
+            
+            <tag> xpath </tag>
+            
+            <tag> 模特图片 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>爬虫07：requests请求模块2</title>
       <link href="/2019/01/22/spider-07/"/>
       <url>/2019/01/22/spider-07/</url>
       
-        <content type="html"><![CDATA[<p><a href="/contents/spider/">爬虫•目录</a> <a href="/categories/Spider/">爬虫•类别</a></p><hr><h3 id="Post方法-requests-Post"><a href="#Post方法-requests-Post" class="headerlink" title="Post方法　requests.Post()"></a>Post方法　requests.Post()</h3><h4 id="post-参数"><a href="#post-参数" class="headerlink" title="post()参数"></a>post()参数</h4><ul><li>data<br>  Form表单数据，字典形式，不需要编码和转码</li></ul><blockquote><p>其它参数同GET()</p></blockquote><h3 id="案例（有道翻译）"><a href="#案例（有道翻译）" class="headerlink" title="案例（有道翻译）"></a>案例（有道翻译）</h3><blockquote><p>抓包，多抓几次观察Form表单中的数据变化（浏览器F12　Network-&gt;Headers-&gt;From Data）<br><code>&#39;salt&#39;: &#39;15481491442904&#39;,</code><br><code>&#39;sign&#39;: &#39;407948613c2943e6ff32f27e6aa7fcd6&#39;</code><br><code>&#39;ts&#39;: &#39;1548149144290&#39;</code><br><code>&#39;bv&#39;: &#39;9deb57d53879cce82ff92bccf83a3e4c&#39;</code><br>F12,（刷新网页）浏览器重新向有道翻译发送请求，抓到js文件（fanyi.min.js）,Preview查看js代码，保存到编辑器，搜索字段，查看加密方法，按照相同的方法加密．</p></blockquote><hr><p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>]]></content>
+        <content type="html"><![CDATA[<p><a href="/contents/spider/">爬虫•目录</a> <a href="/categories/Spider/">爬虫•类别</a></p><hr><h3 id="Post方法-requests-Post"><a href="#Post方法-requests-Post" class="headerlink" title="Post方法　requests.Post()"></a>Post方法　requests.Post()</h3><h4 id="post-参数"><a href="#post-参数" class="headerlink" title="post()参数"></a>post()参数</h4><ul><li>data<br>  Form表单数据，字典形式，不需要编码和转码</li></ul><blockquote><p>其它参数同GET()</p></blockquote><h3 id="案例（有道翻译）"><a href="#案例（有道翻译）" class="headerlink" title="案例（有道翻译）"></a>案例（有道翻译）</h3><blockquote><p>抓包，多抓几次观察Form表单中的数据变化（浏览器F12　Network-&gt;Headers-&gt;From Data）<br><code>&#39;salt&#39;: &#39;15481491442904&#39;,</code><br><code>&#39;sign&#39;: &#39;407948613c2943e6ff32f27e6aa7fcd6&#39;</code><br><code>&#39;ts&#39;: &#39;1548149144290&#39;</code><br><code>&#39;bv&#39;: &#39;9deb57d53879cce82ff92bccf83a3e4c&#39;</code><br>F12,（刷新网页）浏览器重新向有道翻译发送请求，抓到js文件（fanyi.min.js）,Preview查看js代码，保存到编辑器，搜索字段，查看加密方法，按照相同的方法加密．</p></blockquote><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> json<span class="token keyword">import</span> time<span class="token keyword">import</span> random<span class="token keyword">import</span> hashlib<span class="token keyword">import</span> requests<span class="token comment" spellcheck="true"># F12或抓包工具抓到的POST的地址</span>url <span class="token operator">=</span> <span class="token string">'http://fanyi.youdao.com/translate_o?smartresult=dict&amp;smartresult=rule'</span>key <span class="token operator">=</span> input<span class="token punctuation">(</span><span class="token string">'请输入要翻译的内容:'</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 获取salt的值</span>salt <span class="token operator">=</span> int<span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token operator">+</span>\                   random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 获取sign的值</span>sign <span class="token operator">=</span> <span class="token string">"fanyideskweb"</span> <span class="token operator">+</span> key <span class="token operator">+</span> str<span class="token punctuation">(</span>salt<span class="token punctuation">)</span> <span class="token operator">+</span>\                     <span class="token string">"p09@Bn{h02_BIEe]$P^nG"</span> s <span class="token operator">=</span> hashlib<span class="token punctuation">.</span>md5<span class="token punctuation">(</span><span class="token punctuation">)</span>s<span class="token punctuation">.</span>update<span class="token punctuation">(</span>sign<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>sign <span class="token operator">=</span> s<span class="token punctuation">.</span>hexdigest<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 获取bv的值</span>s1 <span class="token operator">=</span> <span class="token string">'5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'</span>md5 <span class="token operator">=</span> hashlib<span class="token punctuation">.</span>md5<span class="token punctuation">(</span><span class="token punctuation">)</span>md5<span class="token punctuation">.</span>update<span class="token punctuation">(</span>s1<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>bv <span class="token operator">=</span> md5<span class="token punctuation">.</span>hexdigest<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 定义headers</span>headers <span class="token operator">=</span> <span class="token punctuation">{</span>        <span class="token string">'Accept'</span><span class="token punctuation">:</span><span class="token string">'application/json, text/javascript, */*; q=0.01'</span><span class="token punctuation">,</span>        <span class="token comment" spellcheck="true">#Accept-Encoding: gzip, deflate</span>        <span class="token string">'Accept-Language'</span><span class="token punctuation">:</span><span class="token string">'zh-CN,zh;q=0.9'</span><span class="token punctuation">,</span>        <span class="token string">'Connection'</span><span class="token punctuation">:</span><span class="token string">'keep-alive'</span><span class="token punctuation">,</span>        <span class="token string">'Content-Length'</span><span class="token punctuation">:</span><span class="token string">'255'</span><span class="token punctuation">,</span>        <span class="token string">'Content-Type'</span><span class="token punctuation">:</span><span class="token string">'application/x-www-form-urlencoded; charset=UTF-8'</span><span class="token punctuation">,</span>        <span class="token string">'Cookie'</span><span class="token punctuation">:</span><span class="token string">'OUTFOX_SEARCH_USER_ID=1516386930@10.169.0.84; OUTFOX_SEARCH_USER_ID_NCOO=760569518.7197; JSESSIONID=aaa9667LaTZN783i7g-Hw; td_cookie=18446744073249454972; ___rl__test__cookies=1548323620638'</span><span class="token punctuation">,</span>        <span class="token string">'Host'</span><span class="token punctuation">:</span><span class="token string">'fanyi.youdao.com'</span><span class="token punctuation">,</span>        <span class="token string">'Origin'</span><span class="token punctuation">:</span><span class="token string">'http://fanyi.youdao.com'</span><span class="token punctuation">,</span>        <span class="token string">'Referer'</span><span class="token punctuation">:</span><span class="token string">'http://fanyi.youdao.com/'</span><span class="token punctuation">,</span>        <span class="token string">'User-Agent'</span><span class="token punctuation">:</span><span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'</span><span class="token punctuation">,</span>        <span class="token string">'X-Requested-With'</span><span class="token punctuation">:</span><span class="token string">'XMLHttpRequest'</span><span class="token punctuation">}</span><span class="token comment" spellcheck="true"># 处理Form表单数据</span>data <span class="token operator">=</span> <span class="token punctuation">{</span>        <span class="token string">"i"</span><span class="token punctuation">:</span>key<span class="token punctuation">,</span>        <span class="token string">"from"</span><span class="token punctuation">:</span><span class="token string">"AUTO"</span><span class="token punctuation">,</span>        <span class="token string">"to"</span><span class="token punctuation">:</span><span class="token string">"AUTO"</span><span class="token punctuation">,</span>        <span class="token string">"smartresult"</span><span class="token punctuation">:</span><span class="token string">"dict"</span><span class="token punctuation">,</span>        <span class="token string">"client"</span><span class="token punctuation">:</span><span class="token string">"fanyideskweb"</span><span class="token punctuation">,</span>        <span class="token string">"salt"</span><span class="token punctuation">:</span>str<span class="token punctuation">(</span>salt<span class="token punctuation">)</span><span class="token punctuation">,</span>        <span class="token string">"sign"</span><span class="token punctuation">:</span>sign<span class="token punctuation">,</span>        <span class="token string">"ts"</span><span class="token punctuation">:</span>str<span class="token punctuation">(</span>salt<span class="token operator">//</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span>        <span class="token string">"bv"</span><span class="token punctuation">:</span>bv<span class="token punctuation">,</span>        <span class="token string">"doctype"</span><span class="token punctuation">:</span><span class="token string">"json"</span><span class="token punctuation">,</span>        <span class="token string">"version"</span><span class="token punctuation">:</span><span class="token string">"2.1"</span><span class="token punctuation">,</span>        <span class="token string">"keyfrom"</span><span class="token punctuation">:</span><span class="token string">"fanyi.web"</span><span class="token punctuation">,</span>        <span class="token string">"action"</span><span class="token punctuation">:</span><span class="token string">"FY_BY_REALTIME"</span><span class="token punctuation">,</span>        <span class="token string">"typoResult"</span><span class="token punctuation">:</span><span class="token string">"false"</span><span class="token punctuation">,</span>    <span class="token punctuation">}</span>res <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token punctuation">,</span>data<span class="token operator">=</span>data<span class="token punctuation">,</span>                        headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>res<span class="token punctuation">.</span>encoding <span class="token operator">=</span> <span class="token string">'utf-8'</span>html <span class="token operator">=</span> res<span class="token punctuation">.</span>text<span class="token comment" spellcheck="true"># loads()可把json格式的字符串转为Python</span><span class="token comment" spellcheck="true"># 的数据类型</span>rDict <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>html<span class="token punctuation">)</span>result <span class="token operator">=</span> rDict<span class="token punctuation">[</span><span class="token string">'translateResult'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'tgt'</span><span class="token punctuation">]</span><span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span></code></pre><hr><p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>]]></content>
       
       
       <categories>
@@ -149,7 +370,7 @@
     
     
     <entry>
-      <title>爬虫03：解析模块</title>
+      <title>爬虫03：正则解析</title>
       <link href="/2019/01/22/spider-03/"/>
       <url>/2019/01/22/spider-03/</url>
       
@@ -167,7 +388,9 @@
             
             <tag> 爬虫spider </tag>
             
-            <tag> 正则解析 </tag>
+            <tag> 正则表达式 </tag>
+            
+            <tag> 解析 </tag>
             
         </tags>
       

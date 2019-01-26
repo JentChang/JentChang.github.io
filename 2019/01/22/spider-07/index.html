@@ -436,6 +436,76 @@ data  Form表单数据，字典形式，不需要编码和转码
 <h3 id="案例（有道翻译）"><a href="#案例（有道翻译）" class="headerlink" title="案例（有道翻译）"></a>案例（有道翻译）</h3><blockquote>
 <p>抓包，多抓几次观察Form表单中的数据变化（浏览器F12　Network-&gt;Headers-&gt;From Data）<br><code>&#39;salt&#39;: &#39;15481491442904&#39;,</code><br><code>&#39;sign&#39;: &#39;407948613c2943e6ff32f27e6aa7fcd6&#39;</code><br><code>&#39;ts&#39;: &#39;1548149144290&#39;</code><br><code>&#39;bv&#39;: &#39;9deb57d53879cce82ff92bccf83a3e4c&#39;</code><br>F12,（刷新网页）浏览器重新向有道翻译发送请求，抓到js文件（fanyi.min.js）,Preview查看js代码，保存到编辑器，搜索字段，查看加密方法，按照相同的方法加密．</p>
 </blockquote>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> json
+<span class="token keyword">import</span> time
+<span class="token keyword">import</span> random
+<span class="token keyword">import</span> hashlib
+<span class="token keyword">import</span> requests
+
+<span class="token comment" spellcheck="true"># F12或抓包工具抓到的POST的地址</span>
+url <span class="token operator">=</span> <span class="token string">'http://fanyi.youdao.com/translate_o?smartresult=dict&amp;smartresult=rule'</span>
+key <span class="token operator">=</span> input<span class="token punctuation">(</span><span class="token string">'请输入要翻译的内容:'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 获取salt的值</span>
+salt <span class="token operator">=</span> int<span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token operator">+</span>\
+                   random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 获取sign的值</span>
+sign <span class="token operator">=</span> <span class="token string">"fanyideskweb"</span> <span class="token operator">+</span> key <span class="token operator">+</span> str<span class="token punctuation">(</span>salt<span class="token punctuation">)</span> <span class="token operator">+</span>\
+                     <span class="token string">"p09@Bn{h02_BIEe]$P^nG"</span> 
+s <span class="token operator">=</span> hashlib<span class="token punctuation">.</span>md5<span class="token punctuation">(</span><span class="token punctuation">)</span>
+s<span class="token punctuation">.</span>update<span class="token punctuation">(</span>sign<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+sign <span class="token operator">=</span> s<span class="token punctuation">.</span>hexdigest<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 获取bv的值</span>
+s1 <span class="token operator">=</span> <span class="token string">'5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'</span>
+md5 <span class="token operator">=</span> hashlib<span class="token punctuation">.</span>md5<span class="token punctuation">(</span><span class="token punctuation">)</span>
+md5<span class="token punctuation">.</span>update<span class="token punctuation">(</span>s1<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+bv <span class="token operator">=</span> md5<span class="token punctuation">.</span>hexdigest<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 定义headers</span>
+headers <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'Accept'</span><span class="token punctuation">:</span><span class="token string">'application/json, text/javascript, */*; q=0.01'</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">#Accept-Encoding: gzip, deflate</span>
+        <span class="token string">'Accept-Language'</span><span class="token punctuation">:</span><span class="token string">'zh-CN,zh;q=0.9'</span><span class="token punctuation">,</span>
+        <span class="token string">'Connection'</span><span class="token punctuation">:</span><span class="token string">'keep-alive'</span><span class="token punctuation">,</span>
+        <span class="token string">'Content-Length'</span><span class="token punctuation">:</span><span class="token string">'255'</span><span class="token punctuation">,</span>
+        <span class="token string">'Content-Type'</span><span class="token punctuation">:</span><span class="token string">'application/x-www-form-urlencoded; charset=UTF-8'</span><span class="token punctuation">,</span>
+        <span class="token string">'Cookie'</span><span class="token punctuation">:</span><span class="token string">'OUTFOX_SEARCH_USER_ID=1516386930@10.169.0.84; OUTFOX_SEARCH_USER_ID_NCOO=760569518.7197; JSESSIONID=aaa9667LaTZN783i7g-Hw; td_cookie=18446744073249454972; ___rl__test__cookies=1548323620638'</span><span class="token punctuation">,</span>
+        <span class="token string">'Host'</span><span class="token punctuation">:</span><span class="token string">'fanyi.youdao.com'</span><span class="token punctuation">,</span>
+        <span class="token string">'Origin'</span><span class="token punctuation">:</span><span class="token string">'http://fanyi.youdao.com'</span><span class="token punctuation">,</span>
+        <span class="token string">'Referer'</span><span class="token punctuation">:</span><span class="token string">'http://fanyi.youdao.com/'</span><span class="token punctuation">,</span>
+        <span class="token string">'User-Agent'</span><span class="token punctuation">:</span><span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'</span><span class="token punctuation">,</span>
+        <span class="token string">'X-Requested-With'</span><span class="token punctuation">:</span><span class="token string">'XMLHttpRequest'</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true"># 处理Form表单数据</span>
+data <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">"i"</span><span class="token punctuation">:</span>key<span class="token punctuation">,</span>
+        <span class="token string">"from"</span><span class="token punctuation">:</span><span class="token string">"AUTO"</span><span class="token punctuation">,</span>
+        <span class="token string">"to"</span><span class="token punctuation">:</span><span class="token string">"AUTO"</span><span class="token punctuation">,</span>
+        <span class="token string">"smartresult"</span><span class="token punctuation">:</span><span class="token string">"dict"</span><span class="token punctuation">,</span>
+        <span class="token string">"client"</span><span class="token punctuation">:</span><span class="token string">"fanyideskweb"</span><span class="token punctuation">,</span>
+        <span class="token string">"salt"</span><span class="token punctuation">:</span>str<span class="token punctuation">(</span>salt<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token string">"sign"</span><span class="token punctuation">:</span>sign<span class="token punctuation">,</span>
+        <span class="token string">"ts"</span><span class="token punctuation">:</span>str<span class="token punctuation">(</span>salt<span class="token operator">//</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token string">"bv"</span><span class="token punctuation">:</span>bv<span class="token punctuation">,</span>
+        <span class="token string">"doctype"</span><span class="token punctuation">:</span><span class="token string">"json"</span><span class="token punctuation">,</span>
+        <span class="token string">"version"</span><span class="token punctuation">:</span><span class="token string">"2.1"</span><span class="token punctuation">,</span>
+        <span class="token string">"keyfrom"</span><span class="token punctuation">:</span><span class="token string">"fanyi.web"</span><span class="token punctuation">,</span>
+        <span class="token string">"action"</span><span class="token punctuation">:</span><span class="token string">"FY_BY_REALTIME"</span><span class="token punctuation">,</span>
+        <span class="token string">"typoResult"</span><span class="token punctuation">:</span><span class="token string">"false"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+
+res <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token punctuation">,</span>data<span class="token operator">=</span>data<span class="token punctuation">,</span>
+                        headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+res<span class="token punctuation">.</span>encoding <span class="token operator">=</span> <span class="token string">'utf-8'</span>
+html <span class="token operator">=</span> res<span class="token punctuation">.</span>text
+
+<span class="token comment" spellcheck="true"># loads()可把json格式的字符串转为Python</span>
+<span class="token comment" spellcheck="true"># 的数据类型</span>
+rDict <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+result <span class="token operator">=</span> rDict<span class="token punctuation">[</span><span class="token string">'translateResult'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'tgt'</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+</code></pre>
 <hr>
 <p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>
 
@@ -859,29 +929,32 @@ data  Form表单数据，字典形式，不需要编码和转码
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
-                <a href="/2019/01/23/stats-40/">
+                <a href="/2019/01/22/spider-08/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="统计学40：置信区间">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="爬虫08：xpath解析">
                         
-                        <span class="card-title">统计学40：置信区间</span>
+                        <span class="card-title">爬虫08：xpath解析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">统计学•目录 统计学•类别  math
+                    <div class="summary">爬虫•目录 爬虫•类别
 
-置信区间You samole 36 apples from your farm’s harvest of over 200,000 apples. The mean weight of the sa</div>
+xpath解析在XML文档中查找信息的语言，同样适用于HTML文档的检索
+xpath工具Chrom插件　Xpath Helper打开　ctrl + shift + x
+
+Firefox插件　Xpath checke</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-23
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-22
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Statistical/" class="post-category" target="_blank">
-                                    Statistical
+                            <a href="/categories/Spider/" class="post-category" target="_blank">
+                                    Spider
                                 </a>
                             
                             
@@ -891,16 +964,20 @@ data  Form表单数据，字典形式，不需要编码和转码
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Statistical/" target="_blank">
-                        <span class="chip bg-color">Statistical</span>
+                    <a href="/tags/解析/" target="_blank">
+                        <span class="chip bg-color">解析</span>
                     </a>
                     
-                    <a href="/tags/Math/" target="_blank">
-                        <span class="chip bg-color">Math</span>
+                    <a href="/tags/requests/" target="_blank">
+                        <span class="chip bg-color">requests</span>
                     </a>
                     
-                    <a href="/tags/置信区间/" target="_blank">
-                        <span class="chip bg-color">置信区间</span>
+                    <a href="/tags/xpath/" target="_blank">
+                        <span class="chip bg-color">xpath</span>
+                    </a>
+                    
+                    <a href="/tags/模特图片/" target="_blank">
+                        <span class="chip bg-color">模特图片</span>
                     </a>
                     
                 </div>
