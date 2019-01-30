@@ -273,11 +273,107 @@
   </entry>
   
   <entry>
+    <title>爬虫14：爬虫框架Scrapy02</title>
+    <link href="http://JentChang.github.io/2019/01/22/spider-14/"/>
+    <id>http://JentChang.github.io/2019/01/22/spider-14/</id>
+    <published>2019-01-21T17:00:14.000Z</published>
+    <updated>2019-01-30T04:07:28.113Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/spider/&quot;&gt;爬虫•目录&lt;/a&gt; &lt;a href=&quot;/categories/Spider/&quot;&gt;爬虫•类别&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;爬虫框架Scrapy&quot;&gt;&lt;a href=&quot;#爬虫框架Scrapy&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Spider" scheme="http://JentChang.github.io/categories/Spider/"/>
+    
+    
+      <category term="爬虫Spider" scheme="http://JentChang.github.io/tags/%E7%88%AC%E8%99%ABSpider/"/>
+    
+      <category term="Scrapy" scheme="http://JentChang.github.io/tags/Scrapy/"/>
+    
+      <category term="Python" scheme="http://JentChang.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>爬虫13：爬虫框架Scrapy</title>
+    <link href="http://JentChang.github.io/2019/01/22/spider-13/"/>
+    <id>http://JentChang.github.io/2019/01/22/spider-13/</id>
+    <published>2019-01-21T17:00:13.000Z</published>
+    <updated>2019-01-30T03:13:53.751Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/spider/&quot;&gt;爬虫•目录&lt;/a&gt; &lt;a href=&quot;/categories/Spider/&quot;&gt;爬虫•类别&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;爬虫框架Scrapy&quot;&gt;&lt;a href=&quot;#爬虫框架Scrapy&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Spider" scheme="http://JentChang.github.io/categories/Spider/"/>
+    
+    
+      <category term="爬虫Spider" scheme="http://JentChang.github.io/tags/%E7%88%AC%E8%99%ABSpider/"/>
+    
+      <category term="框架" scheme="http://JentChang.github.io/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="Scrapy" scheme="http://JentChang.github.io/tags/Scrapy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>爬虫12：BeautifulSoup解析</title>
+    <link href="http://JentChang.github.io/2019/01/22/spider-12/"/>
+    <id>http://JentChang.github.io/2019/01/22/spider-12/</id>
+    <published>2019-01-21T17:00:12.000Z</published>
+    <updated>2019-01-30T01:17:09.878Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/spider/&quot;&gt;爬虫•目录&lt;/a&gt; &lt;a href=&quot;/categories/Spider/&quot;&gt;爬虫•类别&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;BeautifulSoup解析&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Spider" scheme="http://JentChang.github.io/categories/Spider/"/>
+    
+    
+      <category term="解析" scheme="http://JentChang.github.io/tags/%E8%A7%A3%E6%9E%90/"/>
+    
+      <category term="爬虫Spider" scheme="http://JentChang.github.io/tags/%E7%88%AC%E8%99%ABSpider/"/>
+    
+      <category term="BeautifulSoup" scheme="http://JentChang.github.io/tags/BeautifulSoup/"/>
+    
+  </entry>
+  
+  <entry>
     <title>爬虫11：多线程爬取</title>
     <link href="http://JentChang.github.io/2019/01/22/spider-11/"/>
     <id>http://JentChang.github.io/2019/01/22/spider-11/</id>
     <published>2019-01-21T17:00:11.000Z</published>
-    <updated>2019-01-29T03:58:16.379Z</updated>
+    <updated>2019-01-29T08:46:02.069Z</updated>
     
     <summary type="html">
     
@@ -559,98 +655,6 @@
       <category term="正则表达式" scheme="http://JentChang.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
       <category term="解析" scheme="http://JentChang.github.io/tags/%E8%A7%A3%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>爬虫02：请求及案例</title>
-    <link href="http://JentChang.github.io/2019/01/22/spider-02/"/>
-    <id>http://JentChang.github.io/2019/01/22/spider-02/</id>
-    <published>2019-01-21T17:00:02.000Z</published>
-    <updated>2019-01-24T11:03:34.518Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;/contents/spider/&quot;&gt;爬虫•目录&lt;/a&gt; &lt;a href=&quot;/categories/Spider/&quot;&gt;爬虫•类别&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;1-GET&quot;&gt;&lt;a href=&quot;#1-GET&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Spider" scheme="http://JentChang.github.io/categories/Spider/"/>
-    
-    
-      <category term="爬虫spider" scheme="http://JentChang.github.io/tags/%E7%88%AC%E8%99%ABspider/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>爬虫01：概述,环境，模块</title>
-    <link href="http://JentChang.github.io/2019/01/22/spider-01/"/>
-    <id>http://JentChang.github.io/2019/01/22/spider-01/</id>
-    <published>2019-01-21T17:00:01.000Z</published>
-    <updated>2019-01-23T11:46:24.424Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;/contents/spider/&quot;&gt;爬虫•目录&lt;/a&gt; &lt;a href=&quot;/categories/Spider/&quot;&gt;爬虫•类别&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;获取数据的方式&quot;&gt;&lt;a href=&quot;#获取数据的方式&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Spider" scheme="http://JentChang.github.io/categories/Spider/"/>
-    
-    
-      <category term="爬虫spider" scheme="http://JentChang.github.io/tags/%E7%88%AC%E8%99%ABspider/"/>
-    
-      <category term="Anaconda" scheme="http://JentChang.github.io/tags/Anaconda/"/>
-    
-      <category term="Spyder" scheme="http://JentChang.github.io/tags/Spyder/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>统计学39：抽样分布例题</title>
-    <link href="http://JentChang.github.io/2019/01/01/stats-39/"/>
-    <id>http://JentChang.github.io/2019/01/01/stats-39/</id>
-    <published>2018-12-31T16:00:19.000Z</published>
-    <updated>2019-01-24T13:29:26.447Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;/contents/math/statistical.html&quot;&gt;统计学•目录&lt;/a&gt; &lt;a href=&quot;/categories/Statistical/&quot;&gt;统计学•类别&lt;/a&gt;  &lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Statistical" scheme="http://JentChang.github.io/categories/Statistical/"/>
-    
-    
-      <category term="Statistical" scheme="http://JentChang.github.io/tags/Statistical/"/>
-    
-      <category term="Math" scheme="http://JentChang.github.io/tags/Math/"/>
-    
-      <category term="抽样分布例题" scheme="http://JentChang.github.io/tags/%E6%8A%BD%E6%A0%B7%E5%88%86%E5%B8%83%E4%BE%8B%E9%A2%98/"/>
-    
-      <category term="z表格" scheme="http://JentChang.github.io/tags/z%E8%A1%A8%E6%A0%BC/"/>
     
   </entry>
   
