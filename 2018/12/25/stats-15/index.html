@@ -40,7 +40,8 @@ $\bar x = \frac{\su">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 </head>
 
@@ -469,13 +470,13 @@ $\bar x = \frac{\su">
 <h3 id="标准差-1"><a href="#标准差-1" class="headerlink" title="标准差"></a>标准差</h3><blockquote>
 <p>为什么要引入标准差呢？<br>还记得量纲吗，方差的单位并不是数据的单位，我们需要对它开方，这样刚刚好得到的标准差和我们的数据单位是一样的．</p>
 </blockquote>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
 
 data <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 std_pop <span class="token operator">=</span> np<span class="token punctuation">.</span>std<span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># ddof:方差分母为n-ddof</span>
 std_sam <span class="token operator">=</span> np<span class="token punctuation">.</span>std<span class="token punctuation">(</span>data<span class="token punctuation">,</span> ddof<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 假设这部分数据只是样本，不是全部</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>std_pop<span class="token punctuation">,</span> std_sam<span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>代码采用科学计算工具<code>numpy</code>，python的基础计算过程只需要在方差那一篇的文章中代码稍微改一下就可以．记住对于样本数据，要更改分母．</p>
 </blockquote>

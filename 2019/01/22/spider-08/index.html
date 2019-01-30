@@ -31,7 +31,8 @@ Firefox插件　Xpath checke">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 </head>
 
@@ -399,12 +400,12 @@ Firefox插件　Xpath checke">
                     <span class="chip bg-color">requests</span>
                 </a>
                 
-                <a href="/tags/xpath/" target="_blank">
-                    <span class="chip bg-color">xpath</span>
+                <a href="/tags/图片/" target="_blank">
+                    <span class="chip bg-color">图片</span>
                 </a>
                 
-                <a href="/tags/模特图片/" target="_blank">
-                    <span class="chip bg-color">模特图片</span>
+                <a href="/tags/xpath/" target="_blank">
+                    <span class="chip bg-color">xpath</span>
                 </a>
                 
             </div>
@@ -528,7 +529,7 @@ Firefox插件　Xpath checke">
 </blockquote>
 </li>
 </ul>
-<h4 id="xpath解析例子"><a href="#xpath解析例子" class="headerlink" title="xpath解析例子"></a>xpath解析例子</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
+<h4 id="xpath解析例子"><a href="#xpath解析例子" class="headerlink" title="xpath解析例子"></a>xpath解析例子</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
 
 html <span class="token operator">=</span> <span class="token triple-quoted-string string">'''
 &lt;div class="wrapper">
@@ -562,7 +563,7 @@ xp<span class="token punctuation">(</span><span class="token string">'//ul//a/te
 <span class="token comment" spellcheck="true">#Out:['国内', '国际', '军事', '图片', '社会', '娱乐', '科技', '体育', '财经', '汽车']</span>
 xp<span class="token punctuation">(</span><span class="token string">'//ul/li/a/@href'</span><span class="token punctuation">)</span>
 <span class="token comment" spellcheck="true">#Out:['http://domestic.firefox.sina.com/', 'http://world.firefox.sina.com/', 'http://mil.firefox.sina.com/', 'http://photo.firefox.sina.com/', 'http://society.firefox.sina.com/', 'http://ent.firefox.sina.com/', 'http://tech.firefox.sina.com/', 'http://sports.firefox.sina.com/', 'http://finance.firefox.sina.com/', 'http://auto.firefox.sina.com/']</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="爬虫案例"><a href="#爬虫案例" class="headerlink" title="爬虫案例"></a>爬虫案例</h3><p>抓取目标图片</p>
 <blockquote>
 <p>思路</p>
@@ -578,7 +579,7 @@ for 模特链接　in　模特链接列表：
 <p>步骤<br>1.获取主页URL，寻找URl规律<br><a href="http://www.tmt001.com/" target="_blank" rel="noopener">http://www.tmt001.com/</a><br>2.xpath<br>List : //div[@class=’result_models’]/ul/li/div[@class=’model_data’]/a/@href<br>name : //div[@class=’result_models’]/ul/li/div[@class=’model_data’]/a/text()<br>jpgList ://dd/img/@src<br>jpgname : name+01</p>
 </blockquote>
 <p>爬虫代码</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
 <span class="token keyword">import</span> requests
 <span class="token keyword">import</span> time
 
@@ -641,7 +642,7 @@ for 模特链接　in　模特链接列表：
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
     spider <span class="token operator">=</span> TotSpider<span class="token punctuation">(</span><span class="token punctuation">)</span>
     spider<span class="token punctuation">.</span>workOn<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>
 

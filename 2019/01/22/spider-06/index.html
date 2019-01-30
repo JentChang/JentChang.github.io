@@ -31,7 +31,8 @@ Get方法　re">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 </head>
 
@@ -395,8 +396,8 @@ Get方法　re">
                     <span class="chip bg-color">requests</span>
                 </a>
                 
-                <a href="/tags/图片爬取/" target="_blank">
-                    <span class="chip bg-color">图片爬取</span>
+                <a href="/tags/图片/" target="_blank">
+                    <span class="chip bg-color">图片</span>
                 </a>
                 
                 <a href="/tags/客户端验证/" target="_blank">
@@ -435,7 +436,7 @@ Get方法　re">
 <p>requests是一个第三方模块，需要安装．<br>Anaconda Prompt: <code>conda install requests</code><br>cmd: <code>python -m pip install requests</code></p>
 </blockquote>
 <h3 id="Get方法-requests-get-url-headers-headers"><a href="#Get方法-requests-get-url-headers-headers" class="headerlink" title="Get方法　requests.get(url, headers=headers)"></a>Get方法　requests.get(url, headers=headers)</h3><p>requests.get发起请求并获取对象</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> requests
 
 url <span class="token operator">=</span> <span class="token string">'http://www.baidu.com/'</span>
 headers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span><span class="token string">''</span><span class="token punctuation">}</span>
@@ -443,12 +444,12 @@ headers <span class="token operator">=</span> <span class="token punctuation">{<
 res <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
 res<span class="token punctuation">.</span>encoding<span class="token operator">=</span><span class="token string">'utf-8'</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>url<span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>返回值属性<br><code>res.encoding</code>响应对象内容的编码属性<br><code>res.text</code> 响应内容字符串格式<br><code>res.content</code> 响应内容bytes格式（字节流）<br><code>res.url</code> 返回实际数据的url地址<br><code>res.status_code</code> HTTP响应码</p>
 </blockquote>
 <h4 id="非结构化数据保存（图片）"><a href="#非结构化数据保存（图片）" class="headerlink" title="非结构化数据保存（图片）"></a>非结构化数据保存（图片）</h4><p><code>html = res.content</code><br><code>with open(&#39;xx.jpg&#39;, &#39;wb&#39;) as f:</code><br><code>f.write(html)</code></p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> requests
 
 url <span class="token operator">=</span> <span class="token string">''</span>https<span class="token punctuation">:</span><span class="token operator">//</span>timgsa<span class="token punctuation">.</span>baidu<span class="token punctuation">.</span>com<span class="token operator">/</span>timg?image<span class="token operator">&amp;</span>quality<span class="token operator">=</span><span class="token number">80</span><span class="token operator">&amp;</span>size<span class="token operator">=</span>b9999_10000<span class="token operator">&amp;</span>sec<span class="token operator">=</span><span class="token number">1548306415352</span><span class="token operator">&amp;</span>di<span class="token operator">=</span>e75cc8258e02b07f5310d43215f1d56a<span class="token operator">&amp;</span>imgtype<span class="token operator">=</span><span class="token number">0</span><span class="token operator">&amp;</span>src<span class="token operator">=</span>http<span class="token operator">%</span><span class="token number">3A</span><span class="token operator">%</span><span class="token number">2F</span><span class="token operator">%</span>2Fimg4<span class="token punctuation">.</span>duitang<span class="token punctuation">.</span>com<span class="token operator">%</span>2Fuploads<span class="token operator">%</span>2Fitem<span class="token operator">%</span><span class="token number">2F201603</span><span class="token operator">%</span><span class="token number">2F21</span><span class="token operator">%</span>2F20160321223952_AVYMa<span class="token punctuation">.</span>jpeg<span class="token string">''</span>
 headers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span><span class="token string">'Mozilla/5.0'</span><span class="token punctuation">}</span>
@@ -464,13 +465,13 @@ html <span class="token operator">=</span> res<span class="token punctuation">.<
     f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
 
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'successfully'</span><span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="get-参数"><a href="#get-参数" class="headerlink" title="get()参数"></a>get()参数</h4><ul>
 <li><p>查询参数（params）<br>  params:字典<br>  res = requests.get(url, params=paramas, headers=heasers)</p>
 <blockquote>
 <p>params的属性存在　不用再编码拼接地址，可以为中文</p>
 </blockquote>
-<pre class=" language-python"><code class="language-python">  <span class="token keyword">import</span> requests
+<pre class="line-numbers language-python"><code class="language-python">  <span class="token keyword">import</span> requests
 
   url <span class="token operator">=</span> <span class="token string">'http://www.baidu.com/s?'</span>
   headers <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'User-Agent'</span><span class="token punctuation">:</span><span class="token string">'Mozilla/5.0'</span><span class="token punctuation">}</span>
@@ -482,7 +483,7 @@ html <span class="token operator">=</span> res<span class="token punctuation">.<
   <span class="token comment" spellcheck="true"># 获取bytes响应内容</span>
   html <span class="token operator">=</span> res<span class="token punctuation">.</span>text
   <span class="token keyword">print</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>代理参数（proxies）</p>
 <ul>

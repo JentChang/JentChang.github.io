@@ -33,7 +33,8 @@ question 2
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 </head>
 
@@ -443,7 +444,7 @@ question 2
 </blockquote>
 <h2 id="question-4"><a href="#question-4" class="headerlink" title="question 4"></a>question 4</h2><blockquote>
 <p>代码结果?</p>
-<pre class=" language-python"><code class="language-python">p <span class="token operator">=</span> <span class="token number">0</span>
+<pre class="line-numbers language-python"><code class="language-python">p <span class="token operator">=</span> <span class="token number">0</span>
 <span class="token keyword">def</span> <span class="token function">a</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">global</span> p
     p <span class="token operator">=</span> s <span class="token operator">-</span> x
@@ -456,7 +457,7 @@ question 2
     a<span class="token punctuation">(</span>s<span class="token punctuation">,</span> x<span class="token punctuation">)</span> <span class="token operator">and</span> b<span class="token punctuation">(</span>s<span class="token punctuation">,</span> x<span class="token punctuation">)</span>
 c<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
 p
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </blockquote>
 <blockquote>
 <p>p=0 考察and内容，左边函数返回值为False则不再执行右边函数。</p>
@@ -466,15 +467,15 @@ p
 </blockquote>
 <blockquote>
 <p>描述性的思考与模型性的思考</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">profit_fun</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> x<span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">profit_fun</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> x<span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">if</span> s <span class="token operator">></span> x<span class="token punctuation">:</span>
         <span class="token keyword">return</span> s <span class="token operator">-</span> x <span class="token operator">-</span> c
     <span class="token keyword">else</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> <span class="token number">0</span> <span class="token operator">-</span> c
-</code></pre>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">profit_fun</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> x<span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">profit_fun</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> x<span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>abs<span class="token punctuation">(</span>s <span class="token operator">-</span> x<span class="token punctuation">)</span> <span class="token operator">+</span> s <span class="token operator">-</span> x<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">-</span> c
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </blockquote>
 <blockquote>
 <p>代码利用数学的抽象方法，读起来会比较抽象，有人觉得这样不利于代码的可读性，我觉得那只是逻辑的问题，你的代码需要别人动脑子，不像是在按事物发展顺序的代码,这样并不意味者可读性差．说了这么多，就是代码的可读性跟你逻辑没有关系</p>
@@ -502,10 +503,10 @@ p
 </blockquote>
 <h2 id="question-9"><a href="#question-9" class="headerlink" title="question 9"></a>question 9</h2><blockquote>
 <p>代码结果</p>
-<pre class=" language-python"><code class="language-python">list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token string">'d'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">]</span>
+<pre class="line-numbers language-python"><code class="language-python">list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token string">'d'</span><span class="token punctuation">,</span> <span class="token string">'e'</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span> list<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span> list<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 </blockquote>
 <blockquote>
 <p>切片返回的是空列表，而索引会报错</p>

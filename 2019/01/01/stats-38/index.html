@@ -29,7 +29,8 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 </head>
 
@@ -433,15 +434,15 @@
 <blockquote>
 <p>还是再来一下代码吧．<br>代码是一个讨厌的东西，但是不得不承认它是一个很好的工具．这意味着要让它为你工作要显得比必须花时间调弄它划算．</p>
 </blockquote>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 只是在代码最后添加了计算标准差</span>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 只是在代码最后添加了计算标准差</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'原来分布标准差'</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>std<span class="token punctuation">(</span>L<span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'计算样本均值抽样分布标准差'</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>std<span class="token punctuation">(</span>L<span class="token punctuation">)</span><span class="token operator">/</span>np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>SIZE<span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'样本均值抽样分布标准差'</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>std<span class="token punctuation">(</span>random_num<span class="token punctuation">(</span>SIZE<span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">,</span> L<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>并不是完美的一样，样本的数量不要设的太小（这里是10000）<br>代码变量名字起的不好，SIZE才是样本容量，相当于公式里面的N</p>
 </blockquote>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt 
 <span class="token keyword">from</span> mpl_toolkits<span class="token punctuation">.</span>axisartist<span class="token punctuation">.</span>axislines <span class="token keyword">import</span> SubplotZero
 <span class="token keyword">import</span> random
@@ -509,7 +510,7 @@
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'样本均值抽样分布标准差'</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>std<span class="token punctuation">(</span>random_num<span class="token punctuation">(</span>SIZE<span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">,</span> L<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
     warnings<span class="token punctuation">.</span>filterwarnings<span class="token punctuation">(</span><span class="token string">'ignore'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#忽略警告</span>
     daw<span class="token punctuation">(</span>SIZE<span class="token punctuation">,</span> N<span class="token punctuation">,</span> L<span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>
 

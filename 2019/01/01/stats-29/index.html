@@ -31,7 +31,8 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 </head>
 
@@ -472,7 +473,7 @@
 <p>表格中的计算就是这样做的</p>
 </blockquote>
 <h3 id="python中的正态分布"><a href="#python中的正态分布" class="headerlink" title="python中的正态分布"></a>python中的正态分布</h3><p>在python中的科学计算包<code>scipy</code>中，stats.norm.pdf（x），stats.norm.cdf（x）分别表示概率密度函数和累积函数，具体参数这里不做介绍．<br>下面是利用python绘图程序．</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> scipy <span class="token keyword">import</span> exp<span class="token punctuation">,</span> sqrt<span class="token punctuation">,</span> stats
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> scipy <span class="token keyword">import</span> exp<span class="token punctuation">,</span> sqrt<span class="token punctuation">,</span> stats
 <span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>mathtext <span class="token keyword">as</span> mathtext
@@ -538,7 +539,7 @@ parser <span class="token operator">=</span> mathtext<span class="token punctuat
 r<span class="token punctuation">,</span> depth <span class="token operator">=</span> parser<span class="token punctuation">.</span>to_rgba<span class="token punctuation">(</span>m<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'k'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">12</span><span class="token punctuation">,</span> dpi<span class="token operator">=</span><span class="token number">120</span><span class="token punctuation">)</span>
 fig<span class="token punctuation">.</span>figimage<span class="token punctuation">(</span>r<span class="token punctuation">.</span>astype<span class="token punctuation">(</span>float<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">255</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">450</span><span class="token punctuation">,</span> <span class="token number">580</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>多利用电子表格熟悉图形和数值之间的关系．</p>
 </blockquote>

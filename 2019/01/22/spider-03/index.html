@@ -37,7 +37,8 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 </head>
 
@@ -455,7 +456,7 @@
 <p>  *：0次或N次<br>  +：1次或N次<br>  ?：0次或1次<br>  {m}：m次</p>
 </li>
 <li><p>贪婪匹配，非贪婪匹配<br>  1.贪婪匹配<code>(.*)</code>　在表达式匹配成功的前提下，尽可能多的匹配<code>*</code><br>  2.非贪婪匹配<code>(.*?)</code>　在表达式匹配成功的前提下，尽可能少的匹配<code>*</code></p>
-<pre class=" language-python"><code class="language-python">  <span class="token keyword">import</span> re
+<pre class="line-numbers language-python"><code class="language-python">  <span class="token keyword">import</span> re
 
   html <span class="token operator">=</span> <span class="token triple-quoted-string string">'''
   &lt;div>&lt;p>汉皇重色思倾国&lt;/p>&lt;/div>
@@ -472,10 +473,10 @@
   rList <span class="token operator">=</span> p<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
   <span class="token keyword">print</span><span class="token punctuation">(</span>rList<span class="token punctuation">)</span>
   <span class="token comment" spellcheck="true">#Out:['&lt;div>&lt;p>汉皇重色思倾国&lt;/p>&lt;/div>', '&lt;div>&lt;p>御宇多年求不得&lt;/p>&lt;/div>']</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>正则分组</p>
-<pre class=" language-python"><code class="language-python">  s <span class="token operator">=</span> <span class="token string">'a b c d'</span>
+<pre class="line-numbers language-python"><code class="language-python">  s <span class="token operator">=</span> <span class="token string">'a b c d'</span>
   p1 <span class="token operator">=</span> re<span class="token punctuation">.</span>compile<span class="token punctuation">(</span><span class="token string">'\w+\s+\w+'</span><span class="token punctuation">)</span>
   <span class="token keyword">print</span><span class="token punctuation">(</span>p1<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">)</span>
   <span class="token comment" spellcheck="true">#Out:['a b', 'c d']</span>
@@ -487,13 +488,13 @@
   p3 <span class="token operator">=</span> re<span class="token punctuation">.</span>compile<span class="token punctuation">(</span><span class="token string">'(\w+)\s+(\w+)'</span><span class="token punctuation">)</span>
   <span class="token keyword">print</span><span class="token punctuation">(</span>p3<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">)</span>
   <span class="token comment" spellcheck="true">#Out:[('a', 'b'), ('c', 'd')]</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>按照不带括号匹配，返回括号内容，不加括号认为括号最大,多个分组（括号），以元组形式显示</p>
 </blockquote>
 </li>
 </ul>
-<h3 id="正则案例"><a href="#正则案例" class="headerlink" title="正则案例"></a>正则案例</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> re
+<h3 id="正则案例"><a href="#正则案例" class="headerlink" title="正则案例"></a>正则案例</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> re
 
 html<span class="token operator">=</span><span class="token triple-quoted-string string">'''
 &lt;div class="financial">
@@ -530,7 +531,7 @@ s <span class="token operator">=</span> p<span class="token punctuation">.</span
 <span class="token comment" spellcheck="true">#Out:====================</span>
 <span class="token comment" spellcheck="true">#Out:Name is : Linear Algebra</span>
 <span class="token comment" spellcheck="true">#Out:Describe : It's just an enhancement course.</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="CSV解析模块"><a href="#CSV解析模块" class="headerlink" title="CSV解析模块"></a>CSV解析模块</h2><h3 id="CSV模块流程"><a href="#CSV模块流程" class="headerlink" title="CSV模块流程"></a>CSV模块流程</h3><ul>
 <li>导入<br>  <code>import csv</code></li>
 <li>打开CSV文件<br>  <code>with open(&#39;xxx.csv&#39;, &#39;w&#39;) as f:</code></li>

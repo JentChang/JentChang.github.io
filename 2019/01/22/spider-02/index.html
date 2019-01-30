@@ -30,7 +30,8 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 </head>
 
@@ -425,7 +426,7 @@
 <li>1.先把data定义为字典</li>
 <li>2.<code>urlencode(data).encode()</code></li>
 </ul>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request
 <span class="token keyword">import</span> urllib<span class="token punctuation">.</span>parse
 <span class="token keyword">import</span> json
 
@@ -463,7 +464,7 @@ html <span class="token operator">=</span> res<span class="token punctuation">.<
 <span class="token comment" spellcheck="true">#json转为python数据类型</span>
 rDict <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>rDict<span class="token punctuation">[</span><span class="token string">'translateResult'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'tgt'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>验证问题后面再弄（<a href="/2019/01/22/spider-07/">爬虫07：requests请求模块2</a>），这里只是改了url</p>
 </blockquote>

@@ -35,7 +35,8 @@ No prefe">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 </head>
 
@@ -496,7 +497,7 @@ No prefe">
 <p>我觉得我们需要一个正确的绘图来表达两个的对比<br>他们需要相同的坐标中比较</p>
 </blockquote>
 <p><img src="/images/stats/s_07_02.png" alt="图片"></p>
-<h4 id="利用pyhton绘制线性图"><a href="#利用pyhton绘制线性图" class="headerlink" title="利用pyhton绘制线性图"></a>利用<code>pyhton</code>绘制线性图</h4><h5 id="误导人的线形图程序"><a href="#误导人的线形图程序" class="headerlink" title="误导人的线形图程序"></a>误导人的线形图程序</h5><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
+<h4 id="利用pyhton绘制线性图"><a href="#利用pyhton绘制线性图" class="headerlink" title="利用pyhton绘制线性图"></a>利用<code>pyhton</code>绘制线性图</h4><h5 id="误导人的线形图程序"><a href="#误导人的线形图程序" class="headerlink" title="误导人的线形图程序"></a>误导人的线形图程序</h5><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt 
 <span class="token keyword">from</span> mpl_toolkits<span class="token punctuation">.</span>axisartist<span class="token punctuation">.</span>axislines <span class="token keyword">import</span> SubplotZero
 
@@ -534,8 +535,8 @@ ax2<span class="token punctuation">.</span>set_yticks<span class="token punctuat
 ax2<span class="token punctuation">.</span>set_title<span class="token punctuation">(</span>prefer<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-<h5 id="正确的线形绘图程序"><a href="#正确的线形绘图程序" class="headerlink" title="正确的线形绘图程序"></a>正确的线形绘图程序</h5><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="正确的线形绘图程序"><a href="#正确的线形绘图程序" class="headerlink" title="正确的线形绘图程序"></a>正确的线形绘图程序</h5><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt 
 <span class="token keyword">from</span> mpl_toolkits<span class="token punctuation">.</span>axisartist<span class="token punctuation">.</span>axislines <span class="token keyword">import</span> SubplotZero
 
@@ -562,7 +563,7 @@ ax1<span class="token punctuation">.</span>set_yticks<span class="token punctuat
 ax1<span class="token punctuation">.</span>set_title<span class="token punctuation">(</span><span class="token string">'Prefer Yummy Cola and Prefer Thril Soda'</span><span class="token punctuation">)</span>
 
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>由于博文标题在图片上的颜色影响，代码中添加了背景的设置，如果觉得过于繁琐，可以参照前几节的matplotlib命令，或者参考后期的<code>Machine Learning</code>中<a href="/contents/machine_learning/matplotlib.html">matplotlib</a>内容.</p>
 </blockquote>

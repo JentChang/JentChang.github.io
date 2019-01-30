@@ -35,7 +35,8 @@ data  Form表单数据，字典形式，不需要编码和转码
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 </head>
 
@@ -436,7 +437,7 @@ data  Form表单数据，字典形式，不需要编码和转码
 <h3 id="案例（有道翻译）"><a href="#案例（有道翻译）" class="headerlink" title="案例（有道翻译）"></a>案例（有道翻译）</h3><blockquote>
 <p>抓包，多抓几次观察Form表单中的数据变化（浏览器F12　Network-&gt;Headers-&gt;From Data）<br><code>&#39;salt&#39;: &#39;15481491442904&#39;,</code><br><code>&#39;sign&#39;: &#39;407948613c2943e6ff32f27e6aa7fcd6&#39;</code><br><code>&#39;ts&#39;: &#39;1548149144290&#39;</code><br><code>&#39;bv&#39;: &#39;9deb57d53879cce82ff92bccf83a3e4c&#39;</code><br>F12,（刷新网页）浏览器重新向有道翻译发送请求，抓到js文件（fanyi.min.js）,Preview查看js代码，保存到编辑器，搜索字段，查看加密方法，按照相同的方法加密．</p>
 </blockquote>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> json
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> json
 <span class="token keyword">import</span> time
 <span class="token keyword">import</span> random
 <span class="token keyword">import</span> hashlib
@@ -505,7 +506,7 @@ html <span class="token operator">=</span> res<span class="token punctuation">.<
 rDict <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
 result <span class="token operator">=</span> rDict<span class="token punctuation">[</span><span class="token string">'translateResult'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'tgt'</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>
 
@@ -972,12 +973,12 @@ Firefox插件　Xpath checke</div>
                         <span class="chip bg-color">requests</span>
                     </a>
                     
-                    <a href="/tags/xpath/" target="_blank">
-                        <span class="chip bg-color">xpath</span>
+                    <a href="/tags/图片/" target="_blank">
+                        <span class="chip bg-color">图片</span>
                     </a>
                     
-                    <a href="/tags/模特图片/" target="_blank">
-                        <span class="chip bg-color">模特图片</span>
+                    <a href="/tags/xpath/" target="_blank">
+                        <span class="chip bg-color">xpath</span>
                     </a>
                     
                 </div>
@@ -1028,8 +1029,8 @@ Get方法　re</div>
                         <span class="chip bg-color">requests</span>
                     </a>
                     
-                    <a href="/tags/图片爬取/" target="_blank">
-                        <span class="chip bg-color">图片爬取</span>
+                    <a href="/tags/图片/" target="_blank">
+                        <span class="chip bg-color">图片</span>
                     </a>
                     
                     <a href="/tags/客户端验证/" target="_blank">

@@ -36,7 +36,8 @@ def fun_1():
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 </head>
 
@@ -439,7 +440,7 @@ def fun_1():
 </blockquote>
 </li>
 </ul>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">fun_1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">fun_1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'启动生成器'</span><span class="token punctuation">)</span>
     <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">yield</span> i
@@ -451,7 +452,7 @@ fun <span class="token operator">=</span> fun_1<span class="token punctuation">(
         <span class="token keyword">print</span><span class="token punctuation">(</span>next<span class="token punctuation">(</span>fun<span class="token punctuation">)</span><span class="token punctuation">)</span>
     <span class="token keyword">except</span><span class="token punctuation">:</span>
         <span class="token keyword">break</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><ul>
 <li>extract()<br>  获取选择器对象中的文本内容<br>  response.xpath(‘’).extract() 返回列表</li>
 <li>pipelines.py<br>  每个类中必须有函数process_item<br>  def process_item(self, item, spider):<br>  　　return item<blockquote>
@@ -462,7 +463,7 @@ fun <span class="token operator">=</span> fun_1<span class="token punctuation">(
 <h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><h4 id="step1"><a href="#step1" class="headerlink" title="step1"></a>step1</h4><p><strong>终端</strong></p>
 <p><code>cd /jent/project/spider/spider_14</code><br><code>scrapy startproject Csdn</code><br><code>cd Csdn</code><br><code>scrapy genspider csdn blog.csdn.net</code></p>
 <h4 id="step2"><a href="#step2" class="headerlink" title="step2"></a>step2</h4><p><strong>items.py文件</strong></p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> scrapy
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> scrapy
 
 
 <span class="token keyword">class</span> <span class="token class-name">CsdnItem</span><span class="token punctuation">(</span>scrapy<span class="token punctuation">.</span>Item<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -473,9 +474,9 @@ fun <span class="token operator">=</span> fun_1<span class="token punctuation">(
     time <span class="token operator">=</span> scrapy<span class="token punctuation">.</span>Field<span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token comment" spellcheck="true"># 数量</span>
     number <span class="token operator">=</span> scrapy<span class="token punctuation">.</span>Field<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="step3"><a href="#step3" class="headerlink" title="step3"></a>step3</h4><p><strong>csdn.py文件</strong></p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> scrapy
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> scrapy
 <span class="token keyword">from</span> Csdn<span class="token punctuation">.</span>items <span class="token keyword">import</span> CsdnItem
 
 
@@ -493,9 +494,9 @@ fun <span class="token operator">=</span> fun_1<span class="token punctuation">(
         item<span class="token punctuation">[</span><span class="token string">'number'</span><span class="token punctuation">]</span> <span class="token operator">=</span> response<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span><span class="token string">'//span[@class="read-count"]/text()'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>extract<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
 
         <span class="token keyword">yield</span> item
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="step4"><a href="#step4" class="headerlink" title="step4"></a>step4</h4><p><strong>settings.py</strong></p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 更改</span>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 更改</span>
 USER_AGENT <span class="token operator">=</span> <span class="token string">'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36'</span>
 ROBOTSTXT_OBEY <span class="token operator">=</span> <span class="token boolean">False</span>
 <span class="token comment" spellcheck="true">## 数字为执行优先级</span>
@@ -506,6 +507,7 @@ ITEM_PIPELINES <span class="token operator">=</span> <span class="token punctuat
 <span class="token punctuation">}</span>
 
 <span class="token comment" spellcheck="true"># 添加</span>
+<span class="token comment" spellcheck="true">## 下一节介绍</span>
 LOG_LEVEL <span class="token operator">=</span> <span class="token string">'WARNING'</span>
 
 <span class="token comment" spellcheck="true">## MongoDB相关变量</span>
@@ -519,9 +521,9 @@ MYSQL_HOST <span class="token operator">=</span> <span class="token string">'loc
 MYSQL_USER <span class="token operator">=</span> <span class="token string">'root'</span>
 MYSQL_PWD <span class="token operator">=</span> <span class="token string">'123456'</span>
 MYSQL_DB <span class="token operator">=</span> <span class="token string">'csdndb'</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="step5"><a href="#step5" class="headerlink" title="step5"></a>step5</h4><p><strong>pipelines.py文件</strong></p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> pymongo
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> pymongo
 <span class="token keyword">import</span> pymysql
 <span class="token keyword">from</span> Csdn<span class="token punctuation">.</span>settings <span class="token keyword">import</span> <span class="token operator">*</span>
 
@@ -572,7 +574,7 @@ MYSQL_DB <span class="token operator">=</span> <span class="token string">'csdnd
         self<span class="token punctuation">.</span>db<span class="token punctuation">.</span>commit<span class="token punctuation">(</span><span class="token punctuation">)</span>
         <span class="token keyword">return</span> item
 
-    <span class="token keyword">def</span> <span class="token function">close_spider</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">close_spider</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> spider<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token triple-quoted-string string">'''自动调用的结束函数
         '''</span>
         self<span class="token punctuation">.</span>sursor<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -586,7 +588,7 @@ MYSQL_DB <span class="token operator">=</span> <span class="token string">'csdnd
     <span class="token comment" spellcheck="true">#     time varchar(100),</span>
     <span class="token comment" spellcheck="true">#     number varchar(100)</span>
     <span class="token comment" spellcheck="true"># )charset=utf8;</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="step6"><a href="#step6" class="headerlink" title="step6"></a>step6</h4><p><strong>终端启动爬虫</strong></p>
 <p>/jent/project/spider/spider_14/Csdn &gt;&gt;&gt;<code>scrapy crawl csdn</code></p>
 <hr>
@@ -1012,29 +1014,45 @@ MYSQL_DB <span class="token operator">=</span> <span class="token string">'csdnd
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">上一篇</div>
             <div class="card">
-                <a href="/2019/01/23/stats-40/">
+                <a href="/2019/01/22/spider-15/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="统计学40：置信区间">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="爬虫15：爬虫框架Scrapy03">
                         
-                        <span class="card-title">统计学40：置信区间</span>
+                        <span class="card-title">爬虫15：爬虫框架Scrapy03</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">统计学•目录 统计学•类别  math
+                    <div class="summary">爬虫•目录 爬虫•类别
 
-置信区间You samole 36 apples from your farm’s harvest of over 200,000 apples. The mean weight of the sa</div>
+爬虫框架Scrapy警告级别／日志文件LOG_LEVEL = ‘’LOG_FILE = ‘文件名.log’
+LOG_LEVEL值：
+
+
+
+　级别
+值
+表示
+结果
+
+
+
+
+1
+CRITICAL
+严重错误
+显示CRIT</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-23
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-22
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Statistical/" class="post-category" target="_blank">
-                                    Statistical
+                            <a href="/categories/Spider/" class="post-category" target="_blank">
+                                    Spider
                                 </a>
                             
                             
@@ -1044,16 +1062,20 @@ MYSQL_DB <span class="token operator">=</span> <span class="token string">'csdnd
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Statistical/" target="_blank">
-                        <span class="chip bg-color">Statistical</span>
+                    <a href="/tags/爬虫Spider/" target="_blank">
+                        <span class="chip bg-color">爬虫Spider</span>
                     </a>
                     
-                    <a href="/tags/Math/" target="_blank">
-                        <span class="chip bg-color">Math</span>
+                    <a href="/tags/Scrapy/" target="_blank">
+                        <span class="chip bg-color">Scrapy</span>
                     </a>
                     
-                    <a href="/tags/置信区间/" target="_blank">
-                        <span class="chip bg-color">置信区间</span>
+                    <a href="/tags/警告信息/" target="_blank">
+                        <span class="chip bg-color">警告信息</span>
+                    </a>
+                    
+                    <a href="/tags/CSV/" target="_blank">
+                        <span class="chip bg-color">CSV</span>
                     </a>
                     
                 </div>
@@ -1103,12 +1125,12 @@ Scrapy安装镜像（Anaconda Prompt安装命令）conda config --add chann</div
                         <span class="chip bg-color">爬虫Spider</span>
                     </a>
                     
-                    <a href="/tags/框架/" target="_blank">
-                        <span class="chip bg-color">框架</span>
-                    </a>
-                    
                     <a href="/tags/Scrapy/" target="_blank">
                         <span class="chip bg-color">Scrapy</span>
+                    </a>
+                    
+                    <a href="/tags/框架/" target="_blank">
+                        <span class="chip bg-color">框架</span>
                     </a>
                     
                 </div>

@@ -30,7 +30,8 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 </head>
 
@@ -449,7 +450,7 @@
 <blockquote>
 <p>这里并不是一个正经的茎叶图，我利用<code>stem</code>画出了我的想法，你也可以绘制你自己的茎叶图．在这里你会发现2-3数据比较密集，对的，这说明数据集中在20多(中位数可能分布在这附近)，也可以通过水平相邻的等高点的分布很快发现众数等等，其实可视化重要的是一眼能看出不同数据之间的差异和关系，可以发现它的特性，而不需要取具体的计算．</p>
 </blockquote>
-<h4 id="利用pyhton绘图"><a href="#利用pyhton绘图" class="headerlink" title="利用pyhton绘图"></a>利用<code>pyhton</code>绘图</h4><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
+<h4 id="利用pyhton绘图"><a href="#利用pyhton绘图" class="headerlink" title="利用pyhton绘图"></a>利用<code>pyhton</code>绘图</h4><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt 
 <span class="token keyword">from</span> mpl_toolkits<span class="token punctuation">.</span>axisartist<span class="token punctuation">.</span>axislines <span class="token keyword">import</span> SubplotZero
 
@@ -509,7 +510,7 @@ plt<span class="token punctuation">.</span>setp<span class="token punctuation">(
 plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'r-'</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
 
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>统计的内容中会经常用到matplotlib,如果你对它感兴趣，可以关注后期的<code>Machine Learning</code>中<a href="/contents/machine_learning/matplotlib.html">matplotlib</a>内容.<br>当然，那里的例子不像这样的繁琐，并且会要你想要的一些参数的说明</p>
 </blockquote>

@@ -31,7 +31,8 @@ Mongo数据库pymongo
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 </head>
 
@@ -438,7 +439,7 @@ Mongo数据库pymongo
 <li>4、执行插入语句<br>  myset.insert_one({字典})</li>
 </ul>
 <p><code>&gt;&gt;&gt;show dbs</code><br><code>&gt;&gt;&gt;use 库名</code><br><code>&gt;&gt;&gt;show collections</code><br><code>&gt;&gt;&gt;db.集合名.find().pretty()</code><br><code>&gt;&gt;&gt;db.集合名.count()</code><br><code>&gt;&gt;&gt;db.dropDatabase()</code></p>
-<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request
+<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request
 <span class="token keyword">import</span> re 
 <span class="token keyword">import</span> pymongo
 <span class="token keyword">import</span> time 
@@ -496,7 +497,7 @@ Mongo数据库pymongo
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
     spider <span class="token operator">=</span> MaoyanSpider<span class="token punctuation">(</span><span class="token punctuation">)</span>
     spider<span class="token punctuation">.</span>workOn<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="Mysql数据库"><a href="#Mysql数据库" class="headerlink" title="Mysql数据库"></a>Mysql数据库</h2><p>1、创建数据库对象<br>2、创建游标对象<br>3、执行命令<br>4、(重要)提交到数据库执行</p>
 <h3 id="例"><a href="#例" class="headerlink" title="例"></a>例</h3><p>1、建库<br><code>mysql&gt; create database mydb charset=utf8;</code><br>2、建表<br><code>use mydb;</code><br><code>create table top100(</code><br><code>id int primary key auto_increment,</code><br><code>name varchar(50),</code><br><code>star varchar(150),</code><br><code>time varchar(50)</code><br><code>)charset=utf8;</code></p>
 <h3 id="远程存入MySQL数据库"><a href="#远程存入MySQL数据库" class="headerlink" title="远程存入MySQL数据库"></a>远程存入MySQL数据库</h3><h4 id="1-开启远程链接"><a href="#1-开启远程链接" class="headerlink" title="1.开启远程链接"></a>1.开启远程链接</h4><p><code>sudo -i</code><br><code>cd /etc/mysql/mysql.conf.d/</code><br><code>vi mysqld.cnf</code><br><code>注释掉下面</code><br><code># bind-address = 127.0.0.1</code><br><code>srevice mysql restart</code></p>
@@ -511,7 +512,7 @@ Mongo数据库pymongo
 <li>查看状态<br>  <code>sudo ufw status</code></li>
 </ul>
 </blockquote>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request
 <span class="token keyword">import</span> re 
 <span class="token keyword">import</span> pymysql
 <span class="token keyword">import</span> time 
@@ -577,7 +578,7 @@ Mongo数据库pymongo
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
     spider <span class="token operator">=</span> MaoyanSpider<span class="token punctuation">(</span><span class="token punctuation">)</span>
     spider<span class="token punctuation">.</span>workOn<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>
 

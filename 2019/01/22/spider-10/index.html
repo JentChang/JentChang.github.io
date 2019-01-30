@@ -32,7 +32,8 @@ phantomjs">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 </head>
 
@@ -435,7 +436,7 @@ phantomjs">
 <h3 id="phantomjs"><a href="#phantomjs" class="headerlink" title="phantomjs"></a>phantomjs</h3><p>无界面浏览器</p>
 <p>把网站在内存进行页面加载</p>
 <h3 id="chromedrive"><a href="#chromedrive" class="headerlink" title="chromedrive"></a>chromedrive</h3><p><a href="https://chromedriver.storage.googleapis.com/index.html" target="_blank" rel="noopener">https://chromedriver.storage.googleapis.com/index.html</a></p>
-<h3 id="selenium使用"><a href="#selenium使用" class="headerlink" title="selenium使用"></a>selenium使用</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+<h3 id="selenium使用"><a href="#selenium使用" class="headerlink" title="selenium使用"></a>selenium使用</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
 
 <span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
 
@@ -453,7 +454,7 @@ driver<span class="token punctuation">.</span>save_screenshot<span class="token 
 
 <span class="token comment" spellcheck="true"># 关闭浏览器</span>
 driver<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><table>
 <thead>
 <tr>
@@ -497,7 +498,7 @@ driver<span class="token punctuation">.</span>quit<span class="token punctuation
 </blockquote>
 </li>
 </ul>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
 <span class="token keyword">import</span> time
 
 <span class="token comment" spellcheck="true"># 创建phantom.js浏览器对象</span>
@@ -521,12 +522,12 @@ driver<span class="token punctuation">.</span>save_screenshot<span class="token 
 
 <span class="token comment" spellcheck="true"># 关闭浏览器</span>
 driver<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-<h3 id="chromedriver设置无界面模式"><a href="#chromedriver设置无界面模式" class="headerlink" title="chromedriver设置无界面模式"></a>chromedriver设置无界面模式</h3><pre class=" language-python"><code class="language-python">opt <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>ChromeOptins<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="chromedriver设置无界面模式"><a href="#chromedriver设置无界面模式" class="headerlink" title="chromedriver设置无界面模式"></a>chromedriver设置无界面模式</h3><pre class="line-numbers language-python"><code class="language-python">opt <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>ChromeOptins<span class="token punctuation">(</span><span class="token punctuation">)</span>
 opt<span class="token punctuation">.</span>set_headless<span class="token punctuation">(</span><span class="token punctuation">)</span>
 driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>options<span class="token operator">=</span>opt<span class="token punctuation">)</span>
-</code></pre>
-<h3 id="例子－京东商品信息"><a href="#例子－京东商品信息" class="headerlink" title="例子－京东商品信息"></a>例子－京东商品信息</h3><pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="例子－京东商品信息"><a href="#例子－京东商品信息" class="headerlink" title="例子－京东商品信息"></a>例子－京东商品信息</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
 <span class="token keyword">import</span> time
 <span class="token keyword">import</span> csv
 
@@ -579,7 +580,7 @@ n <span class="token operator">=</span> <span class="token number">1</span>
         time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
     <span class="token keyword">else</span><span class="token punctuation">:</span>
         <span class="token keyword">break</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>
 

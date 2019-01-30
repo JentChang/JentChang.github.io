@@ -31,7 +31,8 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 </head>
 
@@ -450,7 +451,7 @@
 <p>看到这个公式，你应该明白了，对于连续随机变量，我们寻找它确定值的发生概率几乎等于0，从图中也可以发现，它只会是一根线段，围不成一个面．</p>
 </blockquote>
 <p>密度函数图示代码：</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
 <span class="token keyword">from</span> scipy <span class="token keyword">import</span> exp<span class="token punctuation">,</span> sqrt<span class="token punctuation">,</span> stats
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt 
 <span class="token keyword">from</span> mpl_toolkits<span class="token punctuation">.</span>axisartist<span class="token punctuation">.</span>axislines <span class="token keyword">import</span> SubplotZero
@@ -526,7 +527,7 @@ ax1<span class="token punctuation">.</span>fill_between<span class="token punctu
 
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="离散的随机变量概率图"><a href="#离散的随机变量概率图" class="headerlink" title="离散的随机变量概率图"></a>离散的随机变量概率图</h3><blockquote>
 <p>下面是一个离散随机变量的概率分布，但是我们不能说是密度函数，它的值是一个个枚举出来的<br>这是一个掷筛子的概率，但是这是一个处理过的筛子，它的二被改成了六</p>
 </blockquote>
@@ -534,7 +535,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <blockquote>
 <p>$\frac{1}{6}+0+\frac{1}{6}+\frac{1}{6}+\frac{1}{6}+\frac{2}{6}=1$</p>
 </blockquote>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np 
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt 
 <span class="token keyword">from</span> mpl_toolkits<span class="token punctuation">.</span>axisartist<span class="token punctuation">.</span>axislines <span class="token keyword">import</span> SubplotZero
 <span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
@@ -558,7 +559,7 @@ width <span class="token operator">=</span> <span class="token number">0.4</span
 ax1<span class="token punctuation">.</span>bar<span class="token punctuation">(</span>x<span class="token operator">-</span>width<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> y<span class="token punctuation">,</span> width<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'c'</span><span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.7</span><span class="token punctuation">)</span>
 
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>
 

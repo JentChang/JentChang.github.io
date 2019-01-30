@@ -35,7 +35,8 @@ python的多线程由于全局">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 </head>
 
@@ -488,7 +489,7 @@ python的多线程由于全局">
 </ul>
 <h4 id="2-常用方法"><a href="#2-常用方法" class="headerlink" title="2.常用方法"></a>2.常用方法</h4><ul>
 <li><p>urllib.request.urlopen（’URL地址’）<br>  1.作用：　向网站发起请求并获取响应对象<br>  2.不支持重构User-Agent</p>
-<pre class=" language-python"><code class="language-python">
+<pre class="line-numbers language-python"><code class="language-python">
   <span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request
 
   <span class="token comment" spellcheck="true">#向网站发起请求获取响应对象</span>
@@ -499,14 +500,14 @@ python的多线程由于全局">
   <span class="token keyword">print</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
   <span class="token comment" spellcheck="true">#encode():字符串转为bytes decode():bytes转为string</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>urllib.request.Request（’url’,headers={}）<br>  1.使用流程</p>
 <ul>
 <li>step1 创建请求对象（Request()）</li>
 <li>step2 发请求获取响应（Urlopen()）</li>
 <li><p>step3 获取相应内容（read().decode(‘utf-8’)）</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#定义变量</span>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true">#定义变量</span>
 url <span class="token operator">=</span> <span class="token string">'http://www.baidu.com/'</span>
 headers <span class="token operator">=</span> <span class="token punctuation">{</span>Mozilla<span class="token operator">/</span><span class="token number">5.0</span> <span class="token punctuation">(</span>Windows NT <span class="token number">6.1</span><span class="token punctuation">;</span> WOW64<span class="token punctuation">)</span> 
 AppleWebKit<span class="token operator">/</span><span class="token number">537.36</span> <span class="token punctuation">(</span>KHTML<span class="token punctuation">,</span> like Gecko<span class="token punctuation">)</span> 
@@ -521,7 +522,7 @@ res <span class="token operator">=</span> urllib<span class="token punctuation">
 <span class="token comment" spellcheck="true">#step1:获取响应内容</span>
 html <span class="token operator">=</span> req<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>html<span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 </li>
@@ -541,7 +542,7 @@ html <span class="token operator">=</span> req<span class="token punctuation">.<
 </blockquote>
 </li>
 <li><p>EX:终端输入内容，得到百度搜索结果，保存本地</p>
-<pre class=" language-python"><code class="language-python">  <span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request
+<pre class="line-numbers language-python"><code class="language-python">  <span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request
   <span class="token keyword">import</span> urllib<span class="token punctuation">.</span>parse
 
   <span class="token comment" spellcheck="true"># 1定义常用变量</span>
@@ -561,16 +562,16 @@ html <span class="token operator">=</span> req<span class="token punctuation">.<
   <span class="token comment" spellcheck="true"># 3保存到本地</span>
   <span class="token keyword">with</span> open<span class="token punctuation">(</span><span class="token string">'baidu.html'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
       f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ul>
 </li>
 <li><p>2.quote(‘字符串’)</p>
 <ul>
 <li>ex:<code>s = urllib.parse.quote(&#39;经济&#39;)</code></li>
-<li>更改其中两句命令<pre class=" language-python"><code class="language-python">  baseurl <span class="token operator">=</span> <span class="token string">'http://www.baidu.com/s?wd='</span>
+<li>更改其中两句命令<pre class="line-numbers language-python"><code class="language-python">  baseurl <span class="token operator">=</span> <span class="token string">'http://www.baidu.com/s?wd='</span>
   key <span class="token operator">=</span> urllib<span class="token punctuation">.</span>parse<span class="token punctuation">.</span>quote<span class="token punctuation">(</span>key<span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 </ul>
 </li>
@@ -593,7 +594,7 @@ html <span class="token operator">=</span> req<span class="token punctuation">.<
 <li>step3 保存</li>
 </ul>
 </blockquote>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> urllib<span class="token punctuation">.</span>request
 <span class="token keyword">import</span> urllib<span class="token punctuation">.</span>parse
 <span class="token keyword">import</span> time
 
@@ -640,7 +641,7 @@ html <span class="token operator">=</span> req<span class="token punctuation">.<
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
     spdier <span class="token operator">=</span> BaiduSpider<span class="token punctuation">(</span><span class="token punctuation">)</span>
     spdier<span class="token punctuation">.</span>workOn<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>
 
