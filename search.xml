@@ -8,7 +8,7 @@
       <link href="/2019/03/25/special-explanation/"/>
       <url>/2019/03/25/special-explanation/</url>
       
-        <content type="html"><![CDATA[<p>我取消了版权限制的复制，这样可以直接复制完整的代码便于调试．但是有些代码我是在Notebook上写的，排版可能有点问题，但是我想那应该不是什么解决不了的．</p><p>最近东西比较多，我要一边找东西一边学习东西．所以更新上可能会比较缓慢，另外我发现写这个真的很费时间，但是我想我会坚持．不过最近东西太多，而且我需要为我寻找一份数据相关的工作，并胜任它，等我回过神会慢慢的再梳理出来．</p><p>有一部分在我的笔记本上，我想拍照上传，但是字太丑，哈哈哈哈哈哈．</p><hr><p>老规矩，如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）</p>]]></content>
+        <content type="html"><![CDATA[<p>我取消了版权限制的复制，这样可以直接复制完整的代码便于调试．但是有些代码我是在Notebook上写的，排版可能有点问题，但是我想那应该不是什么解决不了的．</p><p>最近东西比较多，我要一边找东西一边学习东西．所以更新上可能会比较缓慢，另外我发现写这个真的很费时间，但是我想我会坚持．不过最近东西太多，而且我需要为我寻找一份数据相关的工作，并胜任它，等我回过神会慢慢的再梳理出来．</p><p>有一部分在我的笔记本上，我想拍照上传，但是字太丑，哈哈哈哈哈哈．</p><p>我还有一个计划就是有一些东西，比如非线性迭代过程，我想我闲下来的时候应该把过程用动画的方式表示出来（我指的不是收敛曲线，是原理图），这样更直观．当然，这是个想法，而且可行，就看谁最早去尝试它．</p><hr><p>老规矩，如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）</p>]]></content>
       
       
       <categories>
@@ -426,11 +426,11 @@
     
     
     <entry>
-      <title>爬虫17：爬虫框架Scrapy05</title>
-      <link href="/2019/01/22/spider-17/"/>
-      <url>/2019/01/22/spider-17/</url>
+      <title>爬虫19：分布式爬虫</title>
+      <link href="/2019/01/22/spider-19/"/>
+      <url>/2019/01/22/spider-19/</url>
       
-        <content type="html"><![CDATA[<p><a href="/contents/spider/">爬虫•目录</a> <a href="/categories/Spider/">爬虫•类别</a></p><hr><h2 id="爬虫框架Scrapy"><a href="#爬虫框架Scrapy" class="headerlink" title="爬虫框架Scrapy"></a>爬虫框架Scrapy</h2><h4 id="scrapy-shell使用"><a href="#scrapy-shell使用" class="headerlink" title="scrapy shell使用"></a>scrapy shell使用</h4><table><thead><tr><th style="text-align:left">代码</th><th style="text-align:left">　含义</th></tr></thead><tbody><tr><td style="text-align:left">scrapy shell URL</td><td style="text-align:left">地址</td></tr><tr><td style="text-align:left">request.headers</td><td style="text-align:left">请求头　字典</td></tr><tr><td style="text-align:left">request.meta</td><td style="text-align:left">定义代理等相关信息　字典</td></tr><tr><td style="text-align:left">request.text</td><td style="text-align:left">字符串</td></tr><tr><td style="text-align:left">response.body</td><td style="text-align:left">字节流</td></tr><tr><td style="text-align:left">response.xpath(‘’)</td><td style="text-align:left">搜索</td></tr></tbody></table><h4 id="scrapy-Request-常用参数"><a href="#scrapy-Request-常用参数" class="headerlink" title="scrapy.Request()常用参数"></a>scrapy.Request()常用参数</h4><table><thead><tr><th style="text-align:left"></th><th style="text-align:left"></th></tr></thead><tbody><tr><td style="text-align:left">url</td><td style="text-align:left">地址</td></tr><tr><td style="text-align:left">callback</td><td style="text-align:left">回调函数</td></tr><tr><td style="text-align:left">headers</td><td style="text-align:left">请求头</td></tr><tr><td style="text-align:left">meta</td><td style="text-align:left">代理等相关信息</td></tr><tr><td style="text-align:left">dont_filter</td><td style="text-align:left">是否忽略域组限制 Ture不检查allowed_domains=［＇＇］，默认False</td></tr><tr><td style="text-align:left">encoding</td><td style="text-align:left">默认utf-8</td></tr></tbody></table><h4 id="下载器中间件（随机User-Agent）"><a href="#下载器中间件（随机User-Agent）" class="headerlink" title="下载器中间件（随机User-Agent）"></a>下载器中间件（随机User-Agent）</h4><table><thead><tr><th style="text-align:left">操作文件</th><th style="text-align:left">配置命令</th></tr></thead><tbody><tr><td style="text-align:left">setting.py（少量User-Agent）</td><td style="text-align:left">USER_AGENT = ‘’</td></tr><tr><td style="text-align:left"></td><td style="text-align:left">DEFAULT_REQUEST_HEADRES = {}</td></tr></tbody></table><ul><li>setting.py（少量User-Agent）<br>  USER_AGENT = ‘’<br>  DEFAULT_REQUEST_HEADRES = {}</li><li>middlewares.py设置中间件<br>  1.项目目录新建useragets.py，存放agent<pre><code>  uaList = [&#39;&#39;, &#39;&#39; ,&#39;&#39;,...]</code></pre>  2.middlewares.py中创建中间件类<pre><code>  from xxx.useragents import *  class RandomUAmiddleware(boject):      def process_request(self, request, spider):          # 此处注意headers属性          request.headers[&#39;User-Agent&#39;] = ...</code></pre>  3.开启中间件<pre><code>  setting.py设置  DOWNLOADER_MIDDLEWARES = </code></pre></li></ul><h4 id="升级Scrapy"><a href="#升级Scrapy" class="headerlink" title="升级Scrapy"></a>升级Scrapy</h4><ul><li>安装pip<br>  官网下载pip解压<br>  cd到解压路径　执行<code>python setup.py install</code></li><li>升级<br>  python -m pip install –upgrade Scrapy</li></ul><hr><p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>]]></content>
+        <content type="html"><![CDATA[<p><a href="/contents/spider/">爬虫•目录</a> <a href="/categories/Spider/">爬虫•类别</a></p><hr><h2 id="分布式爬虫"><a href="#分布式爬虫" class="headerlink" title="分布式爬虫"></a>分布式爬虫</h2><hr><p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>]]></content>
       
       
       <categories>
@@ -444,9 +444,9 @@
             
             <tag> 爬虫Spider </tag>
             
-            <tag> Scrapy </tag>
+            <tag> 分布式 </tag>
             
-            <tag> shell </tag>
+            <tag> redis </tag>
             
         </tags>
       
@@ -486,11 +486,11 @@
     
     
     <entry>
-      <title>爬虫19：分布式爬虫</title>
-      <link href="/2019/01/22/spider-19/"/>
-      <url>/2019/01/22/spider-19/</url>
+      <title>爬虫17：爬虫框架Scrapy05</title>
+      <link href="/2019/01/22/spider-17/"/>
+      <url>/2019/01/22/spider-17/</url>
       
-        <content type="html"><![CDATA[<p><a href="/contents/spider/">爬虫•目录</a> <a href="/categories/Spider/">爬虫•类别</a></p><hr><h2 id="分布式爬虫"><a href="#分布式爬虫" class="headerlink" title="分布式爬虫"></a>分布式爬虫</h2><hr><p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>]]></content>
+        <content type="html"><![CDATA[<p><a href="/contents/spider/">爬虫•目录</a> <a href="/categories/Spider/">爬虫•类别</a></p><hr><h2 id="爬虫框架Scrapy"><a href="#爬虫框架Scrapy" class="headerlink" title="爬虫框架Scrapy"></a>爬虫框架Scrapy</h2><h4 id="scrapy-shell使用"><a href="#scrapy-shell使用" class="headerlink" title="scrapy shell使用"></a>scrapy shell使用</h4><table><thead><tr><th style="text-align:left">代码</th><th style="text-align:left">　含义</th></tr></thead><tbody><tr><td style="text-align:left">scrapy shell URL</td><td style="text-align:left">地址</td></tr><tr><td style="text-align:left">request.headers</td><td style="text-align:left">请求头　字典</td></tr><tr><td style="text-align:left">request.meta</td><td style="text-align:left">定义代理等相关信息　字典</td></tr><tr><td style="text-align:left">request.text</td><td style="text-align:left">字符串</td></tr><tr><td style="text-align:left">response.body</td><td style="text-align:left">字节流</td></tr><tr><td style="text-align:left">response.xpath(‘’)</td><td style="text-align:left">搜索</td></tr></tbody></table><h4 id="scrapy-Request-常用参数"><a href="#scrapy-Request-常用参数" class="headerlink" title="scrapy.Request()常用参数"></a>scrapy.Request()常用参数</h4><table><thead><tr><th style="text-align:left"></th><th style="text-align:left"></th></tr></thead><tbody><tr><td style="text-align:left">url</td><td style="text-align:left">地址</td></tr><tr><td style="text-align:left">callback</td><td style="text-align:left">回调函数</td></tr><tr><td style="text-align:left">headers</td><td style="text-align:left">请求头</td></tr><tr><td style="text-align:left">meta</td><td style="text-align:left">代理等相关信息</td></tr><tr><td style="text-align:left">dont_filter</td><td style="text-align:left">是否忽略域组限制 Ture不检查allowed_domains=［＇＇］，默认False</td></tr><tr><td style="text-align:left">encoding</td><td style="text-align:left">默认utf-8</td></tr></tbody></table><h4 id="下载器中间件（随机User-Agent）"><a href="#下载器中间件（随机User-Agent）" class="headerlink" title="下载器中间件（随机User-Agent）"></a>下载器中间件（随机User-Agent）</h4><table><thead><tr><th style="text-align:left">操作文件</th><th style="text-align:left">配置命令</th></tr></thead><tbody><tr><td style="text-align:left">setting.py（少量User-Agent）</td><td style="text-align:left">USER_AGENT = ‘’</td></tr><tr><td style="text-align:left"></td><td style="text-align:left">DEFAULT_REQUEST_HEADRES = {}</td></tr></tbody></table><ul><li>setting.py（少量User-Agent）<br>  USER_AGENT = ‘’<br>  DEFAULT_REQUEST_HEADRES = {}</li><li>middlewares.py设置中间件<br>  1.项目目录新建useragets.py，存放agent<pre><code>  uaList = [&#39;&#39;, &#39;&#39; ,&#39;&#39;,...]</code></pre>  2.middlewares.py中创建中间件类<pre><code>  from xxx.useragents import *  class RandomUAmiddleware(boject):      def process_request(self, request, spider):          # 此处注意headers属性          request.headers[&#39;User-Agent&#39;] = ...</code></pre>  3.开启中间件<pre><code>  setting.py设置  DOWNLOADER_MIDDLEWARES = </code></pre></li></ul><h4 id="升级Scrapy"><a href="#升级Scrapy" class="headerlink" title="升级Scrapy"></a>升级Scrapy</h4><ul><li>安装pip<br>  官网下载pip解压<br>  cd到解压路径　执行<code>python setup.py install</code></li><li>升级<br>  python -m pip install –upgrade Scrapy</li></ul><hr><p>博主个人能力有限，错误在所难免．<br>如发现错误请不要吝啬，发邮件给博主更正内容，在此提前鸣谢．<br>Email: <a href="mailto:JentChang@163.com" target="_blank" rel="noopener">JentChang@163.com</a> （来信请注明文章标题，如果附带链接就更方便了）<br>你也可以在下方的留言板留下你宝贵的意见．</p>]]></content>
       
       
       <categories>
@@ -504,9 +504,9 @@
             
             <tag> 爬虫Spider </tag>
             
-            <tag> 分布式 </tag>
+            <tag> Scrapy </tag>
             
-            <tag> redis </tag>
+            <tag> shell </tag>
             
         </tags>
       
