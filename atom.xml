@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://JentChang.github.io/"/>
-  <updated>2019-03-13T02:51:46.549Z</updated>
+  <updated>2019-03-29T13:07:35.443Z</updated>
   <id>http://JentChang.github.io/</id>
   
   <author>
@@ -15,6 +15,91 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Special Explanation</title>
+    <link href="http://JentChang.github.io/2019/03/25/special-explanation/"/>
+    <id>http://JentChang.github.io/2019/03/25/special-explanation/</id>
+    <published>2019-03-24T16:00:00.000Z</published>
+    <updated>2019-03-29T13:07:35.443Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我取消了版权限制的复制，这样可以直接复制完整的代码便于调试．但是有些代码我是在Notebook上写的，排版可能有点问题，但是我想那应该不是什么解决不了的．&lt;/p&gt;
+&lt;p&gt;最近东西比较多，我要一边找东西一边学习东西．所以更新上可能会比较缓慢，另外我发现写这个真的很费时间，但是
+        
+      
+    
+    </summary>
+    
+      <category term="解释" scheme="http://JentChang.github.io/categories/%E8%A7%A3%E9%87%8A/"/>
+    
+    
+      <category term="说明" scheme="http://JentChang.github.io/tags/%E8%AF%B4%E6%98%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>金融数据分析：非线性问题</title>
+    <link href="http://JentChang.github.io/2019/03/02/mpf-02/"/>
+    <id>http://JentChang.github.io/2019/03/02/mpf-02/</id>
+    <published>2019-03-01T16:00:02.000Z</published>
+    <updated>2019-03-29T12:51:39.425Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/finanical/MPF.html&quot;&gt;金融数据分析•目录&lt;/a&gt; &lt;a href=&quot;/categories/MPF/&quot;&gt;金融数据分析•类别&lt;/a&gt;　&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="MPF" scheme="http://JentChang.github.io/categories/MPF/"/>
+    
+    
+      <category term="非线性求解" scheme="http://JentChang.github.io/tags/%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%B1%82%E8%A7%A3/"/>
+    
+      <category term="牛顿迭代" scheme="http://JentChang.github.io/tags/%E7%89%9B%E9%A1%BF%E8%BF%AD%E4%BB%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>金融数据分析：线性问题</title>
+    <link href="http://JentChang.github.io/2019/03/02/mpf-01/"/>
+    <id>http://JentChang.github.io/2019/03/02/mpf-01/</id>
+    <published>2019-03-01T16:00:01.000Z</published>
+    <updated>2019-03-29T12:39:24.542Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/finanical/MPF.html&quot;&gt;金融数据分析•目录&lt;/a&gt; &lt;a href=&quot;/categories/MPF/&quot;&gt;金融数据分析•类别&lt;/a&gt;　&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="MPF" scheme="http://JentChang.github.io/categories/MPF/"/>
+    
+    
+      <category term="线性求解" scheme="http://JentChang.github.io/tags/%E7%BA%BF%E6%80%A7%E6%B1%82%E8%A7%A3/"/>
+    
+      <category term="线性规划" scheme="http://JentChang.github.io/tags/%E7%BA%BF%E6%80%A7%E8%A7%84%E5%88%92/"/>
+    
+      <category term="矩阵分解" scheme="http://JentChang.github.io/tags/%E7%9F%A9%E9%98%B5%E5%88%86%E8%A7%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>案例：人脸识别导图　</title>
@@ -340,38 +425,6 @@
   </entry>
   
   <entry>
-    <title>爬虫19：分布式爬虫</title>
-    <link href="http://JentChang.github.io/2019/01/22/spider-19/"/>
-    <id>http://JentChang.github.io/2019/01/22/spider-19/</id>
-    <published>2019-01-21T17:00:16.000Z</published>
-    <updated>2019-01-31T07:53:53.322Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;/contents/spider/&quot;&gt;爬虫•目录&lt;/a&gt; &lt;a href=&quot;/categories/Spider/&quot;&gt;爬虫•类别&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;分布式爬虫&quot;&gt;&lt;a href=&quot;#分布式爬虫&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Spider" scheme="http://JentChang.github.io/categories/Spider/"/>
-    
-    
-      <category term="爬虫Spider" scheme="http://JentChang.github.io/tags/%E7%88%AC%E8%99%ABSpider/"/>
-    
-      <category term="分布式" scheme="http://JentChang.github.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
-    
-      <category term="redis" scheme="http://JentChang.github.io/tags/redis/"/>
-    
-  </entry>
-  
-  <entry>
     <title>爬虫16：爬虫框架Scrapy04</title>
     <link href="http://JentChang.github.io/2019/01/22/spider-16/"/>
     <id>http://JentChang.github.io/2019/01/22/spider-16/</id>
@@ -472,6 +525,38 @@
   </entry>
   
   <entry>
+    <title>爬虫19：分布式爬虫</title>
+    <link href="http://JentChang.github.io/2019/01/22/spider-19/"/>
+    <id>http://JentChang.github.io/2019/01/22/spider-19/</id>
+    <published>2019-01-21T17:00:16.000Z</published>
+    <updated>2019-01-31T07:53:53.322Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;/contents/spider/&quot;&gt;爬虫•目录&lt;/a&gt; &lt;a href=&quot;/categories/Spider/&quot;&gt;爬虫•类别&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;分布式爬虫&quot;&gt;&lt;a href=&quot;#分布式爬虫&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Spider" scheme="http://JentChang.github.io/categories/Spider/"/>
+    
+    
+      <category term="爬虫Spider" scheme="http://JentChang.github.io/tags/%E7%88%AC%E8%99%ABSpider/"/>
+    
+      <category term="分布式" scheme="http://JentChang.github.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F/"/>
+    
+      <category term="redis" scheme="http://JentChang.github.io/tags/redis/"/>
+    
+  </entry>
+  
+  <entry>
     <title>爬虫15：爬虫框架Scrapy03</title>
     <link href="http://JentChang.github.io/2019/01/22/spider-15/"/>
     <id>http://JentChang.github.io/2019/01/22/spider-15/</id>
@@ -566,102 +651,6 @@
       <category term="框架" scheme="http://JentChang.github.io/tags/%E6%A1%86%E6%9E%B6/"/>
     
       <category term="Scrapy" scheme="http://JentChang.github.io/tags/Scrapy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>爬虫12：BeautifulSoup解析</title>
-    <link href="http://JentChang.github.io/2019/01/22/spider-12/"/>
-    <id>http://JentChang.github.io/2019/01/22/spider-12/</id>
-    <published>2019-01-21T17:00:12.000Z</published>
-    <updated>2019-01-30T01:17:09.878Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;/contents/spider/&quot;&gt;爬虫•目录&lt;/a&gt; &lt;a href=&quot;/categories/Spider/&quot;&gt;爬虫•类别&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;BeautifulSoup解析&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Spider" scheme="http://JentChang.github.io/categories/Spider/"/>
-    
-    
-      <category term="解析" scheme="http://JentChang.github.io/tags/%E8%A7%A3%E6%9E%90/"/>
-    
-      <category term="爬虫Spider" scheme="http://JentChang.github.io/tags/%E7%88%AC%E8%99%ABSpider/"/>
-    
-      <category term="BeautifulSoup" scheme="http://JentChang.github.io/tags/BeautifulSoup/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>爬虫11：多线程爬取</title>
-    <link href="http://JentChang.github.io/2019/01/22/spider-11/"/>
-    <id>http://JentChang.github.io/2019/01/22/spider-11/</id>
-    <published>2019-01-21T17:00:11.000Z</published>
-    <updated>2019-01-29T08:46:02.069Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;/contents/spider/&quot;&gt;爬虫•目录&lt;/a&gt; &lt;a href=&quot;/categories/Spider/&quot;&gt;爬虫•类别&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;多线程爬取&quot;&gt;&lt;a href=&quot;#多线程爬取&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Spider" scheme="http://JentChang.github.io/categories/Spider/"/>
-    
-    
-      <category term="爬虫Spider" scheme="http://JentChang.github.io/tags/%E7%88%AC%E8%99%ABSpider/"/>
-    
-      <category term="线程" scheme="http://JentChang.github.io/tags/%E7%BA%BF%E7%A8%8B/"/>
-    
-      <category term="局部页面刷新" scheme="http://JentChang.github.io/tags/%E5%B1%80%E9%83%A8%E9%A1%B5%E9%9D%A2%E5%88%B7%E6%96%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>爬虫10：selenium phantomjs/Chrome</title>
-    <link href="http://JentChang.github.io/2019/01/22/spider-10/"/>
-    <id>http://JentChang.github.io/2019/01/22/spider-10/</id>
-    <published>2019-01-21T17:00:10.000Z</published>
-    <updated>2019-01-28T10:58:18.995Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;/contents/spider/&quot;&gt;爬虫•目录&lt;/a&gt; &lt;a href=&quot;/categories/Spider/&quot;&gt;爬虫•类别&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;selenium-phantomjs-Chrome&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Spider" scheme="http://JentChang.github.io/categories/Spider/"/>
-    
-    
-      <category term="爬虫Spider" scheme="http://JentChang.github.io/tags/%E7%88%AC%E8%99%ABSpider/"/>
-    
-      <category term="Selenium" scheme="http://JentChang.github.io/tags/Selenium/"/>
-    
-      <category term="无界面浏览器" scheme="http://JentChang.github.io/tags/%E6%97%A0%E7%95%8C%E9%9D%A2%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
     
   </entry>
   
